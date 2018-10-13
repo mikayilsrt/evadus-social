@@ -155,3 +155,13 @@ table {
 
 /* gradient color */
 
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: #ffffff;
+}
+
+#header-home nav {
+  background: #ffffff;
+  height: 80px;
+}
+

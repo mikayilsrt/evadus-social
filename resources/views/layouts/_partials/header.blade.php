@@ -1,5 +1,5 @@
-<header>
-    <nav>
+<header id="header-home">
+    <nav class="navbar">
         <ul>
             <li>
                 <a href="#">{{ config('app.name') }}</a>
