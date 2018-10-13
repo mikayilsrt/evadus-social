@@ -11,7 +11,7 @@
         <title>{{ config('app.name') }}</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('app/css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 
         <!-- Google fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> 
