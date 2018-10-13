@@ -12,6 +12,9 @@
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="{{ asset('app/css') }}" />
+
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> 
     </head>
     <body>
 
