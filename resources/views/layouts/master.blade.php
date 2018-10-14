@@ -17,10 +17,12 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> 
     </head>
     <body>
-
-        @include('layouts._partials.header')
-
+        <!-- wrapper page -->
         <div class="wrapper">
+            <!-- main header -->
+            @include('layouts._partials._header')
+
+            <!--  body-content -->
             @yield('content')
         </div>
 

@@ -1,6 +1,52 @@
 #header-home {
-  nav {
-    background: $headerNav;
+  .nav-bar {
     height: 80px;
+    border: none;
+    border-radius: 0;
+    background: $headerNav;
+    box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+    .container {
+      max-width: 100%;
+      .topbar-logo {
+        display: block;
+        float: left;
+        height: 80px;
+        padding-top: 30px;
+      }
+      .topbar-search {
+        display: block;
+        float: left;
+        padding-top: 18px;
+        .input {
+          .button {
+            background: $linear-gradient;
+            color: #FFFFFF;
+          }
+        }
+      }
+      .topbar-right {
+        display: block;
+        float: right;
+        padding-top: 23px;
+        .topbar-avatar {
+          .btn-avatar {
+            border: none;
+            background: none;
+            outline: none;
+            cursor: pointer;
+            .img-shadow {
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              overflow: hidden;
+              background: #f6f7fb;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
