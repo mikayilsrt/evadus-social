@@ -1,11 +1,14 @@
 /* Google Font */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 
-/* Css reste */
-@import "~reset-css/sass/reset";
+/* Semantic ui style */
+@import "~semantic-ui-sass/semantic-ui";
 
 /* Bootstrap grid style */
 @import "~bootstrap/scss/bootstrap-grid";
+
+/* Css reste */
+@import "~reset-css/sass/reset";
 
 @import "0-helpers/variables";
 @import "1-base/main";
