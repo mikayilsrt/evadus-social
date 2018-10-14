@@ -4,6 +4,9 @@
 /* Css reste */
 @import "~reset-css/sass/reset";
 
+/* Bootstrap grid style */
+@import "~bootstrap/scss/bootstrap-grid";
+
 @import "0-helpers/variables";
 @import "1-base/main";
 @import "3-blocks/header";
