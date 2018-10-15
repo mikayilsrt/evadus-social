@@ -18,9 +18,12 @@
         height: 80px;
         padding-top: 30px;*/
         position: absolute;
-        left: 15px;
-        top: 39%;
+        left: 16px;
+        top: 38%;
         z-index: 3;
+        color: $color-1;
+        font-size: 1.50em;
+        font-weight: 700;
       }
       .topbar-search {
         display: block;
@@ -29,11 +32,14 @@
         text-align: center;
         .input {
           .search-input {
+            width: 350px;
             border-top-left-radius: 50px !important;
             border-bottom-left-radius: 50px !important;
           }
           .button {
             color: #FFFFFF;
+            font-size: 0.9em;
+            padding: 0px 1.5em 0px 1.5em;
             background: $linear-gradient;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
@@ -46,7 +52,7 @@
         float: right;
         padding-top: 23px;*/
         position: absolute;
-        right: 15px;
+        right: 16px;
         top: 31%;
         .topbar-avatar {
           .btn-avatar {
