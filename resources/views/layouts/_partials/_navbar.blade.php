@@ -4,7 +4,7 @@
         <div class="topbar-search">
             <form class="search-bar">
                 <div class="ui action input">
-                    <input placeholder="Search..." type="text">
+                    <input class="search-input" placeholder="Search..." type="text">
                     <button class="ui icon button">
                         <i class="search icon"></i>
                     </button>

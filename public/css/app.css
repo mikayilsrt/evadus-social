@@ -42620,9 +42620,16 @@ body {
   text-align: center;
 }
 
+#header-home .nav-bar .container .topbar-search .input .search-input {
+  border-top-left-radius: 50px !important;
+  border-bottom-left-radius: 50px !important;
+}
+
 #header-home .nav-bar .container .topbar-search .input .button {
-  background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
   color: #FFFFFF;
+  background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 #header-home .nav-bar .container .topbar-right {
