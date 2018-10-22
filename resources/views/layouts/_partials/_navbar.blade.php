@@ -48,7 +48,7 @@
                 </a>
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#"><i class="icon" data-feather="home"></i>Accueil</a>
+                        <a href="/"><i class="icon" data-feather="home"></i>Accueil</a>
                     </li>
                     <li>
                         <a href="#"><i class="icon" data-feather="globe"></i>Découvrir</a>
@@ -59,10 +59,10 @@
                 </ul>
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#" class="log-link"><i class="icon" data-feather="log-in"></i>Login</a>
+                        <a href="{{ url("login") }}" class="log-link"><i class="icon" data-feather="log-in"></i>Login</a>
                     </li>
                     <li>
-                        <a href="#" class="log-link"><i class="icon" data-feather="user-plus"></i>Register</a>
+                        <a href="{{ url("register") }}" class="log-link"><i class="icon" data-feather="user-plus"></i>Register</a>
                     </li>
                 </ul>
             </div>
