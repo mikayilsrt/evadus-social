@@ -18,11 +18,27 @@
                 <input class="form-control" type="search" placeholder="Search on {{ config("app.name") }}">
                 <button class="btn btn-search"><i class="search-icon" data-feather="search"></i></button>
             </form>
+            <!--
             <li class="nav-item">
                 <a class="nav-link" href="{{ url("login") }}">Sing in</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link signup-btn" href="{{ url("register") }}">Sign up</a>
+            </li>-->
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown">
+                    <div class="user-profile-img">
+                        <img src="https://kaem.io/assets/img/default-profile-img.png" alt="">
+                    </div>
+                    <span>username</span>
+                    <i data-feather="chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
+                    <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
+                    <div class="dropdown-divider"></div>
+                    <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="log-out"></i>Sign out</a></li>
+                </ul>
             </li>
         </ul>
     </div>

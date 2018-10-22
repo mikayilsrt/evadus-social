@@ -31,6 +31,57 @@
           }
         }
       }
+      .dropdown {
+        .user-profile-img {
+          float: left;
+          width: 30px;
+          height: 30px;
+          margin-right: 7px;
+          overflow: hidden;
+          border-radius: 50px;
+          display: inline-block;
+          img {
+            width: 100%;
+          }
+        }
+        .dropdown-menu {
+          top: 65px;
+          left: auto;
+          right: 0;
+          border: none;
+          box-shadow: 0px 1px 5px 0 rgba(34, 36, 38, 0.15);
+          li {
+            a {
+              color: $color-2;
+              font-size: 0.9em;
+              padding: 8px 16px;
+              transition-duration: 0.5s;
+              .icon {
+                width: 14%;
+                margin-right: 7px;
+              }
+              &:hover {
+                color: #ffffff;
+                background: $linear-gradient;
+              }
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 7px 10px 7px;
+            border-color: transparent transparent #ffffff transparent;
+            line-height: 0px;
+            _border-color: #ffffff #ffffff #000000 #ffffff;
+            _filter: progid:DXImageTransform.Microsoft.Chroma(color='#ffffff');
+          }
+        }
+      }
       /** Search input **/
       .form-inline {
         .form-control {
