@@ -4,10 +4,10 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/"><i data-feather="home"></i>Accueil</a>
+                <a class="nav-link" href="/"><i data-feather="home"></i>Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i data-feather="globe"></i>Découvrir</a>
+                <a class="nav-link" href="#"><i data-feather="globe"></i>Discover</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i data-feather="bell"></i>Notifications</a>
@@ -15,14 +15,14 @@
         </ul>
         <ul class="navbar-nav">
             <form class="form-inline">
-                <input class="form-control" type="search" placeholder="Rechercher sur {{ config("app.name") }}">
+                <input class="form-control" type="search" placeholder="Search on {{ config("app.name") }}">
                 <button class="btn btn-search"><i class="search-icon" data-feather="search"></i></button>
             </form>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url("login") }}">Login</a>
+                <a class="nav-link" href="{{ url("login") }}">Sing in</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url("register") }}">Register</a>
+                <a class="nav-link signup-btn" href="{{ url("register") }}">Sign up</a>
             </li>
         </ul>
     </div>
@@ -48,10 +48,10 @@
                 </a>
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/"><i class="icon" data-feather="home"></i>Accueil</a>
+                        <a href="/"><i class="icon" data-feather="home"></i>Home</a>
                     </li>
                     <li>
-                        <a href="#"><i class="icon" data-feather="globe"></i>Découvrir</a>
+                        <a href="#"><i class="icon" data-feather="globe"></i>Discover</a>
                     </li>
                     <li>
                         <a href="#"><i class="icon" data-feather="bell"></i>Notifications</a>
@@ -59,10 +59,10 @@
                 </ul>
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="{{ url("login") }}" class="log-link"><i class="icon" data-feather="log-in"></i>Login</a>
+                        <a href="{{ url("login") }}" class="log-link"><i class="icon" data-feather="log-in"></i>Sing in</a>
                     </li>
                     <li>
-                        <a href="{{ url("register") }}" class="log-link"><i class="icon" data-feather="user-plus"></i>Register</a>
+                        <a href="{{ url("register") }}" class="log-link"><i class="icon" data-feather="user-plus"></i>Sign up</a>
                     </li>
                 </ul>
             </div>

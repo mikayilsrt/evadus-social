@@ -10652,7 +10652,7 @@ body {
   color: #303030;
   font-weight: 500;
   font-size: 0.875em;
-  padding: 20px 25px;
+  padding: 15px 25px;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
@@ -10664,6 +10664,16 @@ body {
 
 #header-home .main-navbar .navbar-nav .nav-item .nav-link:hover {
   color: #7c21ff;
+}
+
+#header-home .main-navbar .navbar-nav .nav-item .signup-btn {
+  color: #ffffff;
+  border-radius: 3px;
+  background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
+}
+
+#header-home .main-navbar .navbar-nav .nav-item .signup-btn:hover {
+  color: #ffffff;
 }
 
 #header-home .main-navbar .navbar-nav .form-inline .form-control {
