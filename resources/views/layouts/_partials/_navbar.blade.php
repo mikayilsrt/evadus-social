@@ -74,12 +74,29 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <div class="user-profile-img">
+                                <img src="https://kaem.io/assets/img/default-profile-img.png" alt="">
+                            </div>
+                            <span>username</span>
+                            <i data-feather="chevron-down" class="icon"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
+                            <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="log-out"></i>Sign out</a></li>
+                        </ul>
+                    </li>
+                    <!--
                     <li>
                         <a href="{{ url("login") }}" class="log-link"><i class="icon" data-feather="log-in"></i>Sing in</a>
                     </li>
                     <li>
                         <a href="{{ url("register") }}" class="log-link"><i class="icon" data-feather="user-plus"></i>Sign up</a>
                     </li>
+                    -->
                 </ul>
             </div>
         </div>

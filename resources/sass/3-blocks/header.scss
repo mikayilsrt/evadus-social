@@ -206,6 +206,36 @@
               }
             }
           }
+          .dropdown {
+            .nav-link {
+              .user-profile-img {
+                float: left;
+                width: 25px;
+                height: 25px;
+                margin-right: 7px;
+                overflow: hidden;
+                border-radius: 50px;
+                display: inline-block;
+                img {
+                  width: 100%;
+                }
+              }
+              .icon {
+                width: 7%;
+                margin-left: 7px;
+              }
+            }
+            .dropdown-menu {
+              border: none;
+              li {
+                padding: 0;
+                a {
+                  font-weight: 500;
+                  background: none;
+                }
+              }
+            }
+          }
         }
       }
       .open-mobile-nav {

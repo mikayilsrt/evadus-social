@@ -10878,6 +10878,38 @@ body {
   color: #ffffff;
 }
 
+#header-home .main-navbar-mobile .mobile-navbar .mobile-nav-block .nav .dropdown .nav-link .user-profile-img {
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin-right: 7px;
+  overflow: hidden;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+#header-home .main-navbar-mobile .mobile-navbar .mobile-nav-block .nav .dropdown .nav-link .user-profile-img img {
+  width: 100%;
+}
+
+#header-home .main-navbar-mobile .mobile-navbar .mobile-nav-block .nav .dropdown .nav-link .icon {
+  width: 7%;
+  margin-left: 7px;
+}
+
+#header-home .main-navbar-mobile .mobile-navbar .mobile-nav-block .nav .dropdown .dropdown-menu {
+  border: none;
+}
+
+#header-home .main-navbar-mobile .mobile-navbar .mobile-nav-block .nav .dropdown .dropdown-menu li {
+  padding: 0;
+}
+
+#header-home .main-navbar-mobile .mobile-navbar .mobile-nav-block .nav .dropdown .dropdown-menu li a {
+  font-weight: 500;
+  background: none;
+}
+
 #header-home .main-navbar-mobile .mobile-navbar .open-mobile-nav {
   right: 0;
 }
