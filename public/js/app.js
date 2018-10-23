@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,8 +70,8 @@
 "use strict";
 
 
-var bind = __webpack_require__(6);
-var isBuffer = __webpack_require__(21);
+var bind = __webpack_require__(7);
+var isBuffer = __webpack_require__(22);
 
 /*global toString:true*/
 
@@ -381,7 +381,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var normalizeHeaderName = __webpack_require__(24);
+var normalizeHeaderName = __webpack_require__(25);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -397,10 +397,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(7);
+    adapter = __webpack_require__(8);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(7);
+    adapter = __webpack_require__(8);
   }
   return adapter;
 }
@@ -475,10 +475,24 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (false) {
+  module.exports = require('./cjs/react.production.min.js');
+} else {
+  module.exports = __webpack_require__(41);
+}
+
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
 var g;
@@ -505,7 +519,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3043,10 +3057,10 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3)))
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -13417,7 +13431,7 @@ return jQuery;
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -13426,7 +13440,7 @@ return jQuery;
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(4), __webpack_require__(3)) :
+   true ? factory(exports, __webpack_require__(5), __webpack_require__(4)) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
   (factory((global.bootstrap = {}),global.jQuery,global.Popper));
 }(this, (function (exports,$,Popper) { 'use strict';
@@ -17367,7 +17381,7 @@ return jQuery;
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17385,19 +17399,19 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var settle = __webpack_require__(25);
-var buildURL = __webpack_require__(27);
-var parseHeaders = __webpack_require__(28);
-var isURLSameOrigin = __webpack_require__(29);
-var createError = __webpack_require__(8);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(30);
+var settle = __webpack_require__(26);
+var buildURL = __webpack_require__(28);
+var parseHeaders = __webpack_require__(29);
+var isURLSameOrigin = __webpack_require__(30);
+var createError = __webpack_require__(9);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(31);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -17494,7 +17508,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(31);
+      var cookies = __webpack_require__(32);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -17572,13 +17586,13 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var enhanceError = __webpack_require__(26);
+var enhanceError = __webpack_require__(27);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -17597,7 +17611,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17609,7 +17623,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17632,20 +17646,6 @@ Cancel.prototype.toString = function toString() {
 Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (false) {
-  module.exports = require('./cjs/react.production.min.js');
-} else {
-  module.exports = __webpack_require__(40);
-}
 
 
 /***/ }),
@@ -17762,7 +17762,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 var printWarning = function() {};
 
 if (true) {
-  var ReactPropTypesSecret = __webpack_require__(41);
+  var ReactPropTypesSecret = __webpack_require__(42);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -17847,12 +17847,57 @@ module.exports = checkPropTypes;
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(15);
-module.exports = __webpack_require__(48);
+"use strict";
+
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (true) {
+    // This branch is unreachable because this function is only called
+    // in production, but the condition is true only in development.
+    // Therefore if the branch is still here, dead code elimination wasn't
+    // properly applied.
+    // Don't change the message. React DevTools relies on it. Also make sure
+    // this message doesn't occur elsewhere in this function, or it will cause
+    // a false positive.
+    throw new Error('^_^');
+  }
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
+if (false) {
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = require('./cjs/react-dom.production.min.js');
+} else {
+  module.exports = __webpack_require__(43);
+}
 
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(16);
+module.exports = __webpack_require__(49);
+
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -17862,14 +17907,21 @@ module.exports = __webpack_require__(48);
  * building robust, powerful web applications using React + Laravel.
  */
 
-__webpack_require__(16);
+__webpack_require__(17);
+
+/**
+ * Next, we will create a fresh React component instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+__webpack_require__(40);
+__webpack_require__(54);
 
 /**
  * Require the bootstrap javascript file.
  **/
-__webpack_require__(5);
-
-// require('semantic-ui-sass/semantic-ui.js');
+__webpack_require__(6);
 
 /**
  * Mobile nav click event.
@@ -17885,21 +17937,13 @@ for (var i = 0; i <= mobileMenuButtons.length; i++) {
   });
 }
 
-/**
- * Next, we will create a fresh React component instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-__webpack_require__(39);
-
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(17);
-window.Popper = __webpack_require__(3).default;
+window._ = __webpack_require__(18);
+window.Popper = __webpack_require__(4).default;
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -17908,9 +17952,9 @@ window.Popper = __webpack_require__(3).default;
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(4);
+  window.$ = window.jQuery = __webpack_require__(5);
 
-  __webpack_require__(5);
+  __webpack_require__(6);
 } catch (e) {}
 
 /**
@@ -17919,7 +17963,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(19);
+window.axios = __webpack_require__(20);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -17955,7 +17999,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -35067,10 +35111,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(18)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(19)(module)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -35098,21 +35142,21 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(20);
+module.exports = __webpack_require__(21);
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var bind = __webpack_require__(6);
-var Axios = __webpack_require__(22);
+var bind = __webpack_require__(7);
+var Axios = __webpack_require__(23);
 var defaults = __webpack_require__(1);
 
 /**
@@ -35146,15 +35190,15 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(10);
-axios.CancelToken = __webpack_require__(37);
-axios.isCancel = __webpack_require__(9);
+axios.Cancel = __webpack_require__(11);
+axios.CancelToken = __webpack_require__(38);
+axios.isCancel = __webpack_require__(10);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(38);
+axios.spread = __webpack_require__(39);
 
 module.exports = axios;
 
@@ -35163,7 +35207,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 /*!
@@ -35190,7 +35234,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35198,8 +35242,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(1);
 var utils = __webpack_require__(0);
-var InterceptorManager = __webpack_require__(32);
-var dispatchRequest = __webpack_require__(33);
+var InterceptorManager = __webpack_require__(33);
+var dispatchRequest = __webpack_require__(34);
 
 /**
  * Create a new instance of Axios
@@ -35276,7 +35320,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -35466,7 +35510,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35485,13 +35529,13 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var createError = __webpack_require__(8);
+var createError = __webpack_require__(9);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -35518,7 +35562,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35546,7 +35590,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35619,7 +35663,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35679,7 +35723,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35754,7 +35798,7 @@ module.exports = (
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35797,7 +35841,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35857,7 +35901,7 @@ module.exports = (
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35916,18 +35960,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var transformData = __webpack_require__(34);
-var isCancel = __webpack_require__(9);
+var transformData = __webpack_require__(35);
+var isCancel = __webpack_require__(10);
 var defaults = __webpack_require__(1);
-var isAbsoluteURL = __webpack_require__(35);
-var combineURLs = __webpack_require__(36);
+var isAbsoluteURL = __webpack_require__(36);
+var combineURLs = __webpack_require__(37);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -36009,7 +36053,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36036,7 +36080,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36057,7 +36101,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36078,13 +36122,13 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Cancel = __webpack_require__(10);
+var Cancel = __webpack_require__(11);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -36142,7 +36186,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36176,14 +36220,14 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -36248,7 +36292,7 @@ if (document.getElementById('example')) {
 }
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37981,7 +38025,7 @@ module.exports = react;
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37997,51 +38041,6 @@ module.exports = react;
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (true) {
-    // This branch is unreachable because this function is only called
-    // in production, but the condition is true only in development.
-    // Therefore if the branch is still here, dead code elimination wasn't
-    // properly applied.
-    // Don't change the message. React DevTools relies on it. Also make sure
-    // this message doesn't occur elsewhere in this function, or it will cause
-    // a false positive.
-    throw new Error('^_^');
-  }
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
-}
-
-if (false) {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = require('./cjs/react-dom.production.min.js');
-} else {
-  module.exports = __webpack_require__(43);
-}
 
 
 /***/ }),
@@ -38066,7 +38065,7 @@ if (true) {
   (function() {
 'use strict';
 
-var React = __webpack_require__(11);
+var React = __webpack_require__(2);
 var _assign = __webpack_require__(12);
 var checkPropTypes = __webpack_require__(13);
 var schedule = __webpack_require__(44);
@@ -57202,10 +57201,18261 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 
 
 /***/ }),
-/* 48 */
+/* 48 */,
+/* 49 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_feather__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_feather___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_feather__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+var TimelineFeed = function (_Component) {
+    _inherits(TimelineFeed, _Component);
+
+    function TimelineFeed(props) {
+        _classCallCheck(this, TimelineFeed);
+
+        var _this = _possibleConstructorReturn(this, (TimelineFeed.__proto__ || Object.getPrototypeOf(TimelineFeed)).call(this, props));
+
+        _this.state = {};
+        return _this;
+    }
+
+    _createClass(TimelineFeed, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'content-timeline' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'item-header' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'a',
+                        { href: true },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'user-profile-img' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://kaem.io/assets/img/default-profile-img.png', alt: true })
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'ul',
+                        { className: true },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'li',
+                            { className: 'fullGroupName' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'a',
+                                { href: '#' },
+                                'Username'
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'li',
+                            { className: 'username' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'a',
+                                { href: '#' },
+                                '@username'
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'li',
+                            { className: 'item-date' },
+                            '13 sept.'
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'item-text-content' },
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan justo sem, vitae sollicitudin ex pulvinar vel. Praesent eget lacinia purus, id condimentum orci. In vulputate nibh quis sapien ultrices vestibulum. Mauris ut velit at leo posuere.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'item-media-content' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://images.unsplash.com/photo-1540281481658-a6ebea61c280?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a46acf5c0244921f4eba50da0dfbf401&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb', alt: true })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'item-footer' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'item-action' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'ul',
+                            null,
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'li',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'button',
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["Heart"], { className: 'icon' }),
+                                    ' Likes'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'li',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'button',
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["Link"], { className: 'icon' }),
+                                    ' Share'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'li',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'button',
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["ChevronRight"], { className: 'icon' }),
+                                    ' Status'
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return TimelineFeed;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (TimelineFeed);
+
+
+if (document.getElementById('timelinefeed')) {
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TimelineFeed, null), document.getElementById('timelinefeed'));
+}
+
+/***/ }),
+/* 55 */,
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (true) {
+  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
+    Symbol.for &&
+    Symbol.for('react.element')) ||
+    0xeac7;
+
+  var isValidElement = function(object) {
+    return typeof object === 'object' &&
+      object !== null &&
+      object.$$typeof === REACT_ELEMENT_TYPE;
+  };
+
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = __webpack_require__(59)(isValidElement, throwOnDirectAccess);
+} else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = require('./factoryWithThrowingShims')();
+}
+
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ZoomOut = exports.ZoomIn = exports.Zap = exports.ZapOff = exports.Youtube = exports.X = exports.XSquare = exports.XCircle = exports.Wind = exports.Wifi = exports.WifiOff = exports.Watch = exports.Volume = exports.VolumeX = exports.Volume2 = exports.Volume1 = exports.Voicemail = exports.Video = exports.VideoOff = exports.Users = exports.User = exports.UserX = exports.UserPlus = exports.UserMinus = exports.UserCheck = exports.Upload = exports.UploadCloud = exports.Unlock = exports.Underline = exports.Umbrella = exports.Type = exports.Twitter = exports.Tv = exports.Truck = exports.Triangle = exports.TrendingUp = exports.TrendingDown = exports.Trash = exports.Trash2 = exports.ToggleRight = exports.ToggleLeft = exports.ThumbsUp = exports.ThumbsDown = exports.Thermometer = exports.Terminal = exports.Target = exports.Tag = exports.Tablet = exports.Sunset = exports.Sunrise = exports.Sun = exports.StopCircle = exports.Star = exports.Square = exports.Speaker = exports.Smartphone = exports.Sliders = exports.Slash = exports.Slack = exports.SkipForward = exports.SkipBack = exports.Sidebar = exports.Shuffle = exports.ShoppingCart = exports.ShoppingBag = exports.Shield = undefined;
+exports.ShieldOff = exports.Share = exports.Share2 = exports.Settings = exports.Server = exports.Send = exports.Search = exports.Scissors = exports.Save = exports.Rss = exports.RotateCw = exports.RotateCcw = exports.Rewind = exports.Repeat = exports.RefreshCw = exports.RefreshCcw = exports.Radio = exports.Printer = exports.Power = exports.Pocket = exports.Plus = exports.PlusSquare = exports.PlusCircle = exports.Play = exports.PlayCircle = exports.PieChart = exports.Phone = exports.PhoneOutgoing = exports.PhoneOff = exports.PhoneMissed = exports.PhoneIncoming = exports.PhoneForwarded = exports.PhoneCall = exports.Percent = exports.Pause = exports.PauseCircle = exports.Paperclip = exports.Package = exports.Octagon = exports.Navigation = exports.Navigation2 = exports.Music = exports.Move = exports.MoreVertical = exports.MoreHorizontal = exports.Moon = exports.Monitor = exports.Minus = exports.MinusSquare = exports.MinusCircle = exports.Minimize = exports.Minimize2 = exports.Mic = exports.MicOff = exports.MessageSquare = exports.MessageCircle = exports.Menu = exports.Maximize = exports.Maximize2 = exports.Map = exports.MapPin = exports.Mail = exports.LogOut = exports.LogIn = exports.Lock = exports.Loader = exports.List = exports.Linkedin = exports.Link = exports.Link2 = exports.LifeBuoy = exports.Layout = exports.Layers = exports.Italic = exports.Instagram = exports.Info = exports.Inbox = exports.Image = exports.Home = exports.HelpCircle = exports.Heart = exports.Headphones = exports.Hash = exports.HardDrive = exports.Grid = exports.Globe = exports.Gitlab = exports.GitHub = exports.GitPullRequest = exports.GitMerge = exports.GitCommit = exports.GitBranch = exports.Gift = exports.Folder = exports.FolderPlus = exports.FolderMinus = exports.Flag = exports.Filter = exports.Film = exports.File = undefined;
+exports.FileText = exports.FilePlus = exports.FileMinus = exports.Feather = exports.FastForward = exports.Facebook = exports.Eye = exports.EyeOff = exports.ExternalLink = exports.Edit = exports.Edit3 = exports.Edit2 = exports.Droplet = exports.Download = exports.DownloadCloud = exports.DollarSign = exports.Disc = exports.Delete = exports.Database = exports.Crosshair = exports.Crop = exports.CreditCard = exports.Cpu = exports.CornerUpRight = exports.CornerUpLeft = exports.CornerRightUp = exports.CornerRightDown = exports.CornerLeftUp = exports.CornerLeftDown = exports.CornerDownRight = exports.CornerDownLeft = exports.Copy = exports.Compass = exports.Command = exports.Codepen = exports.Code = exports.Cloud = exports.CloudSnow = exports.CloudRain = exports.CloudOff = exports.CloudLightning = exports.CloudDrizzle = exports.Clock = exports.Clipboard = exports.Circle = exports.Chrome = exports.ChevronsUp = exports.ChevronsRight = exports.ChevronsLeft = exports.ChevronsDown = exports.ChevronUp = exports.ChevronRight = exports.ChevronLeft = exports.ChevronDown = exports.Check = exports.CheckSquare = exports.CheckCircle = exports.Cast = exports.Camera = exports.CameraOff = exports.Calendar = exports.Briefcase = exports.Box = exports.Bookmark = exports.Book = exports.BookOpen = exports.Bold = exports.Bluetooth = exports.Bell = exports.BellOff = exports.Battery = exports.BatteryCharging = exports.BarChart = exports.BarChart2 = exports.Award = exports.AtSign = exports.ArrowUp = exports.ArrowUpRight = exports.ArrowUpLeft = exports.ArrowUpCircle = exports.ArrowRight = exports.ArrowRightCircle = exports.ArrowLeft = exports.ArrowLeftCircle = exports.ArrowDown = exports.ArrowDownRight = exports.ArrowDownLeft = exports.ArrowDownCircle = exports.Archive = exports.Aperture = exports.Anchor = exports.AlignRight = exports.AlignLeft = exports.AlignJustify = exports.AlignCenter = exports.AlertTriangle = exports.AlertOctagon = exports.AlertCircle = exports.Airplay = exports.Activity = undefined;
+
+var _activity = __webpack_require__(58);
+
+var _activity2 = _interopRequireDefault(_activity);
+
+var _airplay = __webpack_require__(60);
+
+var _airplay2 = _interopRequireDefault(_airplay);
+
+var _alertCircle = __webpack_require__(61);
+
+var _alertCircle2 = _interopRequireDefault(_alertCircle);
+
+var _alertOctagon = __webpack_require__(62);
+
+var _alertOctagon2 = _interopRequireDefault(_alertOctagon);
+
+var _alertTriangle = __webpack_require__(63);
+
+var _alertTriangle2 = _interopRequireDefault(_alertTriangle);
+
+var _alignCenter = __webpack_require__(64);
+
+var _alignCenter2 = _interopRequireDefault(_alignCenter);
+
+var _alignJustify = __webpack_require__(65);
+
+var _alignJustify2 = _interopRequireDefault(_alignJustify);
+
+var _alignLeft = __webpack_require__(66);
+
+var _alignLeft2 = _interopRequireDefault(_alignLeft);
+
+var _alignRight = __webpack_require__(67);
+
+var _alignRight2 = _interopRequireDefault(_alignRight);
+
+var _anchor = __webpack_require__(68);
+
+var _anchor2 = _interopRequireDefault(_anchor);
+
+var _aperture = __webpack_require__(69);
+
+var _aperture2 = _interopRequireDefault(_aperture);
+
+var _archive = __webpack_require__(70);
+
+var _archive2 = _interopRequireDefault(_archive);
+
+var _arrowDownCircle = __webpack_require__(71);
+
+var _arrowDownCircle2 = _interopRequireDefault(_arrowDownCircle);
+
+var _arrowDownLeft = __webpack_require__(72);
+
+var _arrowDownLeft2 = _interopRequireDefault(_arrowDownLeft);
+
+var _arrowDownRight = __webpack_require__(73);
+
+var _arrowDownRight2 = _interopRequireDefault(_arrowDownRight);
+
+var _arrowDown = __webpack_require__(74);
+
+var _arrowDown2 = _interopRequireDefault(_arrowDown);
+
+var _arrowLeftCircle = __webpack_require__(75);
+
+var _arrowLeftCircle2 = _interopRequireDefault(_arrowLeftCircle);
+
+var _arrowLeft = __webpack_require__(76);
+
+var _arrowLeft2 = _interopRequireDefault(_arrowLeft);
+
+var _arrowRightCircle = __webpack_require__(77);
+
+var _arrowRightCircle2 = _interopRequireDefault(_arrowRightCircle);
+
+var _arrowRight = __webpack_require__(78);
+
+var _arrowRight2 = _interopRequireDefault(_arrowRight);
+
+var _arrowUpCircle = __webpack_require__(79);
+
+var _arrowUpCircle2 = _interopRequireDefault(_arrowUpCircle);
+
+var _arrowUpLeft = __webpack_require__(80);
+
+var _arrowUpLeft2 = _interopRequireDefault(_arrowUpLeft);
+
+var _arrowUpRight = __webpack_require__(81);
+
+var _arrowUpRight2 = _interopRequireDefault(_arrowUpRight);
+
+var _arrowUp = __webpack_require__(82);
+
+var _arrowUp2 = _interopRequireDefault(_arrowUp);
+
+var _atSign = __webpack_require__(83);
+
+var _atSign2 = _interopRequireDefault(_atSign);
+
+var _award = __webpack_require__(84);
+
+var _award2 = _interopRequireDefault(_award);
+
+var _barChart = __webpack_require__(85);
+
+var _barChart2 = _interopRequireDefault(_barChart);
+
+var _barChart3 = __webpack_require__(86);
+
+var _barChart4 = _interopRequireDefault(_barChart3);
+
+var _batteryCharging = __webpack_require__(87);
+
+var _batteryCharging2 = _interopRequireDefault(_batteryCharging);
+
+var _battery = __webpack_require__(88);
+
+var _battery2 = _interopRequireDefault(_battery);
+
+var _bellOff = __webpack_require__(89);
+
+var _bellOff2 = _interopRequireDefault(_bellOff);
+
+var _bell = __webpack_require__(90);
+
+var _bell2 = _interopRequireDefault(_bell);
+
+var _bluetooth = __webpack_require__(91);
+
+var _bluetooth2 = _interopRequireDefault(_bluetooth);
+
+var _bold = __webpack_require__(92);
+
+var _bold2 = _interopRequireDefault(_bold);
+
+var _bookOpen = __webpack_require__(93);
+
+var _bookOpen2 = _interopRequireDefault(_bookOpen);
+
+var _book = __webpack_require__(94);
+
+var _book2 = _interopRequireDefault(_book);
+
+var _bookmark = __webpack_require__(95);
+
+var _bookmark2 = _interopRequireDefault(_bookmark);
+
+var _box = __webpack_require__(96);
+
+var _box2 = _interopRequireDefault(_box);
+
+var _briefcase = __webpack_require__(97);
+
+var _briefcase2 = _interopRequireDefault(_briefcase);
+
+var _calendar = __webpack_require__(98);
+
+var _calendar2 = _interopRequireDefault(_calendar);
+
+var _cameraOff = __webpack_require__(99);
+
+var _cameraOff2 = _interopRequireDefault(_cameraOff);
+
+var _camera = __webpack_require__(100);
+
+var _camera2 = _interopRequireDefault(_camera);
+
+var _cast = __webpack_require__(101);
+
+var _cast2 = _interopRequireDefault(_cast);
+
+var _checkCircle = __webpack_require__(102);
+
+var _checkCircle2 = _interopRequireDefault(_checkCircle);
+
+var _checkSquare = __webpack_require__(103);
+
+var _checkSquare2 = _interopRequireDefault(_checkSquare);
+
+var _check = __webpack_require__(104);
+
+var _check2 = _interopRequireDefault(_check);
+
+var _chevronDown = __webpack_require__(105);
+
+var _chevronDown2 = _interopRequireDefault(_chevronDown);
+
+var _chevronLeft = __webpack_require__(106);
+
+var _chevronLeft2 = _interopRequireDefault(_chevronLeft);
+
+var _chevronRight = __webpack_require__(107);
+
+var _chevronRight2 = _interopRequireDefault(_chevronRight);
+
+var _chevronUp = __webpack_require__(108);
+
+var _chevronUp2 = _interopRequireDefault(_chevronUp);
+
+var _chevronsDown = __webpack_require__(109);
+
+var _chevronsDown2 = _interopRequireDefault(_chevronsDown);
+
+var _chevronsLeft = __webpack_require__(110);
+
+var _chevronsLeft2 = _interopRequireDefault(_chevronsLeft);
+
+var _chevronsRight = __webpack_require__(111);
+
+var _chevronsRight2 = _interopRequireDefault(_chevronsRight);
+
+var _chevronsUp = __webpack_require__(112);
+
+var _chevronsUp2 = _interopRequireDefault(_chevronsUp);
+
+var _chrome = __webpack_require__(113);
+
+var _chrome2 = _interopRequireDefault(_chrome);
+
+var _circle = __webpack_require__(114);
+
+var _circle2 = _interopRequireDefault(_circle);
+
+var _clipboard = __webpack_require__(115);
+
+var _clipboard2 = _interopRequireDefault(_clipboard);
+
+var _clock = __webpack_require__(116);
+
+var _clock2 = _interopRequireDefault(_clock);
+
+var _cloudDrizzle = __webpack_require__(117);
+
+var _cloudDrizzle2 = _interopRequireDefault(_cloudDrizzle);
+
+var _cloudLightning = __webpack_require__(118);
+
+var _cloudLightning2 = _interopRequireDefault(_cloudLightning);
+
+var _cloudOff = __webpack_require__(119);
+
+var _cloudOff2 = _interopRequireDefault(_cloudOff);
+
+var _cloudRain = __webpack_require__(120);
+
+var _cloudRain2 = _interopRequireDefault(_cloudRain);
+
+var _cloudSnow = __webpack_require__(121);
+
+var _cloudSnow2 = _interopRequireDefault(_cloudSnow);
+
+var _cloud = __webpack_require__(122);
+
+var _cloud2 = _interopRequireDefault(_cloud);
+
+var _code = __webpack_require__(123);
+
+var _code2 = _interopRequireDefault(_code);
+
+var _codepen = __webpack_require__(124);
+
+var _codepen2 = _interopRequireDefault(_codepen);
+
+var _command = __webpack_require__(125);
+
+var _command2 = _interopRequireDefault(_command);
+
+var _compass = __webpack_require__(126);
+
+var _compass2 = _interopRequireDefault(_compass);
+
+var _copy = __webpack_require__(127);
+
+var _copy2 = _interopRequireDefault(_copy);
+
+var _cornerDownLeft = __webpack_require__(128);
+
+var _cornerDownLeft2 = _interopRequireDefault(_cornerDownLeft);
+
+var _cornerDownRight = __webpack_require__(129);
+
+var _cornerDownRight2 = _interopRequireDefault(_cornerDownRight);
+
+var _cornerLeftDown = __webpack_require__(130);
+
+var _cornerLeftDown2 = _interopRequireDefault(_cornerLeftDown);
+
+var _cornerLeftUp = __webpack_require__(131);
+
+var _cornerLeftUp2 = _interopRequireDefault(_cornerLeftUp);
+
+var _cornerRightDown = __webpack_require__(132);
+
+var _cornerRightDown2 = _interopRequireDefault(_cornerRightDown);
+
+var _cornerRightUp = __webpack_require__(133);
+
+var _cornerRightUp2 = _interopRequireDefault(_cornerRightUp);
+
+var _cornerUpLeft = __webpack_require__(134);
+
+var _cornerUpLeft2 = _interopRequireDefault(_cornerUpLeft);
+
+var _cornerUpRight = __webpack_require__(135);
+
+var _cornerUpRight2 = _interopRequireDefault(_cornerUpRight);
+
+var _cpu = __webpack_require__(136);
+
+var _cpu2 = _interopRequireDefault(_cpu);
+
+var _creditCard = __webpack_require__(137);
+
+var _creditCard2 = _interopRequireDefault(_creditCard);
+
+var _crop = __webpack_require__(138);
+
+var _crop2 = _interopRequireDefault(_crop);
+
+var _crosshair = __webpack_require__(139);
+
+var _crosshair2 = _interopRequireDefault(_crosshair);
+
+var _database = __webpack_require__(140);
+
+var _database2 = _interopRequireDefault(_database);
+
+var _delete = __webpack_require__(141);
+
+var _delete2 = _interopRequireDefault(_delete);
+
+var _disc = __webpack_require__(142);
+
+var _disc2 = _interopRequireDefault(_disc);
+
+var _dollarSign = __webpack_require__(143);
+
+var _dollarSign2 = _interopRequireDefault(_dollarSign);
+
+var _downloadCloud = __webpack_require__(144);
+
+var _downloadCloud2 = _interopRequireDefault(_downloadCloud);
+
+var _download = __webpack_require__(145);
+
+var _download2 = _interopRequireDefault(_download);
+
+var _droplet = __webpack_require__(146);
+
+var _droplet2 = _interopRequireDefault(_droplet);
+
+var _edit = __webpack_require__(147);
+
+var _edit2 = _interopRequireDefault(_edit);
+
+var _edit3 = __webpack_require__(148);
+
+var _edit4 = _interopRequireDefault(_edit3);
+
+var _edit5 = __webpack_require__(149);
+
+var _edit6 = _interopRequireDefault(_edit5);
+
+var _externalLink = __webpack_require__(150);
+
+var _externalLink2 = _interopRequireDefault(_externalLink);
+
+var _eyeOff = __webpack_require__(151);
+
+var _eyeOff2 = _interopRequireDefault(_eyeOff);
+
+var _eye = __webpack_require__(152);
+
+var _eye2 = _interopRequireDefault(_eye);
+
+var _facebook = __webpack_require__(153);
+
+var _facebook2 = _interopRequireDefault(_facebook);
+
+var _fastForward = __webpack_require__(154);
+
+var _fastForward2 = _interopRequireDefault(_fastForward);
+
+var _feather = __webpack_require__(155);
+
+var _feather2 = _interopRequireDefault(_feather);
+
+var _fileMinus = __webpack_require__(156);
+
+var _fileMinus2 = _interopRequireDefault(_fileMinus);
+
+var _filePlus = __webpack_require__(157);
+
+var _filePlus2 = _interopRequireDefault(_filePlus);
+
+var _fileText = __webpack_require__(158);
+
+var _fileText2 = _interopRequireDefault(_fileText);
+
+var _file = __webpack_require__(159);
+
+var _file2 = _interopRequireDefault(_file);
+
+var _film = __webpack_require__(160);
+
+var _film2 = _interopRequireDefault(_film);
+
+var _filter = __webpack_require__(161);
+
+var _filter2 = _interopRequireDefault(_filter);
+
+var _flag = __webpack_require__(162);
+
+var _flag2 = _interopRequireDefault(_flag);
+
+var _folderMinus = __webpack_require__(163);
+
+var _folderMinus2 = _interopRequireDefault(_folderMinus);
+
+var _folderPlus = __webpack_require__(164);
+
+var _folderPlus2 = _interopRequireDefault(_folderPlus);
+
+var _folder = __webpack_require__(165);
+
+var _folder2 = _interopRequireDefault(_folder);
+
+var _gift = __webpack_require__(166);
+
+var _gift2 = _interopRequireDefault(_gift);
+
+var _gitBranch = __webpack_require__(167);
+
+var _gitBranch2 = _interopRequireDefault(_gitBranch);
+
+var _gitCommit = __webpack_require__(168);
+
+var _gitCommit2 = _interopRequireDefault(_gitCommit);
+
+var _gitMerge = __webpack_require__(169);
+
+var _gitMerge2 = _interopRequireDefault(_gitMerge);
+
+var _gitPullRequest = __webpack_require__(170);
+
+var _gitPullRequest2 = _interopRequireDefault(_gitPullRequest);
+
+var _github = __webpack_require__(171);
+
+var _github2 = _interopRequireDefault(_github);
+
+var _gitlab = __webpack_require__(172);
+
+var _gitlab2 = _interopRequireDefault(_gitlab);
+
+var _globe = __webpack_require__(173);
+
+var _globe2 = _interopRequireDefault(_globe);
+
+var _grid = __webpack_require__(174);
+
+var _grid2 = _interopRequireDefault(_grid);
+
+var _hardDrive = __webpack_require__(175);
+
+var _hardDrive2 = _interopRequireDefault(_hardDrive);
+
+var _hash = __webpack_require__(176);
+
+var _hash2 = _interopRequireDefault(_hash);
+
+var _headphones = __webpack_require__(177);
+
+var _headphones2 = _interopRequireDefault(_headphones);
+
+var _heart = __webpack_require__(178);
+
+var _heart2 = _interopRequireDefault(_heart);
+
+var _helpCircle = __webpack_require__(179);
+
+var _helpCircle2 = _interopRequireDefault(_helpCircle);
+
+var _home = __webpack_require__(180);
+
+var _home2 = _interopRequireDefault(_home);
+
+var _image = __webpack_require__(181);
+
+var _image2 = _interopRequireDefault(_image);
+
+var _inbox = __webpack_require__(182);
+
+var _inbox2 = _interopRequireDefault(_inbox);
+
+var _info = __webpack_require__(183);
+
+var _info2 = _interopRequireDefault(_info);
+
+var _instagram = __webpack_require__(184);
+
+var _instagram2 = _interopRequireDefault(_instagram);
+
+var _italic = __webpack_require__(185);
+
+var _italic2 = _interopRequireDefault(_italic);
+
+var _layers = __webpack_require__(186);
+
+var _layers2 = _interopRequireDefault(_layers);
+
+var _layout = __webpack_require__(187);
+
+var _layout2 = _interopRequireDefault(_layout);
+
+var _lifeBuoy = __webpack_require__(188);
+
+var _lifeBuoy2 = _interopRequireDefault(_lifeBuoy);
+
+var _link = __webpack_require__(189);
+
+var _link2 = _interopRequireDefault(_link);
+
+var _link3 = __webpack_require__(190);
+
+var _link4 = _interopRequireDefault(_link3);
+
+var _linkedin = __webpack_require__(191);
+
+var _linkedin2 = _interopRequireDefault(_linkedin);
+
+var _list = __webpack_require__(192);
+
+var _list2 = _interopRequireDefault(_list);
+
+var _loader = __webpack_require__(193);
+
+var _loader2 = _interopRequireDefault(_loader);
+
+var _lock = __webpack_require__(194);
+
+var _lock2 = _interopRequireDefault(_lock);
+
+var _logIn = __webpack_require__(195);
+
+var _logIn2 = _interopRequireDefault(_logIn);
+
+var _logOut = __webpack_require__(196);
+
+var _logOut2 = _interopRequireDefault(_logOut);
+
+var _mail = __webpack_require__(197);
+
+var _mail2 = _interopRequireDefault(_mail);
+
+var _mapPin = __webpack_require__(198);
+
+var _mapPin2 = _interopRequireDefault(_mapPin);
+
+var _map = __webpack_require__(199);
+
+var _map2 = _interopRequireDefault(_map);
+
+var _maximize = __webpack_require__(200);
+
+var _maximize2 = _interopRequireDefault(_maximize);
+
+var _maximize3 = __webpack_require__(201);
+
+var _maximize4 = _interopRequireDefault(_maximize3);
+
+var _menu = __webpack_require__(202);
+
+var _menu2 = _interopRequireDefault(_menu);
+
+var _messageCircle = __webpack_require__(203);
+
+var _messageCircle2 = _interopRequireDefault(_messageCircle);
+
+var _messageSquare = __webpack_require__(204);
+
+var _messageSquare2 = _interopRequireDefault(_messageSquare);
+
+var _micOff = __webpack_require__(205);
+
+var _micOff2 = _interopRequireDefault(_micOff);
+
+var _mic = __webpack_require__(206);
+
+var _mic2 = _interopRequireDefault(_mic);
+
+var _minimize = __webpack_require__(207);
+
+var _minimize2 = _interopRequireDefault(_minimize);
+
+var _minimize3 = __webpack_require__(208);
+
+var _minimize4 = _interopRequireDefault(_minimize3);
+
+var _minusCircle = __webpack_require__(209);
+
+var _minusCircle2 = _interopRequireDefault(_minusCircle);
+
+var _minusSquare = __webpack_require__(210);
+
+var _minusSquare2 = _interopRequireDefault(_minusSquare);
+
+var _minus = __webpack_require__(211);
+
+var _minus2 = _interopRequireDefault(_minus);
+
+var _monitor = __webpack_require__(212);
+
+var _monitor2 = _interopRequireDefault(_monitor);
+
+var _moon = __webpack_require__(213);
+
+var _moon2 = _interopRequireDefault(_moon);
+
+var _moreHorizontal = __webpack_require__(214);
+
+var _moreHorizontal2 = _interopRequireDefault(_moreHorizontal);
+
+var _moreVertical = __webpack_require__(215);
+
+var _moreVertical2 = _interopRequireDefault(_moreVertical);
+
+var _move = __webpack_require__(216);
+
+var _move2 = _interopRequireDefault(_move);
+
+var _music = __webpack_require__(217);
+
+var _music2 = _interopRequireDefault(_music);
+
+var _navigation = __webpack_require__(218);
+
+var _navigation2 = _interopRequireDefault(_navigation);
+
+var _navigation3 = __webpack_require__(219);
+
+var _navigation4 = _interopRequireDefault(_navigation3);
+
+var _octagon = __webpack_require__(220);
+
+var _octagon2 = _interopRequireDefault(_octagon);
+
+var _package = __webpack_require__(221);
+
+var _package2 = _interopRequireDefault(_package);
+
+var _paperclip = __webpack_require__(222);
+
+var _paperclip2 = _interopRequireDefault(_paperclip);
+
+var _pauseCircle = __webpack_require__(223);
+
+var _pauseCircle2 = _interopRequireDefault(_pauseCircle);
+
+var _pause = __webpack_require__(224);
+
+var _pause2 = _interopRequireDefault(_pause);
+
+var _percent = __webpack_require__(225);
+
+var _percent2 = _interopRequireDefault(_percent);
+
+var _phoneCall = __webpack_require__(226);
+
+var _phoneCall2 = _interopRequireDefault(_phoneCall);
+
+var _phoneForwarded = __webpack_require__(227);
+
+var _phoneForwarded2 = _interopRequireDefault(_phoneForwarded);
+
+var _phoneIncoming = __webpack_require__(228);
+
+var _phoneIncoming2 = _interopRequireDefault(_phoneIncoming);
+
+var _phoneMissed = __webpack_require__(229);
+
+var _phoneMissed2 = _interopRequireDefault(_phoneMissed);
+
+var _phoneOff = __webpack_require__(230);
+
+var _phoneOff2 = _interopRequireDefault(_phoneOff);
+
+var _phoneOutgoing = __webpack_require__(231);
+
+var _phoneOutgoing2 = _interopRequireDefault(_phoneOutgoing);
+
+var _phone = __webpack_require__(232);
+
+var _phone2 = _interopRequireDefault(_phone);
+
+var _pieChart = __webpack_require__(233);
+
+var _pieChart2 = _interopRequireDefault(_pieChart);
+
+var _playCircle = __webpack_require__(234);
+
+var _playCircle2 = _interopRequireDefault(_playCircle);
+
+var _play = __webpack_require__(235);
+
+var _play2 = _interopRequireDefault(_play);
+
+var _plusCircle = __webpack_require__(236);
+
+var _plusCircle2 = _interopRequireDefault(_plusCircle);
+
+var _plusSquare = __webpack_require__(237);
+
+var _plusSquare2 = _interopRequireDefault(_plusSquare);
+
+var _plus = __webpack_require__(238);
+
+var _plus2 = _interopRequireDefault(_plus);
+
+var _pocket = __webpack_require__(239);
+
+var _pocket2 = _interopRequireDefault(_pocket);
+
+var _power = __webpack_require__(240);
+
+var _power2 = _interopRequireDefault(_power);
+
+var _printer = __webpack_require__(241);
+
+var _printer2 = _interopRequireDefault(_printer);
+
+var _radio = __webpack_require__(242);
+
+var _radio2 = _interopRequireDefault(_radio);
+
+var _refreshCcw = __webpack_require__(243);
+
+var _refreshCcw2 = _interopRequireDefault(_refreshCcw);
+
+var _refreshCw = __webpack_require__(244);
+
+var _refreshCw2 = _interopRequireDefault(_refreshCw);
+
+var _repeat = __webpack_require__(245);
+
+var _repeat2 = _interopRequireDefault(_repeat);
+
+var _rewind = __webpack_require__(246);
+
+var _rewind2 = _interopRequireDefault(_rewind);
+
+var _rotateCcw = __webpack_require__(247);
+
+var _rotateCcw2 = _interopRequireDefault(_rotateCcw);
+
+var _rotateCw = __webpack_require__(248);
+
+var _rotateCw2 = _interopRequireDefault(_rotateCw);
+
+var _rss = __webpack_require__(249);
+
+var _rss2 = _interopRequireDefault(_rss);
+
+var _save = __webpack_require__(250);
+
+var _save2 = _interopRequireDefault(_save);
+
+var _scissors = __webpack_require__(251);
+
+var _scissors2 = _interopRequireDefault(_scissors);
+
+var _search = __webpack_require__(252);
+
+var _search2 = _interopRequireDefault(_search);
+
+var _send = __webpack_require__(253);
+
+var _send2 = _interopRequireDefault(_send);
+
+var _server = __webpack_require__(254);
+
+var _server2 = _interopRequireDefault(_server);
+
+var _settings = __webpack_require__(255);
+
+var _settings2 = _interopRequireDefault(_settings);
+
+var _share = __webpack_require__(256);
+
+var _share2 = _interopRequireDefault(_share);
+
+var _share3 = __webpack_require__(257);
+
+var _share4 = _interopRequireDefault(_share3);
+
+var _shieldOff = __webpack_require__(258);
+
+var _shieldOff2 = _interopRequireDefault(_shieldOff);
+
+var _shield = __webpack_require__(259);
+
+var _shield2 = _interopRequireDefault(_shield);
+
+var _shoppingBag = __webpack_require__(260);
+
+var _shoppingBag2 = _interopRequireDefault(_shoppingBag);
+
+var _shoppingCart = __webpack_require__(261);
+
+var _shoppingCart2 = _interopRequireDefault(_shoppingCart);
+
+var _shuffle = __webpack_require__(262);
+
+var _shuffle2 = _interopRequireDefault(_shuffle);
+
+var _sidebar = __webpack_require__(263);
+
+var _sidebar2 = _interopRequireDefault(_sidebar);
+
+var _skipBack = __webpack_require__(264);
+
+var _skipBack2 = _interopRequireDefault(_skipBack);
+
+var _skipForward = __webpack_require__(265);
+
+var _skipForward2 = _interopRequireDefault(_skipForward);
+
+var _slack = __webpack_require__(266);
+
+var _slack2 = _interopRequireDefault(_slack);
+
+var _slash = __webpack_require__(267);
+
+var _slash2 = _interopRequireDefault(_slash);
+
+var _sliders = __webpack_require__(268);
+
+var _sliders2 = _interopRequireDefault(_sliders);
+
+var _smartphone = __webpack_require__(269);
+
+var _smartphone2 = _interopRequireDefault(_smartphone);
+
+var _speaker = __webpack_require__(270);
+
+var _speaker2 = _interopRequireDefault(_speaker);
+
+var _square = __webpack_require__(271);
+
+var _square2 = _interopRequireDefault(_square);
+
+var _star = __webpack_require__(272);
+
+var _star2 = _interopRequireDefault(_star);
+
+var _stopCircle = __webpack_require__(273);
+
+var _stopCircle2 = _interopRequireDefault(_stopCircle);
+
+var _sun = __webpack_require__(274);
+
+var _sun2 = _interopRequireDefault(_sun);
+
+var _sunrise = __webpack_require__(275);
+
+var _sunrise2 = _interopRequireDefault(_sunrise);
+
+var _sunset = __webpack_require__(276);
+
+var _sunset2 = _interopRequireDefault(_sunset);
+
+var _tablet = __webpack_require__(277);
+
+var _tablet2 = _interopRequireDefault(_tablet);
+
+var _tag = __webpack_require__(278);
+
+var _tag2 = _interopRequireDefault(_tag);
+
+var _target = __webpack_require__(279);
+
+var _target2 = _interopRequireDefault(_target);
+
+var _terminal = __webpack_require__(280);
+
+var _terminal2 = _interopRequireDefault(_terminal);
+
+var _thermometer = __webpack_require__(281);
+
+var _thermometer2 = _interopRequireDefault(_thermometer);
+
+var _thumbsDown = __webpack_require__(282);
+
+var _thumbsDown2 = _interopRequireDefault(_thumbsDown);
+
+var _thumbsUp = __webpack_require__(283);
+
+var _thumbsUp2 = _interopRequireDefault(_thumbsUp);
+
+var _toggleLeft = __webpack_require__(284);
+
+var _toggleLeft2 = _interopRequireDefault(_toggleLeft);
+
+var _toggleRight = __webpack_require__(285);
+
+var _toggleRight2 = _interopRequireDefault(_toggleRight);
+
+var _trash = __webpack_require__(286);
+
+var _trash2 = _interopRequireDefault(_trash);
+
+var _trash3 = __webpack_require__(287);
+
+var _trash4 = _interopRequireDefault(_trash3);
+
+var _trendingDown = __webpack_require__(288);
+
+var _trendingDown2 = _interopRequireDefault(_trendingDown);
+
+var _trendingUp = __webpack_require__(289);
+
+var _trendingUp2 = _interopRequireDefault(_trendingUp);
+
+var _triangle = __webpack_require__(290);
+
+var _triangle2 = _interopRequireDefault(_triangle);
+
+var _truck = __webpack_require__(291);
+
+var _truck2 = _interopRequireDefault(_truck);
+
+var _tv = __webpack_require__(292);
+
+var _tv2 = _interopRequireDefault(_tv);
+
+var _twitter = __webpack_require__(293);
+
+var _twitter2 = _interopRequireDefault(_twitter);
+
+var _type = __webpack_require__(294);
+
+var _type2 = _interopRequireDefault(_type);
+
+var _umbrella = __webpack_require__(295);
+
+var _umbrella2 = _interopRequireDefault(_umbrella);
+
+var _underline = __webpack_require__(296);
+
+var _underline2 = _interopRequireDefault(_underline);
+
+var _unlock = __webpack_require__(297);
+
+var _unlock2 = _interopRequireDefault(_unlock);
+
+var _uploadCloud = __webpack_require__(298);
+
+var _uploadCloud2 = _interopRequireDefault(_uploadCloud);
+
+var _upload = __webpack_require__(299);
+
+var _upload2 = _interopRequireDefault(_upload);
+
+var _userCheck = __webpack_require__(300);
+
+var _userCheck2 = _interopRequireDefault(_userCheck);
+
+var _userMinus = __webpack_require__(301);
+
+var _userMinus2 = _interopRequireDefault(_userMinus);
+
+var _userPlus = __webpack_require__(302);
+
+var _userPlus2 = _interopRequireDefault(_userPlus);
+
+var _userX = __webpack_require__(303);
+
+var _userX2 = _interopRequireDefault(_userX);
+
+var _user = __webpack_require__(304);
+
+var _user2 = _interopRequireDefault(_user);
+
+var _users = __webpack_require__(305);
+
+var _users2 = _interopRequireDefault(_users);
+
+var _videoOff = __webpack_require__(306);
+
+var _videoOff2 = _interopRequireDefault(_videoOff);
+
+var _video = __webpack_require__(307);
+
+var _video2 = _interopRequireDefault(_video);
+
+var _voicemail = __webpack_require__(308);
+
+var _voicemail2 = _interopRequireDefault(_voicemail);
+
+var _volume = __webpack_require__(309);
+
+var _volume2 = _interopRequireDefault(_volume);
+
+var _volume3 = __webpack_require__(310);
+
+var _volume4 = _interopRequireDefault(_volume3);
+
+var _volumeX = __webpack_require__(311);
+
+var _volumeX2 = _interopRequireDefault(_volumeX);
+
+var _volume5 = __webpack_require__(312);
+
+var _volume6 = _interopRequireDefault(_volume5);
+
+var _watch = __webpack_require__(313);
+
+var _watch2 = _interopRequireDefault(_watch);
+
+var _wifiOff = __webpack_require__(314);
+
+var _wifiOff2 = _interopRequireDefault(_wifiOff);
+
+var _wifi = __webpack_require__(315);
+
+var _wifi2 = _interopRequireDefault(_wifi);
+
+var _wind = __webpack_require__(316);
+
+var _wind2 = _interopRequireDefault(_wind);
+
+var _xCircle = __webpack_require__(317);
+
+var _xCircle2 = _interopRequireDefault(_xCircle);
+
+var _xSquare = __webpack_require__(318);
+
+var _xSquare2 = _interopRequireDefault(_xSquare);
+
+var _x = __webpack_require__(319);
+
+var _x2 = _interopRequireDefault(_x);
+
+var _youtube = __webpack_require__(320);
+
+var _youtube2 = _interopRequireDefault(_youtube);
+
+var _zapOff = __webpack_require__(321);
+
+var _zapOff2 = _interopRequireDefault(_zapOff);
+
+var _zap = __webpack_require__(322);
+
+var _zap2 = _interopRequireDefault(_zap);
+
+var _zoomIn = __webpack_require__(323);
+
+var _zoomIn2 = _interopRequireDefault(_zoomIn);
+
+var _zoomOut = __webpack_require__(324);
+
+var _zoomOut2 = _interopRequireDefault(_zoomOut);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Activity = _activity2.default;
+exports.Airplay = _airplay2.default;
+exports.AlertCircle = _alertCircle2.default;
+exports.AlertOctagon = _alertOctagon2.default;
+exports.AlertTriangle = _alertTriangle2.default;
+exports.AlignCenter = _alignCenter2.default;
+exports.AlignJustify = _alignJustify2.default;
+exports.AlignLeft = _alignLeft2.default;
+exports.AlignRight = _alignRight2.default;
+exports.Anchor = _anchor2.default;
+exports.Aperture = _aperture2.default;
+exports.Archive = _archive2.default;
+exports.ArrowDownCircle = _arrowDownCircle2.default;
+exports.ArrowDownLeft = _arrowDownLeft2.default;
+exports.ArrowDownRight = _arrowDownRight2.default;
+exports.ArrowDown = _arrowDown2.default;
+exports.ArrowLeftCircle = _arrowLeftCircle2.default;
+exports.ArrowLeft = _arrowLeft2.default;
+exports.ArrowRightCircle = _arrowRightCircle2.default;
+exports.ArrowRight = _arrowRight2.default;
+exports.ArrowUpCircle = _arrowUpCircle2.default;
+exports.ArrowUpLeft = _arrowUpLeft2.default;
+exports.ArrowUpRight = _arrowUpRight2.default;
+exports.ArrowUp = _arrowUp2.default;
+exports.AtSign = _atSign2.default;
+exports.Award = _award2.default;
+exports.BarChart2 = _barChart2.default;
+exports.BarChart = _barChart4.default;
+exports.BatteryCharging = _batteryCharging2.default;
+exports.Battery = _battery2.default;
+exports.BellOff = _bellOff2.default;
+exports.Bell = _bell2.default;
+exports.Bluetooth = _bluetooth2.default;
+exports.Bold = _bold2.default;
+exports.BookOpen = _bookOpen2.default;
+exports.Book = _book2.default;
+exports.Bookmark = _bookmark2.default;
+exports.Box = _box2.default;
+exports.Briefcase = _briefcase2.default;
+exports.Calendar = _calendar2.default;
+exports.CameraOff = _cameraOff2.default;
+exports.Camera = _camera2.default;
+exports.Cast = _cast2.default;
+exports.CheckCircle = _checkCircle2.default;
+exports.CheckSquare = _checkSquare2.default;
+exports.Check = _check2.default;
+exports.ChevronDown = _chevronDown2.default;
+exports.ChevronLeft = _chevronLeft2.default;
+exports.ChevronRight = _chevronRight2.default;
+exports.ChevronUp = _chevronUp2.default;
+exports.ChevronsDown = _chevronsDown2.default;
+exports.ChevronsLeft = _chevronsLeft2.default;
+exports.ChevronsRight = _chevronsRight2.default;
+exports.ChevronsUp = _chevronsUp2.default;
+exports.Chrome = _chrome2.default;
+exports.Circle = _circle2.default;
+exports.Clipboard = _clipboard2.default;
+exports.Clock = _clock2.default;
+exports.CloudDrizzle = _cloudDrizzle2.default;
+exports.CloudLightning = _cloudLightning2.default;
+exports.CloudOff = _cloudOff2.default;
+exports.CloudRain = _cloudRain2.default;
+exports.CloudSnow = _cloudSnow2.default;
+exports.Cloud = _cloud2.default;
+exports.Code = _code2.default;
+exports.Codepen = _codepen2.default;
+exports.Command = _command2.default;
+exports.Compass = _compass2.default;
+exports.Copy = _copy2.default;
+exports.CornerDownLeft = _cornerDownLeft2.default;
+exports.CornerDownRight = _cornerDownRight2.default;
+exports.CornerLeftDown = _cornerLeftDown2.default;
+exports.CornerLeftUp = _cornerLeftUp2.default;
+exports.CornerRightDown = _cornerRightDown2.default;
+exports.CornerRightUp = _cornerRightUp2.default;
+exports.CornerUpLeft = _cornerUpLeft2.default;
+exports.CornerUpRight = _cornerUpRight2.default;
+exports.Cpu = _cpu2.default;
+exports.CreditCard = _creditCard2.default;
+exports.Crop = _crop2.default;
+exports.Crosshair = _crosshair2.default;
+exports.Database = _database2.default;
+exports.Delete = _delete2.default;
+exports.Disc = _disc2.default;
+exports.DollarSign = _dollarSign2.default;
+exports.DownloadCloud = _downloadCloud2.default;
+exports.Download = _download2.default;
+exports.Droplet = _droplet2.default;
+exports.Edit2 = _edit2.default;
+exports.Edit3 = _edit4.default;
+exports.Edit = _edit6.default;
+exports.ExternalLink = _externalLink2.default;
+exports.EyeOff = _eyeOff2.default;
+exports.Eye = _eye2.default;
+exports.Facebook = _facebook2.default;
+exports.FastForward = _fastForward2.default;
+exports.Feather = _feather2.default;
+exports.FileMinus = _fileMinus2.default;
+exports.FilePlus = _filePlus2.default;
+exports.FileText = _fileText2.default;
+exports.File = _file2.default;
+exports.Film = _film2.default;
+exports.Filter = _filter2.default;
+exports.Flag = _flag2.default;
+exports.FolderMinus = _folderMinus2.default;
+exports.FolderPlus = _folderPlus2.default;
+exports.Folder = _folder2.default;
+exports.Gift = _gift2.default;
+exports.GitBranch = _gitBranch2.default;
+exports.GitCommit = _gitCommit2.default;
+exports.GitMerge = _gitMerge2.default;
+exports.GitPullRequest = _gitPullRequest2.default;
+exports.GitHub = _github2.default;
+exports.Gitlab = _gitlab2.default;
+exports.Globe = _globe2.default;
+exports.Grid = _grid2.default;
+exports.HardDrive = _hardDrive2.default;
+exports.Hash = _hash2.default;
+exports.Headphones = _headphones2.default;
+exports.Heart = _heart2.default;
+exports.HelpCircle = _helpCircle2.default;
+exports.Home = _home2.default;
+exports.Image = _image2.default;
+exports.Inbox = _inbox2.default;
+exports.Info = _info2.default;
+exports.Instagram = _instagram2.default;
+exports.Italic = _italic2.default;
+exports.Layers = _layers2.default;
+exports.Layout = _layout2.default;
+exports.LifeBuoy = _lifeBuoy2.default;
+exports.Link2 = _link2.default;
+exports.Link = _link4.default;
+exports.Linkedin = _linkedin2.default;
+exports.List = _list2.default;
+exports.Loader = _loader2.default;
+exports.Lock = _lock2.default;
+exports.LogIn = _logIn2.default;
+exports.LogOut = _logOut2.default;
+exports.Mail = _mail2.default;
+exports.MapPin = _mapPin2.default;
+exports.Map = _map2.default;
+exports.Maximize2 = _maximize2.default;
+exports.Maximize = _maximize4.default;
+exports.Menu = _menu2.default;
+exports.MessageCircle = _messageCircle2.default;
+exports.MessageSquare = _messageSquare2.default;
+exports.MicOff = _micOff2.default;
+exports.Mic = _mic2.default;
+exports.Minimize2 = _minimize2.default;
+exports.Minimize = _minimize4.default;
+exports.MinusCircle = _minusCircle2.default;
+exports.MinusSquare = _minusSquare2.default;
+exports.Minus = _minus2.default;
+exports.Monitor = _monitor2.default;
+exports.Moon = _moon2.default;
+exports.MoreHorizontal = _moreHorizontal2.default;
+exports.MoreVertical = _moreVertical2.default;
+exports.Move = _move2.default;
+exports.Music = _music2.default;
+exports.Navigation2 = _navigation2.default;
+exports.Navigation = _navigation4.default;
+exports.Octagon = _octagon2.default;
+exports.Package = _package2.default;
+exports.Paperclip = _paperclip2.default;
+exports.PauseCircle = _pauseCircle2.default;
+exports.Pause = _pause2.default;
+exports.Percent = _percent2.default;
+exports.PhoneCall = _phoneCall2.default;
+exports.PhoneForwarded = _phoneForwarded2.default;
+exports.PhoneIncoming = _phoneIncoming2.default;
+exports.PhoneMissed = _phoneMissed2.default;
+exports.PhoneOff = _phoneOff2.default;
+exports.PhoneOutgoing = _phoneOutgoing2.default;
+exports.Phone = _phone2.default;
+exports.PieChart = _pieChart2.default;
+exports.PlayCircle = _playCircle2.default;
+exports.Play = _play2.default;
+exports.PlusCircle = _plusCircle2.default;
+exports.PlusSquare = _plusSquare2.default;
+exports.Plus = _plus2.default;
+exports.Pocket = _pocket2.default;
+exports.Power = _power2.default;
+exports.Printer = _printer2.default;
+exports.Radio = _radio2.default;
+exports.RefreshCcw = _refreshCcw2.default;
+exports.RefreshCw = _refreshCw2.default;
+exports.Repeat = _repeat2.default;
+exports.Rewind = _rewind2.default;
+exports.RotateCcw = _rotateCcw2.default;
+exports.RotateCw = _rotateCw2.default;
+exports.Rss = _rss2.default;
+exports.Save = _save2.default;
+exports.Scissors = _scissors2.default;
+exports.Search = _search2.default;
+exports.Send = _send2.default;
+exports.Server = _server2.default;
+exports.Settings = _settings2.default;
+exports.Share2 = _share2.default;
+exports.Share = _share4.default;
+exports.ShieldOff = _shieldOff2.default;
+exports.Shield = _shield2.default;
+exports.ShoppingBag = _shoppingBag2.default;
+exports.ShoppingCart = _shoppingCart2.default;
+exports.Shuffle = _shuffle2.default;
+exports.Sidebar = _sidebar2.default;
+exports.SkipBack = _skipBack2.default;
+exports.SkipForward = _skipForward2.default;
+exports.Slack = _slack2.default;
+exports.Slash = _slash2.default;
+exports.Sliders = _sliders2.default;
+exports.Smartphone = _smartphone2.default;
+exports.Speaker = _speaker2.default;
+exports.Square = _square2.default;
+exports.Star = _star2.default;
+exports.StopCircle = _stopCircle2.default;
+exports.Sun = _sun2.default;
+exports.Sunrise = _sunrise2.default;
+exports.Sunset = _sunset2.default;
+exports.Tablet = _tablet2.default;
+exports.Tag = _tag2.default;
+exports.Target = _target2.default;
+exports.Terminal = _terminal2.default;
+exports.Thermometer = _thermometer2.default;
+exports.ThumbsDown = _thumbsDown2.default;
+exports.ThumbsUp = _thumbsUp2.default;
+exports.ToggleLeft = _toggleLeft2.default;
+exports.ToggleRight = _toggleRight2.default;
+exports.Trash2 = _trash2.default;
+exports.Trash = _trash4.default;
+exports.TrendingDown = _trendingDown2.default;
+exports.TrendingUp = _trendingUp2.default;
+exports.Triangle = _triangle2.default;
+exports.Truck = _truck2.default;
+exports.Tv = _tv2.default;
+exports.Twitter = _twitter2.default;
+exports.Type = _type2.default;
+exports.Umbrella = _umbrella2.default;
+exports.Underline = _underline2.default;
+exports.Unlock = _unlock2.default;
+exports.UploadCloud = _uploadCloud2.default;
+exports.Upload = _upload2.default;
+exports.UserCheck = _userCheck2.default;
+exports.UserMinus = _userMinus2.default;
+exports.UserPlus = _userPlus2.default;
+exports.UserX = _userX2.default;
+exports.User = _user2.default;
+exports.Users = _users2.default;
+exports.VideoOff = _videoOff2.default;
+exports.Video = _video2.default;
+exports.Voicemail = _voicemail2.default;
+exports.Volume1 = _volume2.default;
+exports.Volume2 = _volume4.default;
+exports.VolumeX = _volumeX2.default;
+exports.Volume = _volume6.default;
+exports.Watch = _watch2.default;
+exports.WifiOff = _wifiOff2.default;
+exports.Wifi = _wifi2.default;
+exports.Wind = _wind2.default;
+exports.XCircle = _xCircle2.default;
+exports.XSquare = _xSquare2.default;
+exports.X = _x2.default;
+exports.Youtube = _youtube2.default;
+exports.ZapOff = _zapOff2.default;
+exports.Zap = _zap2.default;
+exports.ZoomIn = _zoomIn2.default;
+exports.ZoomOut = _zoomOut2.default;
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Activity = function Activity(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '22 12 18 12 15 21 9 3 6 12 2 12' })
+  );
+};
+
+Activity.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Activity.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Activity;
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var assign = __webpack_require__(12);
+
+var ReactPropTypesSecret = __webpack_require__(42);
+var checkPropTypes = __webpack_require__(13);
+
+var printWarning = function() {};
+
+if (true) {
+  printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+
+function emptyFunctionThatReturnsNull() {
+  return null;
+}
+
+module.exports = function(isValidElement, throwOnDirectAccess) {
+  /* global Symbol */
+  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
+  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
+
+  /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */
+  function getIteratorFn(maybeIterable) {
+    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+    if (typeof iteratorFn === 'function') {
+      return iteratorFn;
+    }
+  }
+
+  /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null && typeof propValue !== 'string' &&
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */
+
+  var ANONYMOUS = '<<anonymous>>';
+
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+  var ReactPropTypes = {
+    array: createPrimitiveTypeChecker('array'),
+    bool: createPrimitiveTypeChecker('boolean'),
+    func: createPrimitiveTypeChecker('function'),
+    number: createPrimitiveTypeChecker('number'),
+    object: createPrimitiveTypeChecker('object'),
+    string: createPrimitiveTypeChecker('string'),
+    symbol: createPrimitiveTypeChecker('symbol'),
+
+    any: createAnyTypeChecker(),
+    arrayOf: createArrayOfTypeChecker,
+    element: createElementTypeChecker(),
+    instanceOf: createInstanceTypeChecker,
+    node: createNodeChecker(),
+    objectOf: createObjectOfTypeChecker,
+    oneOf: createEnumTypeChecker,
+    oneOfType: createUnionTypeChecker,
+    shape: createShapeTypeChecker,
+    exact: createStrictShapeTypeChecker,
+  };
+
+  /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */
+  /*eslint-disable no-self-compare*/
+  function is(x, y) {
+    // SameValue algorithm
+    if (x === y) {
+      // Steps 1-5, 7-10
+      // Steps 6.b-6.e: +0 != -0
+      return x !== 0 || 1 / x === 1 / y;
+    } else {
+      // Step 6.a: NaN == NaN
+      return x !== x && y !== y;
+    }
+  }
+  /*eslint-enable no-self-compare*/
+
+  /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is prohibitively expensive if they are created too often, such as what
+   * happens in oneOfType() for any type before the one that matched.
+   */
+  function PropTypeError(message) {
+    this.message = message;
+    this.stack = '';
+  }
+  // Make `instanceof Error` still work for returned errors.
+  PropTypeError.prototype = Error.prototype;
+
+  function createChainableTypeChecker(validate) {
+    if (true) {
+      var manualPropTypeCallCache = {};
+      var manualPropTypeWarningCount = 0;
+    }
+    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+      componentName = componentName || ANONYMOUS;
+      propFullName = propFullName || propName;
+
+      if (secret !== ReactPropTypesSecret) {
+        if (throwOnDirectAccess) {
+          // New behavior only for users of `prop-types` package
+          var err = new Error(
+            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+            'Use `PropTypes.checkPropTypes()` to call them. ' +
+            'Read more at http://fb.me/use-check-prop-types'
+          );
+          err.name = 'Invariant Violation';
+          throw err;
+        } else if ("development" !== 'production' && typeof console !== 'undefined') {
+          // Old behavior for people using React.PropTypes
+          var cacheKey = componentName + ':' + propName;
+          if (
+            !manualPropTypeCallCache[cacheKey] &&
+            // Avoid spamming the console because they are often not actionable except for lib authors
+            manualPropTypeWarningCount < 3
+          ) {
+            printWarning(
+              'You are manually calling a React.PropTypes validation ' +
+              'function for the `' + propFullName + '` prop on `' + componentName  + '`. This is deprecated ' +
+              'and will throw in the standalone `prop-types` package. ' +
+              'You may be seeing this warning due to a third-party PropTypes ' +
+              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
+            );
+            manualPropTypeCallCache[cacheKey] = true;
+            manualPropTypeWarningCount++;
+          }
+        }
+      }
+      if (props[propName] == null) {
+        if (isRequired) {
+          if (props[propName] === null) {
+            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
+          }
+          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
+        }
+        return null;
+      } else {
+        return validate(props, propName, componentName, location, propFullName);
+      }
+    }
+
+    var chainedCheckType = checkType.bind(null, false);
+    chainedCheckType.isRequired = checkType.bind(null, true);
+
+    return chainedCheckType;
+  }
+
+  function createPrimitiveTypeChecker(expectedType) {
+    function validate(props, propName, componentName, location, propFullName, secret) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== expectedType) {
+        // `propValue` being instance of, say, date/regexp, pass the 'object'
+        // check, but we can offer a more precise error message here rather than
+        // 'of type `object`'.
+        var preciseType = getPreciseType(propValue);
+
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createAnyTypeChecker() {
+    return createChainableTypeChecker(emptyFunctionThatReturnsNull);
+  }
+
+  function createArrayOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
+      }
+      var propValue = props[propName];
+      if (!Array.isArray(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
+      }
+      for (var i = 0; i < propValue.length; i++) {
+        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+        if (error instanceof Error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createElementTypeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      if (!isValidElement(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createInstanceTypeChecker(expectedClass) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!(props[propName] instanceof expectedClass)) {
+        var expectedClassName = expectedClass.name || ANONYMOUS;
+        var actualClassName = getClassName(props[propName]);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createEnumTypeChecker(expectedValues) {
+    if (!Array.isArray(expectedValues)) {
+       true ? printWarning('Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
+      return emptyFunctionThatReturnsNull;
+    }
+
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      for (var i = 0; i < expectedValues.length; i++) {
+        if (is(propValue, expectedValues[i])) {
+          return null;
+        }
+      }
+
+      var valuesString = JSON.stringify(expectedValues);
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createObjectOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
+      }
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
+      }
+      for (var key in propValue) {
+        if (propValue.hasOwnProperty(key)) {
+          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+          if (error instanceof Error) {
+            return error;
+          }
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createUnionTypeChecker(arrayOfTypeCheckers) {
+    if (!Array.isArray(arrayOfTypeCheckers)) {
+       true ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
+      return emptyFunctionThatReturnsNull;
+    }
+
+    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+      var checker = arrayOfTypeCheckers[i];
+      if (typeof checker !== 'function') {
+        printWarning(
+          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
+          'received ' + getPostfixForTypeWarning(checker) + ' at index ' + i + '.'
+        );
+        return emptyFunctionThatReturnsNull;
+      }
+    }
+
+    function validate(props, propName, componentName, location, propFullName) {
+      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+        var checker = arrayOfTypeCheckers[i];
+        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+          return null;
+        }
+      }
+
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createNodeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!isNode(props[propName])) {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      for (var key in shapeTypes) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          continue;
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createStrictShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      // We need to check all keys in case some are required but missing from
+      // props.
+      var allKeys = assign({}, props[propName], shapeTypes);
+      for (var key in allKeys) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          return new PropTypeError(
+            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
+            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
+            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+          );
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+
+    return createChainableTypeChecker(validate);
+  }
+
+  function isNode(propValue) {
+    switch (typeof propValue) {
+      case 'number':
+      case 'string':
+      case 'undefined':
+        return true;
+      case 'boolean':
+        return !propValue;
+      case 'object':
+        if (Array.isArray(propValue)) {
+          return propValue.every(isNode);
+        }
+        if (propValue === null || isValidElement(propValue)) {
+          return true;
+        }
+
+        var iteratorFn = getIteratorFn(propValue);
+        if (iteratorFn) {
+          var iterator = iteratorFn.call(propValue);
+          var step;
+          if (iteratorFn !== propValue.entries) {
+            while (!(step = iterator.next()).done) {
+              if (!isNode(step.value)) {
+                return false;
+              }
+            }
+          } else {
+            // Iterator will provide entry [k,v] tuples rather than values.
+            while (!(step = iterator.next()).done) {
+              var entry = step.value;
+              if (entry) {
+                if (!isNode(entry[1])) {
+                  return false;
+                }
+              }
+            }
+          }
+        } else {
+          return false;
+        }
+
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  function isSymbol(propType, propValue) {
+    // Native Symbol.
+    if (propType === 'symbol') {
+      return true;
+    }
+
+    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+    if (propValue['@@toStringTag'] === 'Symbol') {
+      return true;
+    }
+
+    // Fallback for non-spec compliant Symbols which are polyfilled.
+    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
+      return true;
+    }
+
+    return false;
+  }
+
+  // Equivalent of `typeof` but with special handling for array and regexp.
+  function getPropType(propValue) {
+    var propType = typeof propValue;
+    if (Array.isArray(propValue)) {
+      return 'array';
+    }
+    if (propValue instanceof RegExp) {
+      // Old webkits (at least until Android 4.0) return 'function' rather than
+      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+      // passes PropTypes.object.
+      return 'object';
+    }
+    if (isSymbol(propType, propValue)) {
+      return 'symbol';
+    }
+    return propType;
+  }
+
+  // This handles more types than `getPropType`. Only used for error messages.
+  // See `createPrimitiveTypeChecker`.
+  function getPreciseType(propValue) {
+    if (typeof propValue === 'undefined' || propValue === null) {
+      return '' + propValue;
+    }
+    var propType = getPropType(propValue);
+    if (propType === 'object') {
+      if (propValue instanceof Date) {
+        return 'date';
+      } else if (propValue instanceof RegExp) {
+        return 'regexp';
+      }
+    }
+    return propType;
+  }
+
+  // Returns a string that is postfixed to a warning about an invalid type.
+  // For example, "undefined" or "of type array"
+  function getPostfixForTypeWarning(value) {
+    var type = getPreciseType(value);
+    switch (type) {
+      case 'array':
+      case 'object':
+        return 'an ' + type;
+      case 'boolean':
+      case 'date':
+      case 'regexp':
+        return 'a ' + type;
+      default:
+        return type;
+    }
+  }
+
+  // Returns class name of the object, if any.
+  function getClassName(propValue) {
+    if (!propValue.constructor || !propValue.constructor.name) {
+      return ANONYMOUS;
+    }
+    return propValue.constructor.name;
+  }
+
+  ReactPropTypes.checkPropTypes = checkPropTypes;
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
+
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Airplay = function Airplay(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1' }),
+    _react2.default.createElement('polygon', { points: '12 15 17 21 7 21 12 15' })
+  );
+};
+
+Airplay.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Airplay.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Airplay;
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var AlertCircle = function AlertCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('line', { x1: '12', y1: '8', x2: '12', y2: '12' }),
+    _react2.default.createElement('line', { x1: '12', y1: '16', x2: '12', y2: '16' })
+  );
+};
+
+AlertCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+AlertCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = AlertCircle;
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var AlertOctagon = function AlertOctagon(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2' }),
+    _react2.default.createElement('line', { x1: '12', y1: '8', x2: '12', y2: '12' }),
+    _react2.default.createElement('line', { x1: '12', y1: '16', x2: '12', y2: '16' })
+  );
+};
+
+AlertOctagon.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+AlertOctagon.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = AlertOctagon;
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var AlertTriangle = function AlertTriangle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z' }),
+    _react2.default.createElement('line', { x1: '12', y1: '9', x2: '12', y2: '13' }),
+    _react2.default.createElement('line', { x1: '12', y1: '17', x2: '12', y2: '17' })
+  );
+};
+
+AlertTriangle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+AlertTriangle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = AlertTriangle;
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var AlignCenter = function AlignCenter(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '18', y1: '10', x2: '6', y2: '10' }),
+    _react2.default.createElement('line', { x1: '21', y1: '6', x2: '3', y2: '6' }),
+    _react2.default.createElement('line', { x1: '21', y1: '14', x2: '3', y2: '14' }),
+    _react2.default.createElement('line', { x1: '18', y1: '18', x2: '6', y2: '18' })
+  );
+};
+
+AlignCenter.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+AlignCenter.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = AlignCenter;
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var AlignJustify = function AlignJustify(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '21', y1: '10', x2: '3', y2: '10' }),
+    _react2.default.createElement('line', { x1: '21', y1: '6', x2: '3', y2: '6' }),
+    _react2.default.createElement('line', { x1: '21', y1: '14', x2: '3', y2: '14' }),
+    _react2.default.createElement('line', { x1: '21', y1: '18', x2: '3', y2: '18' })
+  );
+};
+
+AlignJustify.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+AlignJustify.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = AlignJustify;
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var AlignLeft = function AlignLeft(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '17', y1: '10', x2: '3', y2: '10' }),
+    _react2.default.createElement('line', { x1: '21', y1: '6', x2: '3', y2: '6' }),
+    _react2.default.createElement('line', { x1: '21', y1: '14', x2: '3', y2: '14' }),
+    _react2.default.createElement('line', { x1: '17', y1: '18', x2: '3', y2: '18' })
+  );
+};
+
+AlignLeft.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+AlignLeft.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = AlignLeft;
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var AlignRight = function AlignRight(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '21', y1: '10', x2: '7', y2: '10' }),
+    _react2.default.createElement('line', { x1: '21', y1: '6', x2: '3', y2: '6' }),
+    _react2.default.createElement('line', { x1: '21', y1: '14', x2: '3', y2: '14' }),
+    _react2.default.createElement('line', { x1: '21', y1: '18', x2: '7', y2: '18' })
+  );
+};
+
+AlignRight.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+AlignRight.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = AlignRight;
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Anchor = function Anchor(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '5', r: '3' }),
+    _react2.default.createElement('line', { x1: '12', y1: '22', x2: '12', y2: '8' }),
+    _react2.default.createElement('path', { d: 'M5 12H2a10 10 0 0 0 20 0h-3' })
+  );
+};
+
+Anchor.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Anchor.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Anchor;
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Aperture = function Aperture(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('line', { x1: '14.31', y1: '8', x2: '20.05', y2: '17.94' }),
+    _react2.default.createElement('line', { x1: '9.69', y1: '8', x2: '21.17', y2: '8' }),
+    _react2.default.createElement('line', { x1: '7.38', y1: '12', x2: '13.12', y2: '2.06' }),
+    _react2.default.createElement('line', { x1: '9.69', y1: '16', x2: '3.95', y2: '6.06' }),
+    _react2.default.createElement('line', { x1: '14.31', y1: '16', x2: '2.83', y2: '16' }),
+    _react2.default.createElement('line', { x1: '16.62', y1: '12', x2: '10.88', y2: '21.94' })
+  );
+};
+
+Aperture.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Aperture.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Aperture;
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Archive = function Archive(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '21 8 21 21 3 21 3 8' }),
+    _react2.default.createElement('rect', { x: '1', y: '3', width: '22', height: '5' }),
+    _react2.default.createElement('line', { x1: '10', y1: '12', x2: '14', y2: '12' })
+  );
+};
+
+Archive.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Archive.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Archive;
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowDownCircle = function ArrowDownCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('polyline', { points: '8 12 12 16 16 12' }),
+    _react2.default.createElement('line', { x1: '12', y1: '8', x2: '12', y2: '16' })
+  );
+};
+
+ArrowDownCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowDownCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowDownCircle;
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowDownLeft = function ArrowDownLeft(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '17', y1: '7', x2: '7', y2: '17' }),
+    _react2.default.createElement('polyline', { points: '17 17 7 17 7 7' })
+  );
+};
+
+ArrowDownLeft.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowDownLeft.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowDownLeft;
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowDownRight = function ArrowDownRight(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '7', y1: '7', x2: '17', y2: '17' }),
+    _react2.default.createElement('polyline', { points: '17 7 17 17 7 17' })
+  );
+};
+
+ArrowDownRight.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowDownRight.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowDownRight;
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowDown = function ArrowDown(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '12', y1: '5', x2: '12', y2: '19' }),
+    _react2.default.createElement('polyline', { points: '19 12 12 19 5 12' })
+  );
+};
+
+ArrowDown.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowDown.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowDown;
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowLeftCircle = function ArrowLeftCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('polyline', { points: '12 8 8 12 12 16' }),
+    _react2.default.createElement('line', { x1: '16', y1: '12', x2: '8', y2: '12' })
+  );
+};
+
+ArrowLeftCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowLeftCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowLeftCircle;
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowLeft = function ArrowLeft(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '19', y1: '12', x2: '5', y2: '12' }),
+    _react2.default.createElement('polyline', { points: '12 19 5 12 12 5' })
+  );
+};
+
+ArrowLeft.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowLeft.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowLeft;
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowRightCircle = function ArrowRightCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('polyline', { points: '12 16 16 12 12 8' }),
+    _react2.default.createElement('line', { x1: '8', y1: '12', x2: '16', y2: '12' })
+  );
+};
+
+ArrowRightCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowRightCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowRightCircle;
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowRight = function ArrowRight(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '5', y1: '12', x2: '19', y2: '12' }),
+    _react2.default.createElement('polyline', { points: '12 5 19 12 12 19' })
+  );
+};
+
+ArrowRight.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowRight.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowRight;
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowUpCircle = function ArrowUpCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('polyline', { points: '16 12 12 8 8 12' }),
+    _react2.default.createElement('line', { x1: '12', y1: '16', x2: '12', y2: '8' })
+  );
+};
+
+ArrowUpCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowUpCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowUpCircle;
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowUpLeft = function ArrowUpLeft(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '17', y1: '17', x2: '7', y2: '7' }),
+    _react2.default.createElement('polyline', { points: '7 17 7 7 17 7' })
+  );
+};
+
+ArrowUpLeft.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowUpLeft.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowUpLeft;
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowUpRight = function ArrowUpRight(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '7', y1: '17', x2: '17', y2: '7' }),
+    _react2.default.createElement('polyline', { points: '7 7 17 7 17 17' })
+  );
+};
+
+ArrowUpRight.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowUpRight.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowUpRight;
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ArrowUp = function ArrowUp(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '12', y1: '19', x2: '12', y2: '5' }),
+    _react2.default.createElement('polyline', { points: '5 12 12 5 19 12' })
+  );
+};
+
+ArrowUp.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ArrowUp.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ArrowUp;
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var AtSign = function AtSign(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '4' }),
+    _react2.default.createElement('path', { d: 'M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94' })
+  );
+};
+
+AtSign.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+AtSign.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = AtSign;
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Award = function Award(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '8', r: '7' }),
+    _react2.default.createElement('polyline', { points: '8.21 13.89 7 23 12 20 17 23 15.79 13.88' })
+  );
+};
+
+Award.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Award.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Award;
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var BarChart2 = function BarChart2(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '18', y1: '20', x2: '18', y2: '10' }),
+    _react2.default.createElement('line', { x1: '12', y1: '20', x2: '12', y2: '4' }),
+    _react2.default.createElement('line', { x1: '6', y1: '20', x2: '6', y2: '14' })
+  );
+};
+
+BarChart2.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+BarChart2.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = BarChart2;
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var BarChart = function BarChart(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '12', y1: '20', x2: '12', y2: '10' }),
+    _react2.default.createElement('line', { x1: '18', y1: '20', x2: '18', y2: '4' }),
+    _react2.default.createElement('line', { x1: '6', y1: '20', x2: '6', y2: '16' })
+  );
+};
+
+BarChart.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+BarChart.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = BarChart;
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var BatteryCharging = function BatteryCharging(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19' }),
+    _react2.default.createElement('line', { x1: '23', y1: '13', x2: '23', y2: '11' }),
+    _react2.default.createElement('polyline', { points: '11 6 7 12 13 12 9 18' })
+  );
+};
+
+BatteryCharging.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+BatteryCharging.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = BatteryCharging;
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Battery = function Battery(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '1', y: '6', width: '18', height: '12', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '23', y1: '13', x2: '23', y2: '11' })
+  );
+};
+
+Battery.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Battery.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Battery;
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var BellOff = function BellOff(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M8.56 2.9A7 7 0 0 1 19 9v4m-2 4H2a3 3 0 0 0 3-3V9a7 7 0 0 1 .78-3.22M13.73 21a2 2 0 0 1-3.46 0' }),
+    _react2.default.createElement('line', { x1: '1', y1: '1', x2: '23', y2: '23' })
+  );
+};
+
+BellOff.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+BellOff.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = BellOff;
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Bell = function Bell(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0' })
+  );
+};
+
+Bell.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Bell.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Bell;
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Bluetooth = function Bluetooth(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5' })
+  );
+};
+
+Bluetooth.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Bluetooth.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Bluetooth;
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Bold = function Bold(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z' }),
+    _react2.default.createElement('path', { d: 'M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z' })
+  );
+};
+
+Bold.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Bold.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Bold;
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var BookOpen = function BookOpen(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z' }),
+    _react2.default.createElement('path', { d: 'M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z' })
+  );
+};
+
+BookOpen.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+BookOpen.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = BookOpen;
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Book = function Book(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M4 19.5A2.5 2.5 0 0 1 6.5 17H20' }),
+    _react2.default.createElement('path', { d: 'M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z' })
+  );
+};
+
+Book.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Book.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Book;
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Bookmark = function Bookmark(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z' })
+  );
+};
+
+Bookmark.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Bookmark.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Bookmark;
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Box = function Box(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.1-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0z' }),
+    _react2.default.createElement('polyline', { points: '2.32 6.16 12 11 21.68 6.16' }),
+    _react2.default.createElement('line', { x1: '12', y1: '22.76', x2: '12', y2: '11' })
+  );
+};
+
+Box.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Box.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Box;
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Briefcase = function Briefcase(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '2', y: '7', width: '20', height: '14', rx: '2', ry: '2' }),
+    _react2.default.createElement('path', { d: 'M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16' })
+  );
+};
+
+Briefcase.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Briefcase.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Briefcase;
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Calendar = function Calendar(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '4', width: '18', height: '18', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '16', y1: '2', x2: '16', y2: '6' }),
+    _react2.default.createElement('line', { x1: '8', y1: '2', x2: '8', y2: '6' }),
+    _react2.default.createElement('line', { x1: '3', y1: '10', x2: '21', y2: '10' })
+  );
+};
+
+Calendar.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Calendar.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Calendar;
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CameraOff = function CameraOff(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '1', y1: '1', x2: '23', y2: '23' }),
+    _react2.default.createElement('path', { d: 'M21 21H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3m3-3h6l2 3h4a2 2 0 0 1 2 2v9.34m-7.72-2.06a4 4 0 1 1-5.56-5.56' })
+  );
+};
+
+CameraOff.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CameraOff.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CameraOff;
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Camera = function Camera(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '13', r: '4' })
+  );
+};
+
+Camera.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Camera.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Camera;
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Cast = function Cast(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6' }),
+    _react2.default.createElement('line', { x1: '2', y1: '20', x2: '2', y2: '20' })
+  );
+};
+
+Cast.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Cast.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Cast;
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CheckCircle = function CheckCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M22 11.08V12a10 10 0 1 1-5.93-9.14' }),
+    _react2.default.createElement('polyline', { points: '22 4 12 14.01 9 11.01' })
+  );
+};
+
+CheckCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CheckCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CheckCircle;
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CheckSquare = function CheckSquare(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '9 11 12 14 22 4' }),
+    _react2.default.createElement('path', { d: 'M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11' })
+  );
+};
+
+CheckSquare.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CheckSquare.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CheckSquare;
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Check = function Check(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '20 6 9 17 4 12' })
+  );
+};
+
+Check.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Check.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Check;
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ChevronDown = function ChevronDown(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '6 9 12 15 18 9' })
+  );
+};
+
+ChevronDown.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ChevronDown.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ChevronDown;
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ChevronLeft = function ChevronLeft(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '15 18 9 12 15 6' })
+  );
+};
+
+ChevronLeft.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ChevronLeft.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ChevronLeft;
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ChevronRight = function ChevronRight(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '9 18 15 12 9 6' })
+  );
+};
+
+ChevronRight.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ChevronRight.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ChevronRight;
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ChevronUp = function ChevronUp(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '18 15 12 9 6 15' })
+  );
+};
+
+ChevronUp.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ChevronUp.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ChevronUp;
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ChevronsDown = function ChevronsDown(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '7 13 12 18 17 13' }),
+    _react2.default.createElement('polyline', { points: '7 6 12 11 17 6' })
+  );
+};
+
+ChevronsDown.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ChevronsDown.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ChevronsDown;
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ChevronsLeft = function ChevronsLeft(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '11 17 6 12 11 7' }),
+    _react2.default.createElement('polyline', { points: '18 17 13 12 18 7' })
+  );
+};
+
+ChevronsLeft.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ChevronsLeft.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ChevronsLeft;
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ChevronsRight = function ChevronsRight(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '13 17 18 12 13 7' }),
+    _react2.default.createElement('polyline', { points: '6 17 11 12 6 7' })
+  );
+};
+
+ChevronsRight.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ChevronsRight.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ChevronsRight;
+
+/***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ChevronsUp = function ChevronsUp(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '17 11 12 6 7 11' }),
+    _react2.default.createElement('polyline', { points: '17 18 12 13 7 18' })
+  );
+};
+
+ChevronsUp.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ChevronsUp.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ChevronsUp;
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Chrome = function Chrome(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '4' }),
+    _react2.default.createElement('line', { x1: '21.17', y1: '8', x2: '12', y2: '8' }),
+    _react2.default.createElement('line', { x1: '3.95', y1: '6.06', x2: '8.54', y2: '14' }),
+    _react2.default.createElement('line', { x1: '10.88', y1: '21.94', x2: '15.46', y2: '14' })
+  );
+};
+
+Chrome.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Chrome.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Chrome;
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Circle = function Circle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' })
+  );
+};
+
+Circle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Circle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Circle;
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Clipboard = function Clipboard(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2' }),
+    _react2.default.createElement('rect', { x: '8', y: '2', width: '8', height: '4', rx: '1', ry: '1' })
+  );
+};
+
+Clipboard.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Clipboard.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Clipboard;
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Clock = function Clock(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('polyline', { points: '12 6 12 12 16 14' })
+  );
+};
+
+Clock.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Clock.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Clock;
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CloudDrizzle = function CloudDrizzle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '8', y1: '19', x2: '8', y2: '21' }),
+    _react2.default.createElement('line', { x1: '8', y1: '13', x2: '8', y2: '15' }),
+    _react2.default.createElement('line', { x1: '16', y1: '19', x2: '16', y2: '21' }),
+    _react2.default.createElement('line', { x1: '16', y1: '13', x2: '16', y2: '15' }),
+    _react2.default.createElement('line', { x1: '12', y1: '21', x2: '12', y2: '23' }),
+    _react2.default.createElement('line', { x1: '12', y1: '15', x2: '12', y2: '17' }),
+    _react2.default.createElement('path', { d: 'M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25' })
+  );
+};
+
+CloudDrizzle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CloudDrizzle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CloudDrizzle;
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CloudLightning = function CloudLightning(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9' }),
+    _react2.default.createElement('polyline', { points: '13 11 9 17 15 17 11 23' })
+  );
+};
+
+CloudLightning.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CloudLightning.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CloudLightning;
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CloudOff = function CloudOff(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M22.61 16.95A5 5 0 0 0 18 10h-1.26a8 8 0 0 0-7.05-6M5 5a8 8 0 0 0 4 15h9a5 5 0 0 0 1.7-.3' }),
+    _react2.default.createElement('line', { x1: '1', y1: '1', x2: '23', y2: '23' })
+  );
+};
+
+CloudOff.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CloudOff.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CloudOff;
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CloudRain = function CloudRain(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '16', y1: '13', x2: '16', y2: '21' }),
+    _react2.default.createElement('line', { x1: '8', y1: '13', x2: '8', y2: '21' }),
+    _react2.default.createElement('line', { x1: '12', y1: '15', x2: '12', y2: '23' }),
+    _react2.default.createElement('path', { d: 'M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25' })
+  );
+};
+
+CloudRain.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CloudRain.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CloudRain;
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CloudSnow = function CloudSnow(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25' }),
+    _react2.default.createElement('line', { x1: '8', y1: '16', x2: '8', y2: '16' }),
+    _react2.default.createElement('line', { x1: '8', y1: '20', x2: '8', y2: '20' }),
+    _react2.default.createElement('line', { x1: '12', y1: '18', x2: '12', y2: '18' }),
+    _react2.default.createElement('line', { x1: '12', y1: '22', x2: '12', y2: '22' }),
+    _react2.default.createElement('line', { x1: '16', y1: '16', x2: '16', y2: '16' }),
+    _react2.default.createElement('line', { x1: '16', y1: '20', x2: '16', y2: '20' })
+  );
+};
+
+CloudSnow.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CloudSnow.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CloudSnow;
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Cloud = function Cloud(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z' })
+  );
+};
+
+Cloud.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Cloud.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Cloud;
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Code = function Code(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '16 18 22 12 16 6' }),
+    _react2.default.createElement('polyline', { points: '8 6 2 12 8 18' })
+  );
+};
+
+Code.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Code.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Code;
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Codepen = function Codepen(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2' }),
+    _react2.default.createElement('line', { x1: '12', y1: '22', x2: '12', y2: '15.5' }),
+    _react2.default.createElement('polyline', { points: '22 8.5 12 15.5 2 8.5' }),
+    _react2.default.createElement('polyline', { points: '2 15.5 12 8.5 22 15.5' }),
+    _react2.default.createElement('line', { x1: '12', y1: '2', x2: '12', y2: '8.5' })
+  );
+};
+
+Codepen.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Codepen.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Codepen;
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Command = function Command(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z' })
+  );
+};
+
+Command.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Command.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Command;
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Compass = function Compass(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('polygon', { points: '16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76' })
+  );
+};
+
+Compass.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Compass.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Compass;
+
+/***/ }),
+/* 127 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Copy = function Copy(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '9', y: '9', width: '13', height: '13', rx: '2', ry: '2' }),
+    _react2.default.createElement('path', { d: 'M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1' })
+  );
+};
+
+Copy.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Copy.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Copy;
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CornerDownLeft = function CornerDownLeft(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '9 10 4 15 9 20' }),
+    _react2.default.createElement('path', { d: 'M20 4v7a4 4 0 0 1-4 4H4' })
+  );
+};
+
+CornerDownLeft.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CornerDownLeft.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CornerDownLeft;
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CornerDownRight = function CornerDownRight(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '15 10 20 15 15 20' }),
+    _react2.default.createElement('path', { d: 'M4 4v7a4 4 0 0 0 4 4h12' })
+  );
+};
+
+CornerDownRight.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CornerDownRight.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CornerDownRight;
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CornerLeftDown = function CornerLeftDown(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '14 15 9 20 4 15' }),
+    _react2.default.createElement('path', { d: 'M20 4h-7a4 4 0 0 0-4 4v12' })
+  );
+};
+
+CornerLeftDown.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CornerLeftDown.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CornerLeftDown;
+
+/***/ }),
+/* 131 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CornerLeftUp = function CornerLeftUp(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '14 9 9 4 4 9' }),
+    _react2.default.createElement('path', { d: 'M20 20h-7a4 4 0 0 1-4-4V4' })
+  );
+};
+
+CornerLeftUp.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CornerLeftUp.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CornerLeftUp;
+
+/***/ }),
+/* 132 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CornerRightDown = function CornerRightDown(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '10 15 15 20 20 15' }),
+    _react2.default.createElement('path', { d: 'M4 4h7a4 4 0 0 1 4 4v12' })
+  );
+};
+
+CornerRightDown.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CornerRightDown.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CornerRightDown;
+
+/***/ }),
+/* 133 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CornerRightUp = function CornerRightUp(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '10 9 15 4 20 9' }),
+    _react2.default.createElement('path', { d: 'M4 20h7a4 4 0 0 0 4-4V4' })
+  );
+};
+
+CornerRightUp.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CornerRightUp.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CornerRightUp;
+
+/***/ }),
+/* 134 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CornerUpLeft = function CornerUpLeft(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '9 14 4 9 9 4' }),
+    _react2.default.createElement('path', { d: 'M20 20v-7a4 4 0 0 0-4-4H4' })
+  );
+};
+
+CornerUpLeft.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CornerUpLeft.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CornerUpLeft;
+
+/***/ }),
+/* 135 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CornerUpRight = function CornerUpRight(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '15 14 20 9 15 4' }),
+    _react2.default.createElement('path', { d: 'M4 20v-7a4 4 0 0 1 4-4h12' })
+  );
+};
+
+CornerUpRight.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CornerUpRight.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CornerUpRight;
+
+/***/ }),
+/* 136 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Cpu = function Cpu(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '4', y: '4', width: '16', height: '16', rx: '2', ry: '2' }),
+    _react2.default.createElement('rect', { x: '9', y: '9', width: '6', height: '6' }),
+    _react2.default.createElement('line', { x1: '9', y1: '1', x2: '9', y2: '4' }),
+    _react2.default.createElement('line', { x1: '15', y1: '1', x2: '15', y2: '4' }),
+    _react2.default.createElement('line', { x1: '9', y1: '20', x2: '9', y2: '23' }),
+    _react2.default.createElement('line', { x1: '15', y1: '20', x2: '15', y2: '23' }),
+    _react2.default.createElement('line', { x1: '20', y1: '9', x2: '23', y2: '9' }),
+    _react2.default.createElement('line', { x1: '20', y1: '14', x2: '23', y2: '14' }),
+    _react2.default.createElement('line', { x1: '1', y1: '9', x2: '4', y2: '9' }),
+    _react2.default.createElement('line', { x1: '1', y1: '14', x2: '4', y2: '14' })
+  );
+};
+
+Cpu.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Cpu.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Cpu;
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var CreditCard = function CreditCard(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '1', y: '4', width: '22', height: '16', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '1', y1: '10', x2: '23', y2: '10' })
+  );
+};
+
+CreditCard.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+CreditCard.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = CreditCard;
+
+/***/ }),
+/* 138 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Crop = function Crop(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M6.13 1L6 16a2 2 0 0 0 2 2h15' }),
+    _react2.default.createElement('path', { d: 'M1 6.13L16 6a2 2 0 0 1 2 2v15' })
+  );
+};
+
+Crop.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Crop.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Crop;
+
+/***/ }),
+/* 139 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Crosshair = function Crosshair(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('line', { x1: '22', y1: '12', x2: '18', y2: '12' }),
+    _react2.default.createElement('line', { x1: '6', y1: '12', x2: '2', y2: '12' }),
+    _react2.default.createElement('line', { x1: '12', y1: '6', x2: '12', y2: '2' }),
+    _react2.default.createElement('line', { x1: '12', y1: '22', x2: '12', y2: '18' })
+  );
+};
+
+Crosshair.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Crosshair.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Crosshair;
+
+/***/ }),
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Database = function Database(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('ellipse', { cx: '12', cy: '5', rx: '9', ry: '3' }),
+    _react2.default.createElement('path', { d: 'M21 12c0 1.66-4 3-9 3s-9-1.34-9-3' }),
+    _react2.default.createElement('path', { d: 'M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5' })
+  );
+};
+
+Database.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Database.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Database;
+
+/***/ }),
+/* 141 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Delete = function Delete(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z' }),
+    _react2.default.createElement('line', { x1: '18', y1: '9', x2: '12', y2: '15' }),
+    _react2.default.createElement('line', { x1: '12', y1: '9', x2: '18', y2: '15' })
+  );
+};
+
+Delete.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Delete.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Delete;
+
+/***/ }),
+/* 142 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Disc = function Disc(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '3' })
+  );
+};
+
+Disc.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Disc.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Disc;
+
+/***/ }),
+/* 143 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var DollarSign = function DollarSign(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '12', y1: '1', x2: '12', y2: '23' }),
+    _react2.default.createElement('path', { d: 'M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6' })
+  );
+};
+
+DollarSign.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+DollarSign.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = DollarSign;
+
+/***/ }),
+/* 144 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var DownloadCloud = function DownloadCloud(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '8 17 12 21 16 17' }),
+    _react2.default.createElement('line', { x1: '12', y1: '12', x2: '12', y2: '21' }),
+    _react2.default.createElement('path', { d: 'M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29' })
+  );
+};
+
+DownloadCloud.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+DownloadCloud.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = DownloadCloud;
+
+/***/ }),
+/* 145 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Download = function Download(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4' }),
+    _react2.default.createElement('polyline', { points: '7 10 12 15 17 10' }),
+    _react2.default.createElement('line', { x1: '12', y1: '15', x2: '12', y2: '3' })
+  );
+};
+
+Download.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Download.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Download;
+
+/***/ }),
+/* 146 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Droplet = function Droplet(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z' })
+  );
+};
+
+Droplet.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Droplet.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Droplet;
+
+/***/ }),
+/* 147 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Edit2 = function Edit2(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '16 3 21 8 8 21 3 21 3 16 16 3' })
+  );
+};
+
+Edit2.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Edit2.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Edit2;
+
+/***/ }),
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Edit3 = function Edit3(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '14 2 18 6 7 17 3 17 3 13 14 2' }),
+    _react2.default.createElement('line', { x1: '3', y1: '22', x2: '21', y2: '22' })
+  );
+};
+
+Edit3.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Edit3.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Edit3;
+
+/***/ }),
+/* 149 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Edit = function Edit(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34' }),
+    _react2.default.createElement('polygon', { points: '18 2 22 6 12 16 8 16 8 12 18 2' })
+  );
+};
+
+Edit.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Edit.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Edit;
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ExternalLink = function ExternalLink(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6' }),
+    _react2.default.createElement('polyline', { points: '15 3 21 3 21 9' }),
+    _react2.default.createElement('line', { x1: '10', y1: '14', x2: '21', y2: '3' })
+  );
+};
+
+ExternalLink.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ExternalLink.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ExternalLink;
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var EyeOff = function EyeOff(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24' }),
+    _react2.default.createElement('line', { x1: '1', y1: '1', x2: '23', y2: '23' })
+  );
+};
+
+EyeOff.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+EyeOff.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = EyeOff;
+
+/***/ }),
+/* 152 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Eye = function Eye(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '3' })
+  );
+};
+
+Eye.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Eye.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Eye;
+
+/***/ }),
+/* 153 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Facebook = function Facebook(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z' })
+  );
+};
+
+Facebook.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Facebook.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Facebook;
+
+/***/ }),
+/* 154 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var FastForward = function FastForward(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '13 19 22 12 13 5 13 19' }),
+    _react2.default.createElement('polygon', { points: '2 19 11 12 2 5 2 19' })
+  );
+};
+
+FastForward.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+FastForward.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = FastForward;
+
+/***/ }),
+/* 155 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Feather = function Feather(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z' }),
+    _react2.default.createElement('line', { x1: '16', y1: '8', x2: '2', y2: '22' }),
+    _react2.default.createElement('line', { x1: '17', y1: '15', x2: '9', y2: '15' })
+  );
+};
+
+Feather.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Feather.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Feather;
+
+/***/ }),
+/* 156 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var FileMinus = function FileMinus(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z' }),
+    _react2.default.createElement('polyline', { points: '14 2 14 8 20 8' }),
+    _react2.default.createElement('line', { x1: '9', y1: '15', x2: '15', y2: '15' })
+  );
+};
+
+FileMinus.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+FileMinus.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = FileMinus;
+
+/***/ }),
+/* 157 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var FilePlus = function FilePlus(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z' }),
+    _react2.default.createElement('polyline', { points: '14 2 14 8 20 8' }),
+    _react2.default.createElement('line', { x1: '12', y1: '18', x2: '12', y2: '12' }),
+    _react2.default.createElement('line', { x1: '9', y1: '15', x2: '15', y2: '15' })
+  );
+};
+
+FilePlus.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+FilePlus.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = FilePlus;
+
+/***/ }),
+/* 158 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var FileText = function FileText(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z' }),
+    _react2.default.createElement('polyline', { points: '14 2 14 8 20 8' }),
+    _react2.default.createElement('line', { x1: '16', y1: '13', x2: '8', y2: '13' }),
+    _react2.default.createElement('line', { x1: '16', y1: '17', x2: '8', y2: '17' }),
+    _react2.default.createElement('polyline', { points: '10 9 9 9 8 9' })
+  );
+};
+
+FileText.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+FileText.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = FileText;
+
+/***/ }),
+/* 159 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var File = function File(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z' }),
+    _react2.default.createElement('polyline', { points: '13 2 13 9 20 9' })
+  );
+};
+
+File.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+File.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = File;
+
+/***/ }),
+/* 160 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Film = function Film(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '2', y: '2', width: '20', height: '20', rx: '2.18', ry: '2.18' }),
+    _react2.default.createElement('line', { x1: '7', y1: '2', x2: '7', y2: '22' }),
+    _react2.default.createElement('line', { x1: '17', y1: '2', x2: '17', y2: '22' }),
+    _react2.default.createElement('line', { x1: '2', y1: '12', x2: '22', y2: '12' }),
+    _react2.default.createElement('line', { x1: '2', y1: '7', x2: '7', y2: '7' }),
+    _react2.default.createElement('line', { x1: '2', y1: '17', x2: '7', y2: '17' }),
+    _react2.default.createElement('line', { x1: '17', y1: '17', x2: '22', y2: '17' }),
+    _react2.default.createElement('line', { x1: '17', y1: '7', x2: '22', y2: '7' })
+  );
+};
+
+Film.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Film.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Film;
+
+/***/ }),
+/* 161 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Filter = function Filter(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3' })
+  );
+};
+
+Filter.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Filter.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Filter;
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Flag = function Flag(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z' }),
+    _react2.default.createElement('line', { x1: '4', y1: '22', x2: '4', y2: '15' })
+  );
+};
+
+Flag.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Flag.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Flag;
+
+/***/ }),
+/* 163 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var FolderMinus = function FolderMinus(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z' }),
+    _react2.default.createElement('line', { x1: '9', y1: '14', x2: '15', y2: '14' })
+  );
+};
+
+FolderMinus.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+FolderMinus.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = FolderMinus;
+
+/***/ }),
+/* 164 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var FolderPlus = function FolderPlus(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z' }),
+    _react2.default.createElement('line', { x1: '12', y1: '11', x2: '12', y2: '17' }),
+    _react2.default.createElement('line', { x1: '9', y1: '14', x2: '15', y2: '14' })
+  );
+};
+
+FolderPlus.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+FolderPlus.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = FolderPlus;
+
+/***/ }),
+/* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Folder = function Folder(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z' })
+  );
+};
+
+Folder.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Folder.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Folder;
+
+/***/ }),
+/* 166 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Gift = function Gift(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '20 12 20 22 4 22 4 12' }),
+    _react2.default.createElement('rect', { x: '2', y: '7', width: '20', height: '5' }),
+    _react2.default.createElement('line', { x1: '12', y1: '22', x2: '12', y2: '7' }),
+    _react2.default.createElement('path', { d: 'M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z' }),
+    _react2.default.createElement('path', { d: 'M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z' })
+  );
+};
+
+Gift.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Gift.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Gift;
+
+/***/ }),
+/* 167 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var GitBranch = function GitBranch(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '6', y1: '3', x2: '6', y2: '15' }),
+    _react2.default.createElement('circle', { cx: '18', cy: '6', r: '3' }),
+    _react2.default.createElement('circle', { cx: '6', cy: '18', r: '3' }),
+    _react2.default.createElement('path', { d: 'M18 9a9 9 0 0 1-9 9' })
+  );
+};
+
+GitBranch.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+GitBranch.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = GitBranch;
+
+/***/ }),
+/* 168 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var GitCommit = function GitCommit(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '4' }),
+    _react2.default.createElement('line', { x1: '1.05', y1: '12', x2: '7', y2: '12' }),
+    _react2.default.createElement('line', { x1: '17.01', y1: '12', x2: '22.96', y2: '12' })
+  );
+};
+
+GitCommit.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+GitCommit.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = GitCommit;
+
+/***/ }),
+/* 169 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var GitMerge = function GitMerge(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '18', cy: '18', r: '3' }),
+    _react2.default.createElement('circle', { cx: '6', cy: '6', r: '3' }),
+    _react2.default.createElement('path', { d: 'M6 21V9a9 9 0 0 0 9 9' })
+  );
+};
+
+GitMerge.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+GitMerge.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = GitMerge;
+
+/***/ }),
+/* 170 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var GitPullRequest = function GitPullRequest(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '18', cy: '18', r: '3' }),
+    _react2.default.createElement('circle', { cx: '6', cy: '6', r: '3' }),
+    _react2.default.createElement('path', { d: 'M13 6h3a2 2 0 0 1 2 2v7' }),
+    _react2.default.createElement('line', { x1: '6', y1: '9', x2: '6', y2: '21' })
+  );
+};
+
+GitPullRequest.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+GitPullRequest.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = GitPullRequest;
+
+/***/ }),
+/* 171 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var GitHub = function GitHub(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22' })
+  );
+};
+
+GitHub.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+GitHub.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = GitHub;
+
+/***/ }),
+/* 172 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Gitlab = function Gitlab(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z' })
+  );
+};
+
+Gitlab.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Gitlab.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Gitlab;
+
+/***/ }),
+/* 173 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Globe = function Globe(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('line', { x1: '2', y1: '12', x2: '22', y2: '12' }),
+    _react2.default.createElement('path', { d: 'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z' })
+  );
+};
+
+Globe.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Globe.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Globe;
+
+/***/ }),
+/* 174 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Grid = function Grid(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '3', width: '7', height: '7' }),
+    _react2.default.createElement('rect', { x: '14', y: '3', width: '7', height: '7' }),
+    _react2.default.createElement('rect', { x: '14', y: '14', width: '7', height: '7' }),
+    _react2.default.createElement('rect', { x: '3', y: '14', width: '7', height: '7' })
+  );
+};
+
+Grid.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Grid.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Grid;
+
+/***/ }),
+/* 175 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var HardDrive = function HardDrive(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '22', y1: '12', x2: '2', y2: '12' }),
+    _react2.default.createElement('path', { d: 'M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z' }),
+    _react2.default.createElement('line', { x1: '6', y1: '16', x2: '6', y2: '16' }),
+    _react2.default.createElement('line', { x1: '10', y1: '16', x2: '10', y2: '16' })
+  );
+};
+
+HardDrive.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+HardDrive.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = HardDrive;
+
+/***/ }),
+/* 176 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Hash = function Hash(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '4', y1: '9', x2: '20', y2: '9' }),
+    _react2.default.createElement('line', { x1: '4', y1: '15', x2: '20', y2: '15' }),
+    _react2.default.createElement('line', { x1: '10', y1: '3', x2: '8', y2: '21' }),
+    _react2.default.createElement('line', { x1: '16', y1: '3', x2: '14', y2: '21' })
+  );
+};
+
+Hash.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Hash.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Hash;
+
+/***/ }),
+/* 177 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Headphones = function Headphones(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M3 18v-6a9 9 0 0 1 18 0v6' }),
+    _react2.default.createElement('path', { d: 'M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z' })
+  );
+};
+
+Headphones.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Headphones.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Headphones;
+
+/***/ }),
+/* 178 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Heart = function Heart(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z' })
+  );
+};
+
+Heart.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Heart.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Heart;
+
+/***/ }),
+/* 179 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var HelpCircle = function HelpCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('path', { d: 'M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3' }),
+    _react2.default.createElement('line', { x1: '12', y1: '17', x2: '12', y2: '17' })
+  );
+};
+
+HelpCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+HelpCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = HelpCircle;
+
+/***/ }),
+/* 180 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Home = function Home(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z' }),
+    _react2.default.createElement('polyline', { points: '9 22 9 12 15 12 15 22' })
+  );
+};
+
+Home.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Home.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Home;
+
+/***/ }),
+/* 181 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Image = function Image(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '3', width: '18', height: '18', rx: '2', ry: '2' }),
+    _react2.default.createElement('circle', { cx: '8.5', cy: '8.5', r: '1.5' }),
+    _react2.default.createElement('polyline', { points: '21 15 16 10 5 21' })
+  );
+};
+
+Image.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Image.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Image;
+
+/***/ }),
+/* 182 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Inbox = function Inbox(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '22 12 16 12 14 15 10 15 8 12 2 12' }),
+    _react2.default.createElement('path', { d: 'M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z' })
+  );
+};
+
+Inbox.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Inbox.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Inbox;
+
+/***/ }),
+/* 183 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Info = function Info(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('line', { x1: '12', y1: '16', x2: '12', y2: '12' }),
+    _react2.default.createElement('line', { x1: '12', y1: '8', x2: '12', y2: '8' })
+  );
+};
+
+Info.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Info.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Info;
+
+/***/ }),
+/* 184 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Instagram = function Instagram(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '2', y: '2', width: '20', height: '20', rx: '5', ry: '5' }),
+    _react2.default.createElement('path', { d: 'M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z' }),
+    _react2.default.createElement('line', { x1: '17.5', y1: '6.5', x2: '17.5', y2: '6.5' })
+  );
+};
+
+Instagram.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Instagram.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Instagram;
+
+/***/ }),
+/* 185 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Italic = function Italic(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '19', y1: '4', x2: '10', y2: '4' }),
+    _react2.default.createElement('line', { x1: '14', y1: '20', x2: '5', y2: '20' }),
+    _react2.default.createElement('line', { x1: '15', y1: '4', x2: '9', y2: '20' })
+  );
+};
+
+Italic.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Italic.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Italic;
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Layers = function Layers(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '12 2 2 7 12 12 22 7 12 2' }),
+    _react2.default.createElement('polyline', { points: '2 17 12 22 22 17' }),
+    _react2.default.createElement('polyline', { points: '2 12 12 17 22 12' })
+  );
+};
+
+Layers.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Layers.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Layers;
+
+/***/ }),
+/* 187 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Layout = function Layout(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '3', width: '18', height: '18', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '3', y1: '9', x2: '21', y2: '9' }),
+    _react2.default.createElement('line', { x1: '9', y1: '21', x2: '9', y2: '9' })
+  );
+};
+
+Layout.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Layout.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Layout;
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var LifeBuoy = function LifeBuoy(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '4' }),
+    _react2.default.createElement('line', { x1: '4.93', y1: '4.93', x2: '9.17', y2: '9.17' }),
+    _react2.default.createElement('line', { x1: '14.83', y1: '14.83', x2: '19.07', y2: '19.07' }),
+    _react2.default.createElement('line', { x1: '14.83', y1: '9.17', x2: '19.07', y2: '4.93' }),
+    _react2.default.createElement('line', { x1: '14.83', y1: '9.17', x2: '18.36', y2: '5.64' }),
+    _react2.default.createElement('line', { x1: '4.93', y1: '19.07', x2: '9.17', y2: '14.83' })
+  );
+};
+
+LifeBuoy.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+LifeBuoy.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = LifeBuoy;
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Link2 = function Link2(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3' }),
+    _react2.default.createElement('line', { x1: '8', y1: '12', x2: '16', y2: '12' })
+  );
+};
+
+Link2.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Link2.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Link2;
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Link = function Link(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71' }),
+    _react2.default.createElement('path', { d: 'M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71' })
+  );
+};
+
+Link.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Link.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Link;
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Linkedin = function Linkedin(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z' }),
+    _react2.default.createElement('rect', { x: '2', y: '9', width: '4', height: '12' }),
+    _react2.default.createElement('circle', { cx: '4', cy: '4', r: '2' })
+  );
+};
+
+Linkedin.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Linkedin.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Linkedin;
+
+/***/ }),
+/* 192 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var List = function List(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '8', y1: '6', x2: '21', y2: '6' }),
+    _react2.default.createElement('line', { x1: '8', y1: '12', x2: '21', y2: '12' }),
+    _react2.default.createElement('line', { x1: '8', y1: '18', x2: '21', y2: '18' }),
+    _react2.default.createElement('line', { x1: '3', y1: '6', x2: '3', y2: '6' }),
+    _react2.default.createElement('line', { x1: '3', y1: '12', x2: '3', y2: '12' }),
+    _react2.default.createElement('line', { x1: '3', y1: '18', x2: '3', y2: '18' })
+  );
+};
+
+List.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+List.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = List;
+
+/***/ }),
+/* 193 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Loader = function Loader(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '12', y1: '2', x2: '12', y2: '6' }),
+    _react2.default.createElement('line', { x1: '12', y1: '18', x2: '12', y2: '22' }),
+    _react2.default.createElement('line', { x1: '4.93', y1: '4.93', x2: '7.76', y2: '7.76' }),
+    _react2.default.createElement('line', { x1: '16.24', y1: '16.24', x2: '19.07', y2: '19.07' }),
+    _react2.default.createElement('line', { x1: '2', y1: '12', x2: '6', y2: '12' }),
+    _react2.default.createElement('line', { x1: '18', y1: '12', x2: '22', y2: '12' }),
+    _react2.default.createElement('line', { x1: '4.93', y1: '19.07', x2: '7.76', y2: '16.24' }),
+    _react2.default.createElement('line', { x1: '16.24', y1: '7.76', x2: '19.07', y2: '4.93' })
+  );
+};
+
+Loader.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Loader.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Loader;
+
+/***/ }),
+/* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Lock = function Lock(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '11', width: '18', height: '11', rx: '2', ry: '2' }),
+    _react2.default.createElement('path', { d: 'M7 11V7a5 5 0 0 1 10 0v4' })
+  );
+};
+
+Lock.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Lock.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Lock;
+
+/***/ }),
+/* 195 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var LogIn = function LogIn(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4' }),
+    _react2.default.createElement('polyline', { points: '10 17 15 12 10 7' }),
+    _react2.default.createElement('line', { x1: '15', y1: '12', x2: '3', y2: '12' })
+  );
+};
+
+LogIn.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+LogIn.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = LogIn;
+
+/***/ }),
+/* 196 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var LogOut = function LogOut(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4' }),
+    _react2.default.createElement('polyline', { points: '16 17 21 12 16 7' }),
+    _react2.default.createElement('line', { x1: '21', y1: '12', x2: '9', y2: '12' })
+  );
+};
+
+LogOut.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+LogOut.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = LogOut;
+
+/***/ }),
+/* 197 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Mail = function Mail(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z' }),
+    _react2.default.createElement('polyline', { points: '22,6 12,13 2,6' })
+  );
+};
+
+Mail.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Mail.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Mail;
+
+/***/ }),
+/* 198 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var MapPin = function MapPin(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '10', r: '3' })
+  );
+};
+
+MapPin.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+MapPin.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = MapPin;
+
+/***/ }),
+/* 199 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Map = function Map(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6' }),
+    _react2.default.createElement('line', { x1: '8', y1: '2', x2: '8', y2: '18' }),
+    _react2.default.createElement('line', { x1: '16', y1: '6', x2: '16', y2: '22' })
+  );
+};
+
+Map.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Map.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Map;
+
+/***/ }),
+/* 200 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Maximize2 = function Maximize2(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '15 3 21 3 21 9' }),
+    _react2.default.createElement('polyline', { points: '9 21 3 21 3 15' }),
+    _react2.default.createElement('line', { x1: '21', y1: '3', x2: '14', y2: '10' }),
+    _react2.default.createElement('line', { x1: '3', y1: '21', x2: '10', y2: '14' })
+  );
+};
+
+Maximize2.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Maximize2.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Maximize2;
+
+/***/ }),
+/* 201 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Maximize = function Maximize(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3' })
+  );
+};
+
+Maximize.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Maximize.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Maximize;
+
+/***/ }),
+/* 202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Menu = function Menu(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '3', y1: '12', x2: '21', y2: '12' }),
+    _react2.default.createElement('line', { x1: '3', y1: '6', x2: '21', y2: '6' }),
+    _react2.default.createElement('line', { x1: '3', y1: '18', x2: '21', y2: '18' })
+  );
+};
+
+Menu.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Menu.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Menu;
+
+/***/ }),
+/* 203 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var MessageCircle = function MessageCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z' })
+  );
+};
+
+MessageCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+MessageCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = MessageCircle;
+
+/***/ }),
+/* 204 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var MessageSquare = function MessageSquare(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z' })
+  );
+};
+
+MessageSquare.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+MessageSquare.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = MessageSquare;
+
+/***/ }),
+/* 205 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var MicOff = function MicOff(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '1', y1: '1', x2: '23', y2: '23' }),
+    _react2.default.createElement('path', { d: 'M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6' }),
+    _react2.default.createElement('path', { d: 'M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23' }),
+    _react2.default.createElement('line', { x1: '12', y1: '19', x2: '12', y2: '23' }),
+    _react2.default.createElement('line', { x1: '8', y1: '23', x2: '16', y2: '23' })
+  );
+};
+
+MicOff.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+MicOff.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = MicOff;
+
+/***/ }),
+/* 206 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Mic = function Mic(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z' }),
+    _react2.default.createElement('path', { d: 'M19 10v2a7 7 0 0 1-14 0v-2' }),
+    _react2.default.createElement('line', { x1: '12', y1: '19', x2: '12', y2: '23' }),
+    _react2.default.createElement('line', { x1: '8', y1: '23', x2: '16', y2: '23' })
+  );
+};
+
+Mic.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Mic.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Mic;
+
+/***/ }),
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Minimize2 = function Minimize2(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '4 14 10 14 10 20' }),
+    _react2.default.createElement('polyline', { points: '20 10 14 10 14 4' }),
+    _react2.default.createElement('line', { x1: '14', y1: '10', x2: '21', y2: '3' }),
+    _react2.default.createElement('line', { x1: '3', y1: '21', x2: '10', y2: '14' })
+  );
+};
+
+Minimize2.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Minimize2.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Minimize2;
+
+/***/ }),
+/* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Minimize = function Minimize(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3' })
+  );
+};
+
+Minimize.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Minimize.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Minimize;
+
+/***/ }),
+/* 209 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var MinusCircle = function MinusCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('line', { x1: '8', y1: '12', x2: '16', y2: '12' })
+  );
+};
+
+MinusCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+MinusCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = MinusCircle;
+
+/***/ }),
+/* 210 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var MinusSquare = function MinusSquare(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '3', width: '18', height: '18', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '8', y1: '12', x2: '16', y2: '12' })
+  );
+};
+
+MinusSquare.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+MinusSquare.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = MinusSquare;
+
+/***/ }),
+/* 211 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Minus = function Minus(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '5', y1: '12', x2: '19', y2: '12' })
+  );
+};
+
+Minus.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Minus.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Minus;
+
+/***/ }),
+/* 212 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Monitor = function Monitor(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '2', y: '3', width: '20', height: '14', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '8', y1: '21', x2: '16', y2: '21' }),
+    _react2.default.createElement('line', { x1: '12', y1: '17', x2: '12', y2: '21' })
+  );
+};
+
+Monitor.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Monitor.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Monitor;
+
+/***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Moon = function Moon(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z' })
+  );
+};
+
+Moon.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Moon.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Moon;
+
+/***/ }),
+/* 214 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var MoreHorizontal = function MoreHorizontal(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '1' }),
+    _react2.default.createElement('circle', { cx: '19', cy: '12', r: '1' }),
+    _react2.default.createElement('circle', { cx: '5', cy: '12', r: '1' })
+  );
+};
+
+MoreHorizontal.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+MoreHorizontal.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = MoreHorizontal;
+
+/***/ }),
+/* 215 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var MoreVertical = function MoreVertical(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '1' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '5', r: '1' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '19', r: '1' })
+  );
+};
+
+MoreVertical.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+MoreVertical.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = MoreVertical;
+
+/***/ }),
+/* 216 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Move = function Move(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '5 9 2 12 5 15' }),
+    _react2.default.createElement('polyline', { points: '9 5 12 2 15 5' }),
+    _react2.default.createElement('polyline', { points: '15 19 12 22 9 19' }),
+    _react2.default.createElement('polyline', { points: '19 9 22 12 19 15' }),
+    _react2.default.createElement('line', { x1: '2', y1: '12', x2: '22', y2: '12' }),
+    _react2.default.createElement('line', { x1: '12', y1: '2', x2: '12', y2: '22' })
+  );
+};
+
+Move.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Move.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Move;
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Music = function Music(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M9 17H5a2 2 0 0 0-2 2 2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm12-2h-4a2 2 0 0 0-2 2 2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z' }),
+    _react2.default.createElement('polyline', { points: '9 17 9 5 21 3 21 15' })
+  );
+};
+
+Music.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Music.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Music;
+
+/***/ }),
+/* 218 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Navigation2 = function Navigation2(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '12 2 19 21 12 17 5 21 12 2' })
+  );
+};
+
+Navigation2.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Navigation2.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Navigation2;
+
+/***/ }),
+/* 219 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Navigation = function Navigation(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '3 11 22 2 13 21 11 13 3 11' })
+  );
+};
+
+Navigation.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Navigation.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Navigation;
+
+/***/ }),
+/* 220 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Octagon = function Octagon(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2' })
+  );
+};
+
+Octagon.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Octagon.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Octagon;
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Package = function Package(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.1-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0z' }),
+    _react2.default.createElement('polyline', { points: '2.32 6.16 12 11 21.68 6.16' }),
+    _react2.default.createElement('line', { x1: '12', y1: '22.76', x2: '12', y2: '11' }),
+    _react2.default.createElement('line', { x1: '7', y1: '3.5', x2: '17', y2: '8.5' })
+  );
+};
+
+Package.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Package.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Package;
+
+/***/ }),
+/* 222 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Paperclip = function Paperclip(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48' })
+  );
+};
+
+Paperclip.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Paperclip.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Paperclip;
+
+/***/ }),
+/* 223 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PauseCircle = function PauseCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('line', { x1: '10', y1: '15', x2: '10', y2: '9' }),
+    _react2.default.createElement('line', { x1: '14', y1: '15', x2: '14', y2: '9' })
+  );
+};
+
+PauseCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PauseCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PauseCircle;
+
+/***/ }),
+/* 224 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Pause = function Pause(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '6', y: '4', width: '4', height: '16' }),
+    _react2.default.createElement('rect', { x: '14', y: '4', width: '4', height: '16' })
+  );
+};
+
+Pause.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Pause.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Pause;
+
+/***/ }),
+/* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Percent = function Percent(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '19', y1: '5', x2: '5', y2: '19' }),
+    _react2.default.createElement('circle', { cx: '6.5', cy: '6.5', r: '2.5' }),
+    _react2.default.createElement('circle', { cx: '17.5', cy: '17.5', r: '2.5' })
+  );
+};
+
+Percent.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Percent.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Percent;
+
+/***/ }),
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PhoneCall = function PhoneCall(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z' })
+  );
+};
+
+PhoneCall.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PhoneCall.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PhoneCall;
+
+/***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PhoneForwarded = function PhoneForwarded(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '19 1 23 5 19 9' }),
+    _react2.default.createElement('line', { x1: '15', y1: '5', x2: '23', y2: '5' }),
+    _react2.default.createElement('path', { d: 'M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z' })
+  );
+};
+
+PhoneForwarded.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PhoneForwarded.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PhoneForwarded;
+
+/***/ }),
+/* 228 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PhoneIncoming = function PhoneIncoming(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '16 2 16 8 22 8' }),
+    _react2.default.createElement('line', { x1: '23', y1: '1', x2: '16', y2: '8' }),
+    _react2.default.createElement('path', { d: 'M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z' })
+  );
+};
+
+PhoneIncoming.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PhoneIncoming.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PhoneIncoming;
+
+/***/ }),
+/* 229 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PhoneMissed = function PhoneMissed(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '23', y1: '1', x2: '17', y2: '7' }),
+    _react2.default.createElement('line', { x1: '17', y1: '1', x2: '23', y2: '7' }),
+    _react2.default.createElement('path', { d: 'M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z' })
+  );
+};
+
+PhoneMissed.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PhoneMissed.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PhoneMissed;
+
+/***/ }),
+/* 230 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PhoneOff = function PhoneOff(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91' }),
+    _react2.default.createElement('line', { x1: '23', y1: '1', x2: '1', y2: '23' })
+  );
+};
+
+PhoneOff.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PhoneOff.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PhoneOff;
+
+/***/ }),
+/* 231 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PhoneOutgoing = function PhoneOutgoing(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '23 7 23 1 17 1' }),
+    _react2.default.createElement('line', { x1: '16', y1: '8', x2: '23', y2: '1' }),
+    _react2.default.createElement('path', { d: 'M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z' })
+  );
+};
+
+PhoneOutgoing.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PhoneOutgoing.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PhoneOutgoing;
+
+/***/ }),
+/* 232 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Phone = function Phone(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z' })
+  );
+};
+
+Phone.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Phone.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Phone;
+
+/***/ }),
+/* 233 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PieChart = function PieChart(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M21.21 15.89A10 10 0 1 1 8 2.83' }),
+    _react2.default.createElement('path', { d: 'M22 12A10 10 0 0 0 12 2v10z' })
+  );
+};
+
+PieChart.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PieChart.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PieChart;
+
+/***/ }),
+/* 234 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PlayCircle = function PlayCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('polygon', { points: '10 8 16 12 10 16 10 8' })
+  );
+};
+
+PlayCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PlayCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PlayCircle;
+
+/***/ }),
+/* 235 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Play = function Play(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '5 3 19 12 5 21 5 3' })
+  );
+};
+
+Play.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Play.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Play;
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PlusCircle = function PlusCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('line', { x1: '12', y1: '8', x2: '12', y2: '16' }),
+    _react2.default.createElement('line', { x1: '8', y1: '12', x2: '16', y2: '12' })
+  );
+};
+
+PlusCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PlusCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PlusCircle;
+
+/***/ }),
+/* 237 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var PlusSquare = function PlusSquare(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '3', width: '18', height: '18', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '12', y1: '8', x2: '12', y2: '16' }),
+    _react2.default.createElement('line', { x1: '8', y1: '12', x2: '16', y2: '12' })
+  );
+};
+
+PlusSquare.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+PlusSquare.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = PlusSquare;
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Plus = function Plus(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '12', y1: '5', x2: '12', y2: '19' }),
+    _react2.default.createElement('line', { x1: '5', y1: '12', x2: '19', y2: '12' })
+  );
+};
+
+Plus.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Plus.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Plus;
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Pocket = function Pocket(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M4 3h16a2 2 0 0 1 2 2v6a10 10 0 0 1-10 10A10 10 0 0 1 2 11V5a2 2 0 0 1 2-2z' }),
+    _react2.default.createElement('polyline', { points: '8 10 12 14 16 10' })
+  );
+};
+
+Pocket.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Pocket.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Pocket;
+
+/***/ }),
+/* 240 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Power = function Power(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M18.36 6.64a9 9 0 1 1-12.73 0' }),
+    _react2.default.createElement('line', { x1: '12', y1: '2', x2: '12', y2: '12' })
+  );
+};
+
+Power.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Power.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Power;
+
+/***/ }),
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Printer = function Printer(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '6 9 6 2 18 2 18 9' }),
+    _react2.default.createElement('path', { d: 'M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2' }),
+    _react2.default.createElement('rect', { x: '6', y: '14', width: '12', height: '8' })
+  );
+};
+
+Printer.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Printer.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Printer;
+
+/***/ }),
+/* 242 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Radio = function Radio(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '2' }),
+    _react2.default.createElement('path', { d: 'M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14' })
+  );
+};
+
+Radio.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Radio.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Radio;
+
+/***/ }),
+/* 243 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var RefreshCcw = function RefreshCcw(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '1 4 1 10 7 10' }),
+    _react2.default.createElement('polyline', { points: '23 20 23 14 17 14' }),
+    _react2.default.createElement('path', { d: 'M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15' })
+  );
+};
+
+RefreshCcw.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+RefreshCcw.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = RefreshCcw;
+
+/***/ }),
+/* 244 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var RefreshCw = function RefreshCw(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '23 4 23 10 17 10' }),
+    _react2.default.createElement('polyline', { points: '1 20 1 14 7 14' }),
+    _react2.default.createElement('path', { d: 'M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15' })
+  );
+};
+
+RefreshCw.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+RefreshCw.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = RefreshCw;
+
+/***/ }),
+/* 245 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Repeat = function Repeat(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '17 1 21 5 17 9' }),
+    _react2.default.createElement('path', { d: 'M3 11V9a4 4 0 0 1 4-4h14' }),
+    _react2.default.createElement('polyline', { points: '7 23 3 19 7 15' }),
+    _react2.default.createElement('path', { d: 'M21 13v2a4 4 0 0 1-4 4H3' })
+  );
+};
+
+Repeat.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Repeat.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Repeat;
+
+/***/ }),
+/* 246 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Rewind = function Rewind(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '11 19 2 12 11 5 11 19' }),
+    _react2.default.createElement('polygon', { points: '22 19 13 12 22 5 22 19' })
+  );
+};
+
+Rewind.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Rewind.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Rewind;
+
+/***/ }),
+/* 247 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var RotateCcw = function RotateCcw(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '1 4 1 10 7 10' }),
+    _react2.default.createElement('path', { d: 'M3.51 15a9 9 0 1 0 2.13-9.36L1 10' })
+  );
+};
+
+RotateCcw.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+RotateCcw.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = RotateCcw;
+
+/***/ }),
+/* 248 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var RotateCw = function RotateCw(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '23 4 23 10 17 10' }),
+    _react2.default.createElement('path', { d: 'M20.49 15a9 9 0 1 1-2.12-9.36L23 10' })
+  );
+};
+
+RotateCw.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+RotateCw.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = RotateCw;
+
+/***/ }),
+/* 249 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Rss = function Rss(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M4 11a9 9 0 0 1 9 9' }),
+    _react2.default.createElement('path', { d: 'M4 4a16 16 0 0 1 16 16' }),
+    _react2.default.createElement('circle', { cx: '5', cy: '19', r: '1' })
+  );
+};
+
+Rss.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Rss.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Rss;
+
+/***/ }),
+/* 250 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Save = function Save(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z' }),
+    _react2.default.createElement('polyline', { points: '17 21 17 13 7 13 7 21' }),
+    _react2.default.createElement('polyline', { points: '7 3 7 8 15 8' })
+  );
+};
+
+Save.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Save.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Save;
+
+/***/ }),
+/* 251 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Scissors = function Scissors(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '6', cy: '6', r: '3' }),
+    _react2.default.createElement('circle', { cx: '6', cy: '18', r: '3' }),
+    _react2.default.createElement('line', { x1: '20', y1: '4', x2: '8.12', y2: '15.88' }),
+    _react2.default.createElement('line', { x1: '14.47', y1: '14.48', x2: '20', y2: '20' }),
+    _react2.default.createElement('line', { x1: '8.12', y1: '8.12', x2: '12', y2: '12' })
+  );
+};
+
+Scissors.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Scissors.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Scissors;
+
+/***/ }),
+/* 252 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Search = function Search(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '11', cy: '11', r: '8' }),
+    _react2.default.createElement('line', { x1: '21', y1: '21', x2: '16.65', y2: '16.65' })
+  );
+};
+
+Search.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Search.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Search;
+
+/***/ }),
+/* 253 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Send = function Send(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '22', y1: '2', x2: '11', y2: '13' }),
+    _react2.default.createElement('polygon', { points: '22 2 15 22 11 13 2 9 22 2' })
+  );
+};
+
+Send.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Send.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Send;
+
+/***/ }),
+/* 254 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Server = function Server(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '2', y: '2', width: '20', height: '8', rx: '2', ry: '2' }),
+    _react2.default.createElement('rect', { x: '2', y: '14', width: '20', height: '8', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '6', y1: '6', x2: '6', y2: '6' }),
+    _react2.default.createElement('line', { x1: '6', y1: '18', x2: '6', y2: '18' })
+  );
+};
+
+Server.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Server.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Server;
+
+/***/ }),
+/* 255 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Settings = function Settings(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '3' }),
+    _react2.default.createElement('path', { d: 'M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z' })
+  );
+};
+
+Settings.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Settings.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Settings;
+
+/***/ }),
+/* 256 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Share2 = function Share2(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '18', cy: '5', r: '3' }),
+    _react2.default.createElement('circle', { cx: '6', cy: '12', r: '3' }),
+    _react2.default.createElement('circle', { cx: '18', cy: '19', r: '3' }),
+    _react2.default.createElement('line', { x1: '8.59', y1: '13.51', x2: '15.42', y2: '17.49' }),
+    _react2.default.createElement('line', { x1: '15.41', y1: '6.51', x2: '8.59', y2: '10.49' })
+  );
+};
+
+Share2.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Share2.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Share2;
+
+/***/ }),
+/* 257 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Share = function Share(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8' }),
+    _react2.default.createElement('polyline', { points: '16 6 12 2 8 6' }),
+    _react2.default.createElement('line', { x1: '12', y1: '2', x2: '12', y2: '15' })
+  );
+};
+
+Share.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Share.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Share;
+
+/***/ }),
+/* 258 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ShieldOff = function ShieldOff(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M19.69 14a6.9 6.9 0 0 0 .31-2V5l-8-3-3.16 1.18' }),
+    _react2.default.createElement('path', { d: 'M4.73 4.73L4 5v7c0 6 8 10 8 10a20.29 20.29 0 0 0 5.62-4.38' }),
+    _react2.default.createElement('line', { x1: '1', y1: '1', x2: '23', y2: '23' })
+  );
+};
+
+ShieldOff.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ShieldOff.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ShieldOff;
+
+/***/ }),
+/* 259 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Shield = function Shield(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' })
+  );
+};
+
+Shield.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Shield.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Shield;
+
+/***/ }),
+/* 260 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ShoppingBag = function ShoppingBag(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z' }),
+    _react2.default.createElement('line', { x1: '3', y1: '6', x2: '21', y2: '6' }),
+    _react2.default.createElement('path', { d: 'M16 10a4 4 0 0 1-8 0' })
+  );
+};
+
+ShoppingBag.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ShoppingBag.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ShoppingBag;
+
+/***/ }),
+/* 261 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ShoppingCart = function ShoppingCart(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '9', cy: '21', r: '1' }),
+    _react2.default.createElement('circle', { cx: '20', cy: '21', r: '1' }),
+    _react2.default.createElement('path', { d: 'M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6' })
+  );
+};
+
+ShoppingCart.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ShoppingCart.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ShoppingCart;
+
+/***/ }),
+/* 262 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Shuffle = function Shuffle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '16 3 21 3 21 8' }),
+    _react2.default.createElement('line', { x1: '4', y1: '20', x2: '21', y2: '3' }),
+    _react2.default.createElement('polyline', { points: '21 16 21 21 16 21' }),
+    _react2.default.createElement('line', { x1: '15', y1: '15', x2: '21', y2: '21' }),
+    _react2.default.createElement('line', { x1: '4', y1: '4', x2: '9', y2: '9' })
+  );
+};
+
+Shuffle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Shuffle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Shuffle;
+
+/***/ }),
+/* 263 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Sidebar = function Sidebar(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '3', width: '18', height: '18', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '9', y1: '3', x2: '9', y2: '21' })
+  );
+};
+
+Sidebar.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Sidebar.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Sidebar;
+
+/***/ }),
+/* 264 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var SkipBack = function SkipBack(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '19 20 9 12 19 4 19 20' }),
+    _react2.default.createElement('line', { x1: '5', y1: '19', x2: '5', y2: '5' })
+  );
+};
+
+SkipBack.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+SkipBack.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = SkipBack;
+
+/***/ }),
+/* 265 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var SkipForward = function SkipForward(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '5 4 15 12 5 20 5 4' }),
+    _react2.default.createElement('line', { x1: '19', y1: '5', x2: '19', y2: '19' })
+  );
+};
+
+SkipForward.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+SkipForward.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = SkipForward;
+
+/***/ }),
+/* 266 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Slack = function Slack(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M22.08 9C19.81 1.41 16.54-.35 9 1.92S-.35 7.46 1.92 15 7.46 24.35 15 22.08 24.35 16.54 22.08 9z' }),
+    _react2.default.createElement('line', { x1: '12.57', y1: '5.99', x2: '16.15', y2: '16.39' }),
+    _react2.default.createElement('line', { x1: '7.85', y1: '7.61', x2: '11.43', y2: '18.01' }),
+    _react2.default.createElement('line', { x1: '16.39', y1: '7.85', x2: '5.99', y2: '11.43' }),
+    _react2.default.createElement('line', { x1: '18.01', y1: '12.57', x2: '7.61', y2: '16.15' })
+  );
+};
+
+Slack.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Slack.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Slack;
+
+/***/ }),
+/* 267 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Slash = function Slash(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('line', { x1: '4.93', y1: '4.93', x2: '19.07', y2: '19.07' })
+  );
+};
+
+Slash.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Slash.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Slash;
+
+/***/ }),
+/* 268 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Sliders = function Sliders(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '4', y1: '21', x2: '4', y2: '14' }),
+    _react2.default.createElement('line', { x1: '4', y1: '10', x2: '4', y2: '3' }),
+    _react2.default.createElement('line', { x1: '12', y1: '21', x2: '12', y2: '12' }),
+    _react2.default.createElement('line', { x1: '12', y1: '8', x2: '12', y2: '3' }),
+    _react2.default.createElement('line', { x1: '20', y1: '21', x2: '20', y2: '16' }),
+    _react2.default.createElement('line', { x1: '20', y1: '12', x2: '20', y2: '3' }),
+    _react2.default.createElement('line', { x1: '1', y1: '14', x2: '7', y2: '14' }),
+    _react2.default.createElement('line', { x1: '9', y1: '8', x2: '15', y2: '8' }),
+    _react2.default.createElement('line', { x1: '17', y1: '16', x2: '23', y2: '16' })
+  );
+};
+
+Sliders.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Sliders.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Sliders;
+
+/***/ }),
+/* 269 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Smartphone = function Smartphone(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '5', y: '2', width: '14', height: '20', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '12', y1: '18', x2: '12', y2: '18' })
+  );
+};
+
+Smartphone.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Smartphone.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Smartphone;
+
+/***/ }),
+/* 270 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Speaker = function Speaker(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '4', y: '2', width: '16', height: '20', rx: '2', ry: '2' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '14', r: '4' }),
+    _react2.default.createElement('line', { x1: '12', y1: '6', x2: '12', y2: '6' })
+  );
+};
+
+Speaker.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Speaker.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Speaker;
+
+/***/ }),
+/* 271 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Square = function Square(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '3', width: '18', height: '18', rx: '2', ry: '2' })
+  );
+};
+
+Square.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Square.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Square;
+
+/***/ }),
+/* 272 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Star = function Star(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' })
+  );
+};
+
+Star.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Star.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Star;
+
+/***/ }),
+/* 273 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var StopCircle = function StopCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('rect', { x: '9', y: '9', width: '6', height: '6' })
+  );
+};
+
+StopCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+StopCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = StopCircle;
+
+/***/ }),
+/* 274 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Sun = function Sun(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '5' }),
+    _react2.default.createElement('line', { x1: '12', y1: '1', x2: '12', y2: '3' }),
+    _react2.default.createElement('line', { x1: '12', y1: '21', x2: '12', y2: '23' }),
+    _react2.default.createElement('line', { x1: '4.22', y1: '4.22', x2: '5.64', y2: '5.64' }),
+    _react2.default.createElement('line', { x1: '18.36', y1: '18.36', x2: '19.78', y2: '19.78' }),
+    _react2.default.createElement('line', { x1: '1', y1: '12', x2: '3', y2: '12' }),
+    _react2.default.createElement('line', { x1: '21', y1: '12', x2: '23', y2: '12' }),
+    _react2.default.createElement('line', { x1: '4.22', y1: '19.78', x2: '5.64', y2: '18.36' }),
+    _react2.default.createElement('line', { x1: '18.36', y1: '5.64', x2: '19.78', y2: '4.22' })
+  );
+};
+
+Sun.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Sun.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Sun;
+
+/***/ }),
+/* 275 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Sunrise = function Sunrise(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M17 18a5 5 0 0 0-10 0' }),
+    _react2.default.createElement('line', { x1: '12', y1: '2', x2: '12', y2: '9' }),
+    _react2.default.createElement('line', { x1: '4.22', y1: '10.22', x2: '5.64', y2: '11.64' }),
+    _react2.default.createElement('line', { x1: '1', y1: '18', x2: '3', y2: '18' }),
+    _react2.default.createElement('line', { x1: '21', y1: '18', x2: '23', y2: '18' }),
+    _react2.default.createElement('line', { x1: '18.36', y1: '11.64', x2: '19.78', y2: '10.22' }),
+    _react2.default.createElement('line', { x1: '23', y1: '22', x2: '1', y2: '22' }),
+    _react2.default.createElement('polyline', { points: '8 6 12 2 16 6' })
+  );
+};
+
+Sunrise.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Sunrise.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Sunrise;
+
+/***/ }),
+/* 276 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Sunset = function Sunset(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M17 18a5 5 0 0 0-10 0' }),
+    _react2.default.createElement('line', { x1: '12', y1: '9', x2: '12', y2: '2' }),
+    _react2.default.createElement('line', { x1: '4.22', y1: '10.22', x2: '5.64', y2: '11.64' }),
+    _react2.default.createElement('line', { x1: '1', y1: '18', x2: '3', y2: '18' }),
+    _react2.default.createElement('line', { x1: '21', y1: '18', x2: '23', y2: '18' }),
+    _react2.default.createElement('line', { x1: '18.36', y1: '11.64', x2: '19.78', y2: '10.22' }),
+    _react2.default.createElement('line', { x1: '23', y1: '22', x2: '1', y2: '22' }),
+    _react2.default.createElement('polyline', { points: '16 5 12 9 8 5' })
+  );
+};
+
+Sunset.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Sunset.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Sunset;
+
+/***/ }),
+/* 277 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Tablet = function Tablet(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', {
+      x: '4',
+      y: '2',
+      width: '16',
+      height: '20',
+      rx: '2',
+      ry: '2',
+      transform: 'rotate(180 12 12)'
+    }),
+    _react2.default.createElement('line', { x1: '12', y1: '18', x2: '12', y2: '18' })
+  );
+};
+
+Tablet.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Tablet.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Tablet;
+
+/***/ }),
+/* 278 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Tag = function Tag(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z' }),
+    _react2.default.createElement('line', { x1: '7', y1: '7', x2: '7', y2: '7' })
+  );
+};
+
+Tag.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Tag.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Tag;
+
+/***/ }),
+/* 279 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Target = function Target(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '6' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '2' })
+  );
+};
+
+Target.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Target.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Target;
+
+/***/ }),
+/* 280 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Terminal = function Terminal(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '4 17 10 11 4 5' }),
+    _react2.default.createElement('line', { x1: '12', y1: '19', x2: '20', y2: '19' })
+  );
+};
+
+Terminal.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Terminal.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Terminal;
+
+/***/ }),
+/* 281 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Thermometer = function Thermometer(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z' })
+  );
+};
+
+Thermometer.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Thermometer.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Thermometer;
+
+/***/ }),
+/* 282 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ThumbsDown = function ThumbsDown(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17' })
+  );
+};
+
+ThumbsDown.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ThumbsDown.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ThumbsDown;
+
+/***/ }),
+/* 283 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ThumbsUp = function ThumbsUp(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3' })
+  );
+};
+
+ThumbsUp.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ThumbsUp.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ThumbsUp;
+
+/***/ }),
+/* 284 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ToggleLeft = function ToggleLeft(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '1', y: '5', width: '22', height: '14', rx: '7', ry: '7' }),
+    _react2.default.createElement('circle', { cx: '8', cy: '12', r: '3' })
+  );
+};
+
+ToggleLeft.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ToggleLeft.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ToggleLeft;
+
+/***/ }),
+/* 285 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ToggleRight = function ToggleRight(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '1', y: '5', width: '22', height: '14', rx: '7', ry: '7' }),
+    _react2.default.createElement('circle', { cx: '16', cy: '12', r: '3' })
+  );
+};
+
+ToggleRight.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ToggleRight.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ToggleRight;
+
+/***/ }),
+/* 286 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Trash2 = function Trash2(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '3 6 5 6 21 6' }),
+    _react2.default.createElement('path', { d: 'M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2' }),
+    _react2.default.createElement('line', { x1: '10', y1: '11', x2: '10', y2: '17' }),
+    _react2.default.createElement('line', { x1: '14', y1: '11', x2: '14', y2: '17' })
+  );
+};
+
+Trash2.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Trash2.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Trash2;
+
+/***/ }),
+/* 287 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Trash = function Trash(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '3 6 5 6 21 6' }),
+    _react2.default.createElement('path', { d: 'M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2' })
+  );
+};
+
+Trash.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Trash.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Trash;
+
+/***/ }),
+/* 288 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var TrendingDown = function TrendingDown(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '23 18 13.5 8.5 8.5 13.5 1 6' }),
+    _react2.default.createElement('polyline', { points: '17 18 23 18 23 12' })
+  );
+};
+
+TrendingDown.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+TrendingDown.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = TrendingDown;
+
+/***/ }),
+/* 289 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var TrendingUp = function TrendingUp(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '23 6 13.5 15.5 8.5 10.5 1 18' }),
+    _react2.default.createElement('polyline', { points: '17 6 23 6 23 12' })
+  );
+};
+
+TrendingUp.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+TrendingUp.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = TrendingUp;
+
+/***/ }),
+/* 290 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Triangle = function Triangle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z' })
+  );
+};
+
+Triangle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Triangle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Triangle;
+
+/***/ }),
+/* 291 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Truck = function Truck(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '1', y: '3', width: '15', height: '13' }),
+    _react2.default.createElement('polygon', { points: '16 8 20 8 23 11 23 16 16 16 16 8' }),
+    _react2.default.createElement('circle', { cx: '5.5', cy: '18.5', r: '2.5' }),
+    _react2.default.createElement('circle', { cx: '18.5', cy: '18.5', r: '2.5' })
+  );
+};
+
+Truck.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Truck.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Truck;
+
+/***/ }),
+/* 292 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Tv = function Tv(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '2', y: '7', width: '20', height: '15', rx: '2', ry: '2' }),
+    _react2.default.createElement('polyline', { points: '17 2 12 7 7 2' })
+  );
+};
+
+Tv.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Tv.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Tv;
+
+/***/ }),
+/* 293 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Twitter = function Twitter(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z' })
+  );
+};
+
+Twitter.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Twitter.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Twitter;
+
+/***/ }),
+/* 294 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Type = function Type(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '4 7 4 4 20 4 20 7' }),
+    _react2.default.createElement('line', { x1: '9', y1: '20', x2: '15', y2: '20' }),
+    _react2.default.createElement('line', { x1: '12', y1: '4', x2: '12', y2: '20' })
+  );
+};
+
+Type.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Type.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Type;
+
+/***/ }),
+/* 295 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Umbrella = function Umbrella(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7' })
+  );
+};
+
+Umbrella.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Umbrella.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Umbrella;
+
+/***/ }),
+/* 296 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Underline = function Underline(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3' }),
+    _react2.default.createElement('line', { x1: '4', y1: '21', x2: '20', y2: '21' })
+  );
+};
+
+Underline.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Underline.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Underline;
+
+/***/ }),
+/* 297 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Unlock = function Unlock(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '11', width: '18', height: '11', rx: '2', ry: '2' }),
+    _react2.default.createElement('path', { d: 'M7 11V7a5 5 0 0 1 9.9-1' })
+  );
+};
+
+Unlock.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Unlock.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Unlock;
+
+/***/ }),
+/* 298 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var UploadCloud = function UploadCloud(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '16 16 12 12 8 16' }),
+    _react2.default.createElement('line', { x1: '12', y1: '12', x2: '12', y2: '21' }),
+    _react2.default.createElement('path', { d: 'M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3' }),
+    _react2.default.createElement('polyline', { points: '16 16 12 12 8 16' })
+  );
+};
+
+UploadCloud.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+UploadCloud.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = UploadCloud;
+
+/***/ }),
+/* 299 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Upload = function Upload(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4' }),
+    _react2.default.createElement('polyline', { points: '17 8 12 3 7 8' }),
+    _react2.default.createElement('line', { x1: '12', y1: '3', x2: '12', y2: '15' })
+  );
+};
+
+Upload.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Upload.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Upload;
+
+/***/ }),
+/* 300 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var UserCheck = function UserCheck(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2' }),
+    _react2.default.createElement('circle', { cx: '8.5', cy: '7', r: '4' }),
+    _react2.default.createElement('polyline', { points: '17 11 19 13 23 9' })
+  );
+};
+
+UserCheck.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+UserCheck.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = UserCheck;
+
+/***/ }),
+/* 301 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var UserMinus = function UserMinus(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2' }),
+    _react2.default.createElement('circle', { cx: '8.5', cy: '7', r: '4' }),
+    _react2.default.createElement('line', { x1: '23', y1: '11', x2: '17', y2: '11' })
+  );
+};
+
+UserMinus.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+UserMinus.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = UserMinus;
+
+/***/ }),
+/* 302 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var UserPlus = function UserPlus(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2' }),
+    _react2.default.createElement('circle', { cx: '8.5', cy: '7', r: '4' }),
+    _react2.default.createElement('line', { x1: '20', y1: '8', x2: '20', y2: '14' }),
+    _react2.default.createElement('line', { x1: '23', y1: '11', x2: '17', y2: '11' })
+  );
+};
+
+UserPlus.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+UserPlus.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = UserPlus;
+
+/***/ }),
+/* 303 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var UserX = function UserX(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2' }),
+    _react2.default.createElement('circle', { cx: '8.5', cy: '7', r: '4' }),
+    _react2.default.createElement('line', { x1: '18', y1: '8', x2: '23', y2: '13' }),
+    _react2.default.createElement('line', { x1: '23', y1: '8', x2: '18', y2: '13' })
+  );
+};
+
+UserX.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+UserX.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = UserX;
+
+/***/ }),
+/* 304 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var User = function User(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2' }),
+    _react2.default.createElement('circle', { cx: '12', cy: '7', r: '4' })
+  );
+};
+
+User.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+User.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = User;
+
+/***/ }),
+/* 305 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Users = function Users(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2' }),
+    _react2.default.createElement('circle', { cx: '9', cy: '7', r: '4' }),
+    _react2.default.createElement('path', { d: 'M23 21v-2a4 4 0 0 0-3-3.87' }),
+    _react2.default.createElement('path', { d: 'M16 3.13a4 4 0 0 1 0 7.75' })
+  );
+};
+
+Users.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Users.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Users;
+
+/***/ }),
+/* 306 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var VideoOff = function VideoOff(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10' }),
+    _react2.default.createElement('line', { x1: '1', y1: '1', x2: '23', y2: '23' })
+  );
+};
+
+VideoOff.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+VideoOff.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = VideoOff;
+
+/***/ }),
+/* 307 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Video = function Video(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '23 7 16 12 23 17 23 7' }),
+    _react2.default.createElement('rect', { x: '1', y: '5', width: '15', height: '14', rx: '2', ry: '2' })
+  );
+};
+
+Video.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Video.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Video;
+
+/***/ }),
+/* 308 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Voicemail = function Voicemail(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '5.5', cy: '11.5', r: '4.5' }),
+    _react2.default.createElement('circle', { cx: '18.5', cy: '11.5', r: '4.5' }),
+    _react2.default.createElement('line', { x1: '5.5', y1: '16', x2: '18.5', y2: '16' })
+  );
+};
+
+Voicemail.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Voicemail.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Voicemail;
+
+/***/ }),
+/* 309 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Volume1 = function Volume1(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '11 5 6 9 2 9 2 15 6 15 11 19 11 5' }),
+    _react2.default.createElement('path', { d: 'M15.54 8.46a5 5 0 0 1 0 7.07' })
+  );
+};
+
+Volume1.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Volume1.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Volume1;
+
+/***/ }),
+/* 310 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Volume2 = function Volume2(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '11 5 6 9 2 9 2 15 6 15 11 19 11 5' }),
+    _react2.default.createElement('path', { d: 'M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07' })
+  );
+};
+
+Volume2.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Volume2.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Volume2;
+
+/***/ }),
+/* 311 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var VolumeX = function VolumeX(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '11 5 6 9 2 9 2 15 6 15 11 19 11 5' }),
+    _react2.default.createElement('line', { x1: '23', y1: '9', x2: '17', y2: '15' }),
+    _react2.default.createElement('line', { x1: '17', y1: '9', x2: '23', y2: '15' })
+  );
+};
+
+VolumeX.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+VolumeX.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = VolumeX;
+
+/***/ }),
+/* 312 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Volume = function Volume(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '11 5 6 9 2 9 2 15 6 15 11 19 11 5' })
+  );
+};
+
+Volume.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Volume.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Volume;
+
+/***/ }),
+/* 313 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Watch = function Watch(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '7' }),
+    _react2.default.createElement('polyline', { points: '12 9 12 12 13.5 13.5' }),
+    _react2.default.createElement('path', { d: 'M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83' })
+  );
+};
+
+Watch.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Watch.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Watch;
+
+/***/ }),
+/* 314 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var WifiOff = function WifiOff(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '1', y1: '1', x2: '23', y2: '23' }),
+    _react2.default.createElement('path', { d: 'M16.72 11.06A10.94 10.94 0 0 1 19 12.55' }),
+    _react2.default.createElement('path', { d: 'M5 12.55a10.94 10.94 0 0 1 5.17-2.39' }),
+    _react2.default.createElement('path', { d: 'M10.71 5.05A16 16 0 0 1 22.58 9' }),
+    _react2.default.createElement('path', { d: 'M1.42 9a15.91 15.91 0 0 1 4.7-2.88' }),
+    _react2.default.createElement('path', { d: 'M8.53 16.11a6 6 0 0 1 6.95 0' }),
+    _react2.default.createElement('line', { x1: '12', y1: '20', x2: '12', y2: '20' })
+  );
+};
+
+WifiOff.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+WifiOff.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = WifiOff;
+
+/***/ }),
+/* 315 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Wifi = function Wifi(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M5 12.55a11 11 0 0 1 14.08 0' }),
+    _react2.default.createElement('path', { d: 'M1.42 9a16 16 0 0 1 21.16 0' }),
+    _react2.default.createElement('path', { d: 'M8.53 16.11a6 6 0 0 1 6.95 0' }),
+    _react2.default.createElement('line', { x1: '12', y1: '20', x2: '12', y2: '20' })
+  );
+};
+
+Wifi.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Wifi.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Wifi;
+
+/***/ }),
+/* 316 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Wind = function Wind(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2' })
+  );
+};
+
+Wind.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Wind.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Wind;
+
+/***/ }),
+/* 317 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var XCircle = function XCircle(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '12', cy: '12', r: '10' }),
+    _react2.default.createElement('line', { x1: '15', y1: '9', x2: '9', y2: '15' }),
+    _react2.default.createElement('line', { x1: '9', y1: '9', x2: '15', y2: '15' })
+  );
+};
+
+XCircle.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+XCircle.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = XCircle;
+
+/***/ }),
+/* 318 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var XSquare = function XSquare(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('rect', { x: '3', y: '3', width: '18', height: '18', rx: '2', ry: '2' }),
+    _react2.default.createElement('line', { x1: '9', y1: '9', x2: '15', y2: '15' }),
+    _react2.default.createElement('line', { x1: '15', y1: '9', x2: '9', y2: '15' })
+  );
+};
+
+XSquare.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+XSquare.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = XSquare;
+
+/***/ }),
+/* 319 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var X = function X(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('line', { x1: '18', y1: '6', x2: '6', y2: '18' }),
+    _react2.default.createElement('line', { x1: '6', y1: '6', x2: '18', y2: '18' })
+  );
+};
+
+X.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+X.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = X;
+
+/***/ }),
+/* 320 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Youtube = function Youtube(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('path', { d: 'M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z' }),
+    _react2.default.createElement('polygon', { points: '9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02' })
+  );
+};
+
+Youtube.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Youtube.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Youtube;
+
+/***/ }),
+/* 321 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ZapOff = function ZapOff(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polyline', { points: '12.41 6.75 13 2 10.57 4.92' }),
+    _react2.default.createElement('polyline', { points: '18.57 12.91 21 10 15.66 10' }),
+    _react2.default.createElement('polyline', { points: '8 8 3 14 12 14 11 22 16 16' }),
+    _react2.default.createElement('line', { x1: '1', y1: '1', x2: '23', y2: '23' })
+  );
+};
+
+ZapOff.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ZapOff.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ZapOff;
+
+/***/ }),
+/* 322 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Zap = function Zap(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('polygon', { points: '13 2 3 14 12 14 11 22 21 10 12 10 13 2' })
+  );
+};
+
+Zap.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+Zap.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = Zap;
+
+/***/ }),
+/* 323 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ZoomIn = function ZoomIn(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '11', cy: '11', r: '8' }),
+    _react2.default.createElement('line', { x1: '21', y1: '21', x2: '16.65', y2: '16.65' }),
+    _react2.default.createElement('line', { x1: '11', y1: '8', x2: '11', y2: '14' }),
+    _react2.default.createElement('line', { x1: '8', y1: '11', x2: '14', y2: '11' })
+  );
+};
+
+ZoomIn.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ZoomIn.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ZoomIn;
+
+/***/ }),
+/* 324 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(56);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var ZoomOut = function ZoomOut(props) {
+  var color = props.color,
+      size = props.size,
+      otherProps = _objectWithoutProperties(props, ['color', 'size']);
+
+  return _react2.default.createElement(
+    'svg',
+    _extends({
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: color,
+      strokeWidth: '2',
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round'
+    }, otherProps),
+    _react2.default.createElement('circle', { cx: '11', cy: '11', r: '8' }),
+    _react2.default.createElement('line', { x1: '21', y1: '21', x2: '16.65', y2: '16.65' }),
+    _react2.default.createElement('line', { x1: '8', y1: '11', x2: '14', y2: '11' })
+  );
+};
+
+ZoomOut.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ZoomOut.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+exports.default = ZoomOut;
 
 /***/ })
 /******/ ]);

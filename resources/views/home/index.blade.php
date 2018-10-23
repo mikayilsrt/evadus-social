@@ -5,6 +5,8 @@
     <div class="container" id="page-container">
         <div class="row">
             <div class="col-12 col-md-8" id="timeline">
+                <div id="timelinefeed"></div>
+                <!--
                 <div class="content-timeline">
                     <div class="item-header">
                         <a href="">
@@ -121,6 +123,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
             @include("layouts._partials._block-section")
         </div>

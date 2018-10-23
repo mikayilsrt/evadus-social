@@ -8,11 +8,19 @@
 require('./bootstrap');
 
 /**
+ * Next, we will create a fresh React component instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+require('./components/Example');
+require('./components/blocks/TimelineFeed');
+
+
+/**
  * Require the bootstrap javascript file.
  **/
 require('bootstrap/dist/js/bootstrap');
-
-// require('semantic-ui-sass/semantic-ui.js');
 
 /**
  * Mobile nav click event.
@@ -27,11 +35,3 @@ for (var i = 0; i <= mobileMenuButtons.length; i++) {
         mobileNav.classList.toggle("open-mobile-nav");
     });
 }
-
-/**
- * Next, we will create a fresh React component instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-require('./components/Example');
