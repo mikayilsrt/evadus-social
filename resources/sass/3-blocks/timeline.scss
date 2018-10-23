@@ -1,3 +1,101 @@
 #timeline {
-  //
+  .content-timeline {
+    float: left;
+    display: block;
+    padding: 10px 20px;
+    // background: #000000;
+    .item-header {
+      display: block;
+      float: left;
+      width: 100%;
+      position: relative;
+      a {
+        float: left;
+        color: $color-2;
+        font-size: 0.875em;
+        display: inline-block;
+        .user-profile-img {
+          width: 48px;
+          height: 48px;
+          overflow: hidden;
+          border-radius: 50%;
+          display: inline-block;
+          float: left;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      ul {
+        top: 20%;
+        float: left;
+        margin-left: 10px;
+        position: absolute;
+        display: inline-block;
+        li {
+          display: inline-block;
+        }
+        .fullGroupName {
+          font-weight: 500;
+          margin-right: 5px;
+        }
+        .username {
+          a{
+            color: $color-3;
+          }
+        }
+        .item-date {
+          display: block;
+          color: $color-3;
+          margin-top: 5px;
+          font-size: 0.813em;
+        }
+      }
+    }
+    .item-text-content {
+      float: left;
+      width: 100%;
+      display: block;
+      font-size: 14px;
+      margin-top: 10px;
+      line-height: 22px;
+    }
+    .item-media-content {
+      float: left;
+      width: 100%;
+      display: block;
+      margin-top: 10px;
+      overflow: hidden;
+      border-radius: 5px;
+      img {
+        width: 100%;
+      }
+    }
+    .item-footer {
+      display: block;
+      float: left;
+      width: 100%;
+      margin-top: 10px;
+      .item-action {
+        ul {
+          width: 100%;
+          float: left;
+          text-align: center;
+          li {
+            width: 25%;
+            display: inline-block;
+            button {
+              border: none;
+              cursor: pointer;
+              background: none;
+              font-size: 0.7em;
+              .icon {
+                width: 40%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
