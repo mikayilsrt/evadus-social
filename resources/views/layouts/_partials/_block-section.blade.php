@@ -1,0 +1,6 @@
+<div class="block-section col-12 col-md-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corporis cum dignissimos doloremque eligendi fugit magni nobis nostrum odio officia qui quidem rem, rerum sequi velit voluptatem voluptates. Adipisci, molestias?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corporis cum dignissimos doloremque eligendi fugit magni nobis nostrum odio officia qui quidem rem, rerum sequi velit voluptatem voluptates. Adipisci, molestias?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corporis cum dignissimos doloremque eligendi fugit magni nobis nostrum odio officia qui quidem rem, rerum sequi velit voluptatem voluptates. Adipisci, molestias?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corporis cum dignissimos doloremque eligendi fugit magni nobis nostrum odio officia qui quidem rem, rerum sequi velit voluptatem voluptates. Adipisci, molestias?</p>
+</div>

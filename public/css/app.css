@@ -10633,6 +10633,8 @@ body {
   color: #303030;
 }
 
+/* Blocks style */
+
 #header-home {
   /** Header navbar **/
   /** Mobile navbar **/
@@ -10918,5 +10920,11 @@ body {
   #header-home .main-navbar-mobile .mobile-navbar {
     display: none;
   }
+}
+
+/* Layouts style */
+
+#page-container {
+  margin-top: 35px;
 }
 

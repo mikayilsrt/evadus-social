@@ -12,4 +12,9 @@
 
 @import "0-helpers/variables";
 @import "1-base/main";
+
+/* Blocks style */
 @import "3-blocks/header";
+
+/* Layouts style */
+@import "2-layouts/home";
