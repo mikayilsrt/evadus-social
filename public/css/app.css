@@ -11020,13 +11020,11 @@ body {
 
 #page-container .row #timeline .content-timeline .item-footer .item-action ul {
   width: 100%;
-  float: left;
-  text-align: center;
-}
-
-#page-container .row #timeline .content-timeline .item-footer .item-action ul li {
-  width: 25%;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #page-container .row #timeline .content-timeline .item-footer .item-action ul li button {
