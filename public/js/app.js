@@ -57282,16 +57282,16 @@ var TimelineFeed = function (_Component) {
                     { className: 'item-header' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
-                        { href: true },
+                        { href: '' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
                             { className: 'user-profile-img' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://kaem.io/assets/img/default-profile-img.png', alt: true })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://kaem.io/assets/img/default-profile-img.png', alt: '' })
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'ul',
-                        { className: true },
+                        { className: '' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'li',
                             { className: 'fullGroupName' },
@@ -57325,7 +57325,7 @@ var TimelineFeed = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'item-media-content' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://images.unsplash.com/photo-1540281481658-a6ebea61c280?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a46acf5c0244921f4eba50da0dfbf401&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb', alt: true })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://images.unsplash.com/photo-1540281481658-a6ebea61c280?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a46acf5c0244921f4eba50da0dfbf401&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb', alt: '' })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
