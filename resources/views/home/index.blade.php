@@ -4,7 +4,7 @@
     <!-- main container -->
     <div class="container" id="page-container">
         <div class="row">
-            <div class="col-12 col-md-8" id="timeline">
+            <div class="col-12 col-md-7" id="timeline">
                 <div id="timelinefeed"></div>
                 <!--
                 <div class="content-timeline">
