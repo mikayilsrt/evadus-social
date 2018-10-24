@@ -10936,11 +10936,15 @@ body {
   position: relative;
 }
 
-.block-section .collection-item {
+.block-section #collectionsBlocks {
+  width: 100%;
+}
+
+.block-section #collectionsBlocks .collection-item {
   margin-bottom: 20px;
 }
 
-.block-section .collection-item .content-item {
+.block-section #collectionsBlocks .collection-item .content-item {
   color: #ffffff;
   overflow: hidden;
   position: inherit;
@@ -10950,7 +10954,7 @@ body {
   background-size: cover !important;
 }
 
-.block-section .collection-item .content-item .header-collection-item .user-profile-img {
+.block-section #collectionsBlocks .collection-item .content-item .header-collection-item .user-profile-img {
   width: 30px;
   height: 30px;
   overflow: hidden;
@@ -10958,11 +10962,11 @@ body {
   border: solid 2px #ffffff;
 }
 
-.block-section .collection-item .content-item .header-collection-item .user-profile-img img {
+.block-section #collectionsBlocks .collection-item .content-item .header-collection-item .user-profile-img img {
   width: 100%;
 }
 
-.block-section .collection-item .content-item .footer-collection-item {
+.block-section #collectionsBlocks .collection-item .content-item .footer-collection-item {
   left: 0;
   right: 0;
   bottom: -15%;
@@ -10973,23 +10977,23 @@ body {
   background: linear-gradient(to top, #7c21ff, #9c28b100);
 }
 
-.block-section .collection-item .content-item .footer-collection-item .footer-content-item {
+.block-section #collectionsBlocks .collection-item .content-item .footer-collection-item .footer-content-item {
   padding: 10px;
 }
 
-.block-section .collection-item .content-item .footer-collection-item .footer-content-item h4 {
+.block-section #collectionsBlocks .collection-item .content-item .footer-collection-item .footer-content-item h4 {
   font-weight: 500;
   margin-bottom: 7px;
 }
 
-.block-section .collection-item .content-item .footer-collection-item .footer-content-item p {
+.block-section #collectionsBlocks .collection-item .content-item .footer-collection-item .footer-content-item p {
   overflow: hidden;
   max-height: 64px;
   line-height: 16px;
   font-size: 0.8em;
 }
 
-.block-section .collection-item .content-item .footer-collection-item:hover {
+.block-section #collectionsBlocks .collection-item .content-item .footer-collection-item:hover {
   bottom: 0;
 }
 
