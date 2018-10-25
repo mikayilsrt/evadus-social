@@ -3,7 +3,7 @@
         <h3>Collections</h3>
     </div>
     <div class="row">
-        <div id="collectionsBlocks"></div>
+        <div id="collectionsBlocks" class="row"></div>
         <!--
         <div class="collection-item col-md-6">
             <a href="">
