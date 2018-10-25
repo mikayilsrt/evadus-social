@@ -39,4 +39,8 @@
         </a>
     </div>
     -->
+    <div class="block-title">
+        <h3>Suggested users</h3>
+    </div>
+    <div id="userSuggested" class="row"></div>
 </div>

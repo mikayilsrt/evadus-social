@@ -59,4 +59,64 @@
       }
     }
   }
+  #userSuggested {
+    .user-item {
+      width: 100%;
+      display: block;
+      padding: 15px 10px;
+      border-radius: 3px;
+      &:hover {
+        background: #f8f8f8;
+        transition-duration: 0.5s;
+      }
+      .user-profile {
+        width: 34px;
+        height: 34px;
+        overflow: hidden;
+        margin-right: 7px;
+        border-radius: 50%;
+        display: inline-block;
+        a {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .user-info {
+      display: inline-block;
+      h3 {
+        font-weight: 500;
+        font-size: 1.0em;
+        a {
+          color: $color-2;
+        }
+        span {
+          color: $color-3;
+          font-weight: 400;
+          font-size: 0.8em;
+          margin-left: 5px;
+        }
+      }
+      .follow-btn {
+        color: $color-1;
+        cursor: pointer;
+        margin-top: 5px;
+        background: none;
+        padding: 7px 20px;
+        font-size: 0.813em;
+        border-radius: 50px;
+        border: solid 1px $color-1;
+        &:hover {
+          color: #ffffff;
+          transition-duration: 0.5s;
+          background: $linear-gradient;
+        }
+      }
+      .active-follow {
+        color: #ffffff;
+        background: $linear-gradient;
+      }
+    }
+  }
 }

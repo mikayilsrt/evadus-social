@@ -10997,6 +10997,75 @@ body {
   bottom: 0;
 }
 
+.block-section #userSuggested .user-item {
+  width: 100%;
+  display: block;
+  padding: 15px 10px;
+  border-radius: 3px;
+}
+
+.block-section #userSuggested .user-item:hover {
+  background: #f8f8f8;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.block-section #userSuggested .user-item .user-profile {
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  margin-right: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.block-section #userSuggested .user-item .user-profile a img {
+  width: 100%;
+}
+
+.block-section #userSuggested .user-info {
+  display: inline-block;
+}
+
+.block-section #userSuggested .user-info h3 {
+  font-weight: 500;
+  font-size: 1.0em;
+}
+
+.block-section #userSuggested .user-info h3 a {
+  color: #303030;
+}
+
+.block-section #userSuggested .user-info h3 span {
+  color: #888888;
+  font-weight: 400;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.block-section #userSuggested .user-info .follow-btn {
+  color: #7c21ff;
+  cursor: pointer;
+  margin-top: 5px;
+  background: none;
+  padding: 7px 20px;
+  font-size: 0.813em;
+  border-radius: 50px;
+  border: solid 1px #7c21ff;
+}
+
+.block-section #userSuggested .user-info .follow-btn:hover {
+  color: #ffffff;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
+}
+
+.block-section #userSuggested .user-info .active-follow {
+  color: #ffffff;
+  background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
+}
+
 /* Layouts style */
 
 #page-container {

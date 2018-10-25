@@ -16,6 +16,7 @@ require('./bootstrap');
 require('./components/Example');
 require('./components/blocks/TimelineFeed');
 require('./components/blocks/CollectionsBlocks');
+require('./components/blocks/UsersSuggested');
 
 
 /**
