@@ -7,7 +7,16 @@ export default class TimelineFeed extends Component {
     constructor (props) {
         super(props);
         this.state = {
+            activeVote: false,
         };
+        this.toggleVote = this.toggleVote.bind(this);
+    }
+
+    toggleVote (e) {
+        e.preventDefault();
+        this.setState({
+            activeVote: !this.state.activeVote
+        });
     }
 
     render() {
@@ -34,7 +43,7 @@ export default class TimelineFeed extends Component {
                 <div className="item-footer">
                     <div className="item-action">
                         <ul>
-                            <li><button><Icons.Heart className="icon" /> Likes</button></li>
+                            <li><button className={ this.state.activeVote ? "toggle-active" : "" } onClick={ this.toggleVote }><Icons.Heart className="icon" /> Likes</button></li>
                             <li><button><Icons.Link className="icon" /> Share</button></li>
                             <li><button><Icons.ChevronRight className="icon" /> Status</button></li>
                         </ul>

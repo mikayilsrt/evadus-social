@@ -11182,3 +11182,7 @@ body {
   width: 40%;
 }
 
+#page-container .row #timeline .content-timeline .item-footer .item-action ul li .toggle-active {
+  color: #b71540;
+}
+
