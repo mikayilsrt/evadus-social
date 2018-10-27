@@ -1,0 +1,22 @@
+#page-container {
+  margin-top: 35px;
+  .row {
+    #profileContent {
+      .header-profile-content {
+        .left-content {
+          .profile-image {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 50%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        .right-content {
+        }
+      }
+    }
+  }
+}
