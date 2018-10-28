@@ -11190,6 +11190,18 @@ body {
   margin-top: 35px;
 }
 
+#page-container .row #profileContent .header-profile-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#page-container .row #profileContent .header-profile-content .left-content {
+  margin-right: 20px;
+}
+
 #page-container .row #profileContent .header-profile-content .left-content .profile-image {
   width: 120px;
   height: 120px;
@@ -11199,5 +11211,165 @@ body {
 
 #page-container .row #profileContent .header-profile-content .left-content .profile-image img {
   width: 100%;
+}
+
+#page-container .row #profileContent .header-profile-content .right-content {
+  padding-top: 10px;
+}
+
+#page-container .row #profileContent .header-profile-content .right-content h3 {
+  float: left;
+  color: #303030;
+  font-weight: 600;
+  font-size: 1.875em;
+  display: inline-block;
+}
+
+#page-container .row #profileContent .header-profile-content .right-content .follow-btn {
+  float: right;
+  color: #7c21ff;
+  cursor: pointer;
+  margin-top: 5px;
+  background: none;
+  padding: 7px 20px;
+  font-size: 0.813em;
+  border-radius: 50px;
+  border: solid 1px #7c21ff;
+}
+
+#page-container .row #profileContent .header-profile-content .right-content .follow-btn:hover {
+  color: #ffffff;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
+}
+
+#page-container .row #profileContent .header-profile-content .right-content .active-follow {
+  color: #ffffff;
+  background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
+}
+
+#page-container .row #profileContent .header-profile-content .right-content p {
+  float: left;
+  width: 100%;
+  display: block;
+  color: #888888;
+  margin-top: 7px;
+  line-height: 24px;
+  font-size: 0.875em;
+}
+
+#page-container .row #profileContent #timeline .content-timeline {
+  float: left;
+  display: block;
+  padding: 10px 20px;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-header {
+  display: block;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-header a {
+  float: left;
+  color: #303030;
+  font-size: 0.875em;
+  display: inline-block;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-header a .user-profile-img {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-header a .user-profile-img img {
+  width: 100%;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-header ul {
+  top: 20%;
+  float: left;
+  margin-left: 10px;
+  position: absolute;
+  display: inline-block;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-header ul li {
+  display: inline-block;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-header ul .fullGroupName {
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-header ul .username a {
+  color: #888888;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-header ul .item-date {
+  display: block;
+  color: #888888;
+  margin-top: 5px;
+  font-size: 0.813em;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-text-content {
+  float: left;
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 22px;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-media-content {
+  float: left;
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-media-content img {
+  width: 100%;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-footer {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-footer .item-action ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-footer .item-action ul li button {
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 0.7em;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-footer .item-action ul li button .icon {
+  width: 40%;
+}
+
+#page-container .row #profileContent #timeline .content-timeline .item-footer .item-action ul li .toggle-active {
+  color: #b71540;
 }
 

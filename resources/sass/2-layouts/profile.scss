@@ -3,7 +3,10 @@
   .row {
     #profileContent {
       .header-profile-content {
+        display: flex;
+        justify-content: space-around;
         .left-content {
+          margin-right: 20px;
           .profile-image {
             width: 120px;
             height: 120px;
@@ -15,8 +18,46 @@
           }
         }
         .right-content {
+          padding-top: 10px;
+          h3 {
+            float: left;
+            color: $color-2;
+            font-weight: 600;
+            font-size: 1.875em;
+            display: inline-block;
+          }
+          .follow-btn {
+            float: right;
+            color: $color-1;
+            cursor: pointer;
+            margin-top: 5px;
+            background: none;
+            padding: 7px 20px;
+            font-size: 0.813em;
+            border-radius: 50px;
+            border: solid 1px $color-1;
+            &:hover {
+              color: #ffffff;
+              transition-duration: 0.5s;
+              background: $linear-gradient;
+            }
+          }
+          .active-follow {
+            color: #ffffff;
+            background: $linear-gradient;
+          }
+          p {
+            float: left;
+            width: 100%;
+            display: block;
+            color: $color-3;
+            margin-top: 7px;
+            line-height: 24px;
+            font-size: 0.875em;
+          }
         }
       }
+      @import "../3-blocks/timeline";
     }
   }
 }
