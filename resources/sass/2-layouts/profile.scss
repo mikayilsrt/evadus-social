@@ -57,6 +57,21 @@
           }
         }
       }
+      .flat-tab-content {
+        padding: 25px 0px;
+        .nav-item {
+          padding: 0px 15px;
+          a {
+            color: $color-2;
+            font-size: 0.875em;
+            text-decoration: none;
+            &:hover {
+              color: $color-1;
+              transition-duration: 0.5s;
+            }
+          }
+        }
+      }
       @import "../3-blocks/timeline";
     }
   }

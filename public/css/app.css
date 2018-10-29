@@ -11259,6 +11259,26 @@ body {
   font-size: 0.875em;
 }
 
+#page-container .row #profileContent .flat-tab-content {
+  padding: 25px 0px;
+}
+
+#page-container .row #profileContent .flat-tab-content .nav-item {
+  padding: 0px 15px;
+}
+
+#page-container .row #profileContent .flat-tab-content .nav-item a {
+  color: #303030;
+  font-size: 0.875em;
+  text-decoration: none;
+}
+
+#page-container .row #profileContent .flat-tab-content .nav-item a:hover {
+  color: #7c21ff;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
 #page-container .row #profileContent #timeline .content-timeline {
   float: left;
   display: block;
