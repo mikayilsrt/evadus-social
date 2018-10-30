@@ -57295,7 +57295,7 @@ var TimelineFeed = function (_Component) {
                     { className: 'item-header' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
-                        { href: '' },
+                        { href: document.location.origin + "/profile/mariachatel" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
                             { className: 'user-profile-img' },
@@ -57310,7 +57310,7 @@ var TimelineFeed = function (_Component) {
                             { className: 'fullGroupName' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'a',
-                                { href: '#' },
+                                { href: document.location.origin + "/profile/mariachatel" },
                                 'Username'
                             )
                         ),
@@ -57319,7 +57319,7 @@ var TimelineFeed = function (_Component) {
                             { className: 'username' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'a',
-                                { href: '#' },
+                                { href: document.location.origin + "/profile/mariachatel" },
                                 '@username'
                             )
                         ),
@@ -75604,7 +75604,7 @@ var UsersSuggested = function (_Component) {
                     { className: 'user-profile' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
-                        { href: '' },
+                        { href: document.location.origin + "/profile/mariachatel" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://kaem.io/assets/img/default-profile-img.png', alt: '' })
                     )
                 ),
@@ -75616,7 +75616,7 @@ var UsersSuggested = function (_Component) {
                         null,
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'a',
-                            { href: '' },
+                            { href: document.location.origin + "/profile/mariachatel" },
                             'Alan Thorton'
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

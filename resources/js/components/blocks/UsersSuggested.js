@@ -22,12 +22,12 @@ export default class UsersSuggested extends Component {
         return (
             <div className="user-item">
                 <div className="user-profile">
-                    <a href="">
+                    <a href={ document.location.origin + "/profile/mariachatel" }>
                         <img src="https://kaem.io/assets/img/default-profile-img.png" alt=""/>
                     </a>
                 </div>
                 <div className="user-info">
-                    <h3><a href="">Alan Thorton</a><span>@alanthorton</span></h3>
+                    <h3><a href={ document.location.origin + "/profile/mariachatel" }>Alan Thorton</a><span>@alanthorton</span></h3>
                     <button className={ this.state.addClass ? "follow-btn active-follow" : "follow-btn" } onClick={ this.handleClick }>
                         { this.state.addClass ? "Subscriber" : "Follow" }
                     </button>

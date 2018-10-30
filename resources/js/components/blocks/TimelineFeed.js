@@ -23,14 +23,14 @@ export default class TimelineFeed extends Component {
         return (
             <div className="content-timeline">
                 <div className="item-header">
-                    <a href="">
+                    <a href={ document.location.origin + "/profile/mariachatel" }>
                         <div className="user-profile-img">
                             <img src="https://kaem.io/assets/img/default-profile-img.png" alt="" />
                         </div>
                     </a>
                     <ul className="">
-                        <li className="fullGroupName"><a href="#">Username</a></li>
-                        <li className="username"><a href="#">@username</a></li>
+                        <li className="fullGroupName"><a href={ document.location.origin + "/profile/mariachatel" }>Username</a></li>
+                        <li className="username"><a href={ document.location.origin + "/profile/mariachatel" }>@username</a></li>
                         <li className="item-date">13 sept.</li>
                     </ul>
                 </div>
