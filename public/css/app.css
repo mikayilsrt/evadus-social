@@ -11219,7 +11219,10 @@ body {
 
 #page-container .row #profileContent .header-profile-content .right-content h3 {
   float: left;
+  height: 34px;
+  max-width: 78%;
   color: #303030;
+  overflow: hidden;
   font-weight: 600;
   font-size: 1.875em;
   display: inline-block;
