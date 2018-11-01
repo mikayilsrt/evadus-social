@@ -11153,6 +11153,7 @@ body {
 
 #page-container .row #timeline .content-timeline .item-media-content img {
   width: 100%;
+  cursor: pointer;
 }
 
 #page-container .row #timeline .content-timeline .item-footer {
@@ -11363,6 +11364,7 @@ body {
 
 #page-container .row #profileContent #timeline .content-timeline .item-media-content img {
   width: 100%;
+  cursor: pointer;
 }
 
 #page-container .row #profileContent #timeline .content-timeline .item-footer {
