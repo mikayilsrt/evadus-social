@@ -1,5 +1,7 @@
 @extends("layouts.master")
 
+@section("pageTitle", "Name (username) | ")
+
 @section("content")
     <div class="container" id="page-container">
         <div class="row">
