@@ -10636,6 +10636,9 @@ body {
 /* Blocks style */
 
 #header-home {
+  z-index: 3;
+  position: relative;
+  background-color: #ffffff;
   /** Header navbar **/
   /** Mobile navbar **/
 }
@@ -11396,5 +11399,60 @@ body {
 
 #page-container .row #profileContent #timeline .content-timeline .item-footer .item-action ul li .toggle-active {
   color: #b71540;
+}
+
+#content-auth {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 80px;
+  z-index: 0;
+  padding: 70px 0;
+  position: absolute;
+}
+
+#content-auth .container .row .right-content h1 {
+  font-weight: 300;
+  font-size: 1.875em;
+}
+
+#content-auth .container .row .right-content p {
+  font-weight: 300;
+  margin-top: 15px;
+  line-height: 24px;
+  font-size: 0.875em;
+}
+
+#content-auth .container .row .right-content .form-content {
+  margin-top: 25px;
+}
+
+#content-auth .container .row .right-content .form-content .form-group .form-control {
+  border: none;
+  padding: 6px 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0px;
+  font-size: 0.875em;
+  border-bottom: solid 1px #c5c6cb;
+}
+
+#content-auth .container .row .right-content .form-content .form-group .form-control:focus {
+  border-bottom: solid 2px #7c21ff;
+}
+
+#content-auth .container .row .right-content .form-content .form-group .btn-auth {
+  width: 100%;
+  border: none;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 0.875em;
+  border-radius: 50px;
+  background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
+}
+
+#content-auth .container .row .right-content .form-content a {
+  color: #7c21ff;
 }
 

@@ -1,0 +1,55 @@
+#content-auth {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 80px;
+  z-index: 0;
+  padding: 70px 0;
+  // background: #0009;
+  position: absolute;
+  .container {
+    .row {
+      .right-content {
+        h1 {
+          font-weight: 300;
+          font-size: 1.875em;
+        }
+        p {
+          font-weight: 300;
+          margin-top: 15px;
+          line-height: 24px;
+          font-size: 0.875em;
+        }
+        .form-content {
+          margin-top: 25px;
+          .form-group {
+            .form-control {
+              border: none;
+              padding: 6px 0;
+              box-shadow: none;
+              border-radius: 0px;
+              font-size: 0.875em;
+              border-bottom: solid 1px $color-4;
+              &:focus {
+                border-bottom: solid 2px $color-1;
+              }
+            }
+            .btn-auth {
+              width: 100%;
+              border: none;
+              color: #ffffff;
+              box-shadow: none;
+              // padding: 6px 30px;
+              font-size: 0.875em;
+              border-radius: 50px;
+              background: $linear-gradient;
+            }
+          }
+          a {
+            color: $color-1;
+          }
+        }
+      }
+    }
+  }
+}
