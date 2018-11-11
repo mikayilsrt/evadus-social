@@ -128,4 +128,10 @@
             @include("layouts._partials._block-section")
         </div>
     </div>
+    <div class="add-post-btn">
+        <button type="button" data-toggle="modal" data-target="#exampleModal">
+            <i data-feather="plus" class="icon"></i>
+        </button>
+    </div>
+    <div id="modalNewPost"></div>
 @endsection

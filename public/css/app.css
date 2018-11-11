@@ -10633,6 +10633,31 @@ body {
   color: #303030;
 }
 
+.add-post-btn {
+  right: 3%;
+  bottom: 3%;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 15px #8d8d8d;
+          box-shadow: 0px 0px 15px #8d8d8d;
+}
+
+.add-post-btn button {
+  top: 20%;
+  border: none;
+  cursor: pointer;
+  background: none;
+  position: absolute;
+}
+
+.add-post-btn button .icon {
+  color: #000000;
+}
+
 /* Blocks style */
 
 #header-home {

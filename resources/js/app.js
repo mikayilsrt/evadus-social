@@ -13,11 +13,12 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
+// require('./components/Example');
 require('./components/blocks/TimelineFeed');
 require('./components/blocks/CollectionsBlocks');
 require('./components/blocks/UsersSuggested');
 require('./components/blocks/HeaderProfileContent');
+require('./components/blocks/ModalPostForm');
 
 
 /**
