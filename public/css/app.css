@@ -10658,6 +10658,10 @@ body {
   color: #000000;
 }
 
+.alert {
+  font-size: 0.813em;
+}
+
 /* Blocks style */
 
 #header-home {
@@ -11090,6 +11094,74 @@ body {
 }
 
 .block-section #userSuggested .user-info .active-follow {
+  color: #ffffff;
+  background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
+}
+
+.modal .modal-dialog .modal-content .modal-header {
+  padding: 30px;
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+  padding: 20px 30px;
+}
+
+.modal .modal-dialog .modal-content .modal-body form .form-group .form-control {
+  height: 40px;
+  border: solid 1px #e1e1e1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 0.875em;
+  background-color: #ffffff;
+}
+
+.modal .modal-dialog .modal-content .modal-body form .form-group .form-control:focus {
+  border: solid 1px #888888;
+}
+
+.modal .modal-dialog .modal-content .modal-body form .form-group .area-input {
+  min-height: 80px;
+}
+
+.modal .modal-dialog .modal-content .modal-body form .form-group .fileInput {
+  display: none;
+}
+
+.modal .modal-dialog .modal-content .modal-body form .form-group .form-icon {
+  width: 30px;
+  height: 30px;
+  float: right;
+  color: #303030;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 50px;
+  border: solid 1px #303030;
+}
+
+.modal .modal-dialog .modal-content .modal-body form .form-group .form-icon .icon {
+  top: 7%;
+  width: 16px;
+  position: relative;
+}
+
+.modal .modal-dialog .modal-content .modal-body form .form-group .form-icon:hover {
+  color: #7c21ff;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  border: solid 1px #7c21ff;
+}
+
+.modal .modal-dialog .modal-content .modal-footer {
+  padding: 20px 30px;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .btn-theme {
+  padding: 10px 20px;
+  font-size: 0.813em;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .btn-upload {
+  border: none;
   color: #ffffff;
   background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
 }

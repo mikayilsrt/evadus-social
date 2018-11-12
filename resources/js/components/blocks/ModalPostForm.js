@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import * as Icons from 'react-feather';
 
 export default class ModalPostForm extends Component {
 
@@ -21,19 +22,31 @@ export default class ModalPostForm extends Component {
                             </button>
                         </div>
                         <div className="modal-body">
+                            <div className="alert alert-danger" role="alert">
+                                A simple error alert—check it out!
+                            </div>
                             <form encType={"multipart/form-data"}>
                                 <div className="form-group">
-                                    <textarea className="form-control" placeholder="Quoi de neuf ?"></textarea>
+                                    <select className="form-control">
+                                        <option>Collection 1</option>
+                                        <option>Collection 2</option>
+                                        <option>Collection 3</option>
+                                        <option>Collection 4</option>
+                                        <option>Collection 5</option>
+                                    </select>
                                 </div>
-                                <div className="custom-file">
-                                    <input type="file" className="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" />
-                                    <label className="custom-file-label" htmlFor="inputGroupFile04">Choose file</label>
+                                <div className="form-group">
+                                    <textarea className="form-control area-input" placeholder="Quoi de neuf ?"></textarea>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="fileInput" className="form-icon"><Icons.FilePlus className={"icon"} /></label>
+                                    <input type="file" className="form-control fileInput" id="fileInput" />
                                 </div>
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Upload</button>
+                            <button type="button" className="btn btn-default btn-theme" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-upload btn-theme">Upload</button>
                         </div>
                     </div>
                 </div>

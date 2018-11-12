@@ -1,0 +1,64 @@
+.modal {
+  .modal-dialog {
+    .modal-content {
+      .modal-header {
+        padding: 30px;
+      }
+      .modal-body {
+        padding: 20px 30px;
+        form {
+          .form-group {
+            .form-control {
+              height: 40px;
+              border: solid 1px #e1e1e1;
+              box-shadow: none;
+              font-size: 0.875em;
+              background-color: #ffffff;
+              &:focus {
+                border: solid 1px $color-3;
+              }
+            }
+            .area-input {
+              min-height: 80px;
+            }
+            .fileInput {
+              display: none;
+            }
+            .form-icon {
+              width: 30px;
+              height: 30px;
+              float: right;
+              color: $color-2;
+              cursor: pointer;
+              text-align: center;
+              border-radius: 50px;
+              border: solid 1px $color-2;
+              .icon {
+                top: 7%;
+                width: 16px;
+                position: relative;
+              }
+              &:hover {
+                color: $color-1;
+                transition-duration: 0.5s;
+                border: solid 1px $color-1;
+              }
+            }
+          }
+        }
+      }
+      .modal-footer {
+        padding: 20px 30px;
+        .btn-theme {
+          padding: 10px 20px;
+          font-size: 0.813em;
+        }
+        .btn-upload {
+          border: none;
+          color: #ffffff;
+          background: $linear-gradient;
+        }
+      }
+    }
+  }
+}
