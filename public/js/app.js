@@ -75720,11 +75720,41 @@ var ModalPostForm = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (ModalPostForm.__proto__ || Object.getPrototypeOf(ModalPostForm)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            strContent: "",
+            countChar: 0,
+            addCollection: false
+        };
+        _this.handleChange = _this.handleChange.bind(_this);
+        _this.handleSubmit = _this.handleSubmit.bind(_this);
+        _this.addCollectionInput = _this.addCollectionInput.bind(_this);
         return _this;
     }
 
     _createClass(ModalPostForm, [{
+        key: 'handleChange',
+        value: function handleChange(e) {
+            e.preventDefault();
+            this.setState({
+                strContent: e.target.value,
+                countChar: e.target.value.length
+            });
+        }
+    }, {
+        key: 'addCollectionInput',
+        value: function addCollectionInput(e) {
+            e.preventDefault();
+            this.setState({
+                addCollection: !this.state.addCollection
+            });
+        }
+    }, {
+        key: 'handleSubmit',
+        value: function handleSubmit(e) {
+            e.preventDefault();
+            console.log("New post...");
+        }
+    }, {
         key: 'render',
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -75734,24 +75764,24 @@ var ModalPostForm = function (_Component) {
                     'div',
                     { className: 'modal-dialog', role: 'document' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'modal-content' },
+                        'form',
+                        { className: 'modal-content', onSubmit: this.handleSubmit, encType: "multipart/form-data" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
                             { className: 'modal-header' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'h5',
-                                { className: 'modal-title' },
-                                'Modal title'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'button',
-                                { type: 'button', className: 'close', 'data-dismiss': 'modal', 'aria-label': 'Close' },
+                                { type: 'button', className: 'close close-btn', 'data-dismiss': 'modal', 'aria-label': 'Close' },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'span',
-                                    { 'aria-hidden': 'true' },
+                                    { 'aria-hidden': 'true', className: 'icon' },
                                     '\xD7'
                                 )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h5',
+                                { className: 'modal-title' },
+                                'Quoi de neuf ?'
                             )
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -75763,56 +75793,80 @@ var ModalPostForm = function (_Component) {
                                 'A simple error alert\u2014check it out!'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'form',
-                                { encType: "multipart/form-data" },
+                                'div',
+                                { className: this.state.addCollection ? "form-group form-group-none" : "form-group" },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'div',
-                                    { className: 'form-group' },
+                                    'select',
+                                    { className: 'form-control', name: '' },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'select',
-                                        { className: 'form-control' },
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'option',
-                                            null,
-                                            'Collection 1'
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'option',
-                                            null,
-                                            'Collection 2'
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'option',
-                                            null,
-                                            'Collection 3'
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'option',
-                                            null,
-                                            'Collection 4'
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'option',
-                                            null,
-                                            'Collection 5'
-                                        )
-                                    )
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'div',
-                                    { className: 'form-group' },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', { className: 'form-control area-input', placeholder: 'Quoi de neuf ?' })
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'div',
-                                    { className: 'form-group' },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'label',
-                                        { htmlFor: 'fileInput', className: 'form-icon' },
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["FilePlus"], { className: "icon" })
+                                        'option',
+                                        null,
+                                        'liste 1'
                                     ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'file', className: 'form-control fileInput', id: 'fileInput' })
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'option',
+                                        null,
+                                        'liste 2'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'option',
+                                        null,
+                                        'liste 3'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'option',
+                                        null,
+                                        'liste 4'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'option',
+                                        null,
+                                        'liste 5'
+                                    )
                                 )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: this.state.addCollection ? "form-group" : "form-group form-group-none" },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+                                    type: 'text',
+                                    name: '',
+                                    className: 'form-control',
+                                    placeholder: 'Nom de la liste...' })
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'form-group' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', {
+                                    className: 'form-control area-input',
+                                    name: '',
+                                    placeholder: 'Quoi de neuf ?',
+                                    onChange: this.handleChange })
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'form-group' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'label',
+                                    { htmlFor: 'fileInput', className: 'form-icon' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["FilePlus"], { className: "icon" })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'file', name: '', className: 'form-control fileInput', id: 'fileInput' })
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'form-group' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'label',
+                                    { className: 'form-icon', onClick: this.addCollectionInput },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["List"], { className: "icon" })
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'js-str-counter' },
+                                this.state.countChar,
+                                ' / 160'
                             )
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -75825,7 +75879,7 @@ var ModalPostForm = function (_Component) {
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'button',
-                                { type: 'button', className: 'btn btn-upload btn-theme' },
+                                { type: 'submit', className: 'btn btn-upload btn-theme' },
                                 'Upload'
                             )
                         )
