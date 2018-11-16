@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home.index');
 });
 
+Route::get('/discover', function () {
+    return view('discover.index');
+});
+
 Route::get('/profile/{name}', function ($name) {
     return view('profile.index')->with("name", $name);
 });
