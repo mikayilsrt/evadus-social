@@ -19,6 +19,10 @@ Route::get('/discover', function () {
     return view('discover.index');
 });
 
+Route::get('/search/{tag}', function () {
+    return view('search.index');
+});
+
 Route::get('/profile/{name}', function ($name) {
     return view('profile.index')->with("name", $name);
 });
