@@ -12,10 +12,10 @@
     <!-- main container -->
     <div class="container" id="search-container">
         <div class="row">
+            @include("layouts._partials._block-section")
             <div class="col-md-7" id="timeline">
                 <div id="timelinefeed"></div>
             </div>
-            @include("layouts._partials._block-section")
         </div>
     </div>
 @endsection
