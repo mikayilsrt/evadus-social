@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('pageTitle', 'Discover | ')
+
 @section('content')
     <!-- main container -->
     <div class="container" id="discover-container">

@@ -1,10 +1,12 @@
 @extends('layouts.master')
 
+@section("pageTitle", $tag . " - Search on " . config("app.name") . " | ")
+
 @section('content')
     <!-- page title -->
     <div class="header-content">
         <div class="container">
-            <h3 class="page-title">Search page tag</h3>
+            <h3 class="page-title">{{ $tag }}</h3>
         </div>
     </div>
     <!-- main container -->
