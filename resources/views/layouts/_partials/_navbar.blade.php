@@ -25,7 +25,8 @@
             <li class="nav-item">
                 <a class="nav-link signup-btn" href="{{ url("register") }}">Sign up</a>
             </li>-->
-            <li class="nav-item dropdown">
+            @if (Auth::check())
+                <li class="nav-item dropdown">
                 <a href="#" class="nav-link" data-toggle="dropdown">
                     <div class="user-profile-img">
                         <img src="https://kaem.io/assets/img/default-profile-img.png" alt="">
@@ -40,6 +41,14 @@
                     <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="log-out"></i>Sign out</a></li>
                 </ul>
             </li>
+            @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url("login") }}">Sing in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link signup-btn" href="{{ url("register") }}">Sign up</a>
+                </li>
+            @endif
         </ul>
     </div>
 </nav>

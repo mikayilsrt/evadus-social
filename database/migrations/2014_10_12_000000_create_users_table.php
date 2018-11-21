@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable(false);
             $table->string('profile_image')->default("default-profile-img.png")->nullable(false);
             $table->string('ip')->nullable(false);
-            $table->timestamp('email_verified_at')->nullable(false);
+            $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

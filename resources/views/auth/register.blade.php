@@ -9,18 +9,19 @@
                     <h1>Join {{ config("app.name") }} today</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad autem.</p>
                     <div class="form-content">
-                        <form method="POST" action="">
+                        <form method="POST" action="{{ url("register") }}">
+                            @csrf
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="username">
+                                <input type="text" class="form-control" name="user_name" placeholder="username">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="email@example.com">
+                                <input type="email" class="form-control" name="email" placeholder="email@example.com">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="password">
+                                <input type="password" class="form-control" name="password" placeholder="password">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Confirm your password">
+                                <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm your password">
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-auth">Sing up</button>
