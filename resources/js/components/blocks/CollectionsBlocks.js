@@ -17,7 +17,7 @@ export default class CollectionsBlocks extends Component {
                     <div className="content-item" style={{ backgroundImage: "url(" + "https://images.unsplash.com/photo-1514866747592-c2d279258a78?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=35bb216e4f81c3bde24544b5630f5bd6&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb" + ")" }}>
                         <div className="header-collection-item">
                             <div className="user-profile-img">
-                                <img src="https://kaem.io/assets/img/default-profile-img.png" />
+                                <img src="/assets/img/default-profile-img.png" />
                             </div>
                         </div>
                         <div className="footer-collection-item">

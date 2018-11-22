@@ -35,7 +35,7 @@ export default class TimelineFeed extends Component {
                 <div className="item-header">
                     <a href={ document.location.origin + "/profile/mariachatel" }>
                         <div className="user-profile-img">
-                            <img src="https://kaem.io/assets/img/default-profile-img.png" alt="" />
+                            <img src="/assets/img/default-profile-img.png" alt="" />
                         </div>
                     </a>
                     <ul className="">

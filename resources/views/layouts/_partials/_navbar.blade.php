@@ -30,7 +30,7 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link" data-toggle="dropdown">
                         <div class="user-profile-img">
-                            <img src="https://kaem.io/assets/img/default-profile-img.png" alt="">
+                            <img src="assets/img/{{ Auth::user()->profile_image }}" alt="">
                         </div>
                         <span>{{ Auth::user()->user_name }}</span>
                         <i data-feather="chevron-down"></i>
@@ -97,7 +97,7 @@
                         <li class="dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">
                                 <div class="user-profile-img">
-                                    <img src="https://kaem.io/assets/img/default-profile-img.png" alt="">
+                                    <img src="assets/img/{{ Auth::user()->profile_image }}" alt="">
                                 </div>
                                 <span>username</span>
                                 <i data-feather="chevron-down" class="icon"></i>

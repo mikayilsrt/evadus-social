@@ -37699,7 +37699,7 @@ var TimelineFeed = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
                             { className: 'user-profile-img' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://kaem.io/assets/img/default-profile-img.png', alt: '' })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/img/default-profile-img.png', alt: '' })
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -75463,7 +75463,7 @@ var CollectionsBlocks = function (_Component) {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
                                 { className: 'user-profile-img' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://kaem.io/assets/img/default-profile-img.png' })
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/img/default-profile-img.png' })
                             )
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -75556,7 +75556,7 @@ var UsersSuggested = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
                         { href: document.location.origin + "/profile/mariachatel" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://kaem.io/assets/img/default-profile-img.png', alt: '' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/img/default-profile-img.png', alt: '' })
                     )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -75652,7 +75652,7 @@ var HeaderProfileContent = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'profile-image' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://kaem.io/assets/img/default-profile-img.png' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/img/default-profile-img.png' })
                     )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

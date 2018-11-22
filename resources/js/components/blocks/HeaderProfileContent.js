@@ -23,7 +23,7 @@ export default class HeaderProfileContent extends Component {
             <div className="header-profile-content">
                 <div className="left-content">
                     <div className="profile-image">
-                        <img src="https://kaem.io/assets/img/default-profile-img.png"/>
+                        <img src="/assets/img/default-profile-img.png"/>
                     </div>
                 </div>
                 <div className="right-content">

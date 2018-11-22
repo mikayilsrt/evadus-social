@@ -23,7 +23,7 @@ export default class UsersSuggested extends Component {
             <div className="user-item">
                 <div className="user-profile">
                     <a href={ document.location.origin + "/profile/mariachatel" }>
-                        <img src="https://kaem.io/assets/img/default-profile-img.png" alt=""/>
+                        <img src="/assets/img/default-profile-img.png" alt=""/>
                     </a>
                 </div>
                 <div className="user-info">
