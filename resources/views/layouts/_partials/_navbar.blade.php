@@ -38,7 +38,14 @@
                     <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
                     <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
                     <div class="dropdown-divider"></div>
-                    <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="log-out"></i>Sign out</a></li>
+                    <li href="#">
+                        <form method="POST" action="{{ url("logout") }}">
+                            @csrf
+                            <button type="submit" class="dropdown-item">
+                                <i class="icon" data-feather="log-out"></i>Sign out
+                            </button>
+                        </form>
+                    </li>
                 </ul>
             </li>
             @else
@@ -72,40 +79,50 @@
                     <i data-feather="x-circle"></i>
                 </a>
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="/"><i class="icon" data-feather="home"></i>Home</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon" data-feather="globe"></i>Discover</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon" data-feather="bell"></i>Notifications</a>
-                    </li>
+                    @if (Auth::check())
+                        <li>
+                            <a href="/"><i class="icon" data-feather="home"></i>Home</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon" data-feather="globe"></i>Discover</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon" data-feather="bell"></i>Notifications</a>
+                        </li>
+                    @endif
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="nav-link" data-toggle="dropdown">
-                            <div class="user-profile-img">
-                                <img src="https://kaem.io/assets/img/default-profile-img.png" alt="">
-                            </div>
-                            <span>username</span>
-                            <i data-feather="chevron-down" class="icon"></i>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
-                            <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
-                            <div class="dropdown-divider"></div>
-                            <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="log-out"></i>Sign out</a></li>
-                        </ul>
-                    </li>
-                    <!--
-                    <li>
-                        <a href="{{ url("login") }}" class="log-link"><i class="icon" data-feather="log-in"></i>Sing in</a>
-                    </li>
-                    <li>
-                        <a href="{{ url("register") }}" class="log-link"><i class="icon" data-feather="user-plus"></i>Sign up</a>
-                    </li>
-                    -->
+                    @if (Auth::check())
+                        <li class="dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <div class="user-profile-img">
+                                    <img src="https://kaem.io/assets/img/default-profile-img.png" alt="">
+                                </div>
+                                <span>username</span>
+                                <i data-feather="chevron-down" class="icon"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
+                                <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
+                                <div class="dropdown-divider"></div>
+                                <li href="#">
+                                    <form method="POST" action="{{ url("logout") }}">
+                                        @csrf
+                                        <button class="dropdown-item" type="submit">
+                                            <i class="icon" data-feather="log-out"></i>Sign out
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    @else
+                        <li>
+                            <a href="{{ url("login") }}" class="log-link"><i class="icon" data-feather="log-in"></i>Sing in</a>
+                        </li>
+                        <li>
+                            <a href="{{ url("register") }}" class="log-link"><i class="icon" data-feather="user-plus"></i>Sign up</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>
