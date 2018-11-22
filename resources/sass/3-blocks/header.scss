@@ -68,6 +68,23 @@
                 background: $linear-gradient;
               }
             }
+            form {
+              button {
+                cursor: pointer;
+                color: $color-2;
+                font-size: 0.9em;
+                padding: 8px 16px;
+                transition-duration: 0.5s;
+                .icon {
+                  width: 14%;
+                  margin-right: 7px;
+                }
+                &:hover {
+                  color: #ffffff;
+                  background: $linear-gradient;
+                }
+              }
+            }
           }
           &::before {
             content: "";
@@ -195,6 +212,22 @@
               &:hover {
                 color: $color-1;
                 transition-duration: 0.5s;
+              }
+            }
+            form {
+              button {
+                cursor: pointer;
+                color: $color-2;
+                text-decoration: none;
+                background-color: transparent;
+                .icon {
+                  width: 7%;
+                  margin-right: 10px;
+                }
+                &:hover {
+                  color: $color-1;
+                  transition-duration: 0.5s;
+                }
               }
             }
             .log-link {

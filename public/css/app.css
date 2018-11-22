@@ -10751,6 +10751,25 @@ body {
   background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
 }
 
+#header-home .main-navbar .navbar-nav .dropdown .dropdown-menu li form button {
+  cursor: pointer;
+  color: #303030;
+  font-size: 0.9em;
+  padding: 8px 16px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+#header-home .main-navbar .navbar-nav .dropdown .dropdown-menu li form button .icon {
+  width: 14%;
+  margin-right: 7px;
+}
+
+#header-home .main-navbar .navbar-nav .dropdown .dropdown-menu li form button:hover {
+  color: #ffffff;
+  background: linear-gradient(-0.25turn, #7c21ff, #9c28b1);
+}
+
 #header-home .main-navbar .navbar-nav .dropdown .dropdown-menu::before {
   content: "";
   position: absolute;
@@ -10894,6 +10913,24 @@ body {
 }
 
 #header-home .main-navbar-mobile .mobile-navbar .mobile-nav-block .nav li a:hover {
+  color: #7c21ff;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+#header-home .main-navbar-mobile .mobile-navbar .mobile-nav-block .nav li form button {
+  cursor: pointer;
+  color: #303030;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+#header-home .main-navbar-mobile .mobile-navbar .mobile-nav-block .nav li form button .icon {
+  width: 7%;
+  margin-right: 10px;
+}
+
+#header-home .main-navbar-mobile .mobile-navbar .mobile-nav-block .nav li form button:hover {
   color: #7c21ff;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
