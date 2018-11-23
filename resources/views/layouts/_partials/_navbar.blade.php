@@ -36,7 +36,7 @@
                         <i data-feather="chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
+                        <li href="#"><a href="{{ url("profile", Auth::user()->user_name) }}" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
                         <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
                         <div class="dropdown-divider"></div>
                         <li href="#">
@@ -103,7 +103,7 @@
                                 <i data-feather="chevron-down" class="icon"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
+                                <li href="#"><a href="{{ url("profile", Auth::user()->user_name) }}" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
                                 <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
                                 <div class="dropdown-divider"></div>
                                 <li href="#">
