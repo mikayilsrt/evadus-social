@@ -22,9 +22,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
 });
 
-Route::get('/profile/{name}', function ($name) {
-    return view('profile.index')->with("name", $name);
-});
+Route::get('/profile/{name}', "UserController@index");
 
 Auth::routes();
 
