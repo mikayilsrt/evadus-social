@@ -10,7 +10,8 @@ export default class TimelineFeed extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            datas: [],
+            datas: {},
+            post: [],
             activeVote: false,
         };
         this.toggleVote = this.toggleVote.bind(this);
@@ -18,12 +19,18 @@ export default class TimelineFeed extends Component {
     }
 
     componentDidMount () {
-        axios.get("/api/profile/1").then((response) => {
+        const component = document.getElementById("timelinefeed");
+        axios.get("/api/profile/" + component.dataset.user_id).then((response) => {
             if (response.status === 200 && response.request.readyState === 4) {
                 this.setState({
-                    datas: response.data
+                    datas: response.data.user,
+                    post: response.data.user.post
                 });
+                console.log(response.data.user);
+                console.log(response.data.user.post);
             }
+        }).catch((error) => {
+            console.log(error);
         });
     }
 
@@ -35,38 +42,38 @@ export default class TimelineFeed extends Component {
     }
 
     zoomMedia (e) {
-        e.preventDefault()
-        const zoomMediaImage = mediumZoom("#media-image")
+        e.preventDefault();
+        const zoomMediaImage = mediumZoom("#media-image");
         zoomMediaImage.open();
         zoomMediaImage.on('closed', () => zoomMediaImage.detach())
     }
 
     getAllPost () {
-        return this.state.datas.map((data) => {
+        return this.state.post.map((item) => {
             return (
-                <div className="content-timeline" key={ data.id }>
+                <div className="content-timeline" key={ item.id }>
                     <div className="item-header">
-                        <a href={ document.location.origin + "/profile/mariachatel" }>
+                        <a href={ document.location.origin + "/profile/" + this.state.datas.user_name }>
                             <div className="user-profile-img">
-                                <img src="/assets/img/default-profile-img.png" alt="" />
+                                <img src={ "/assets/img/" + this.state.datas.profile_image } alt="" />
                             </div>
                         </a>
                         <ul className="">
-                            <li className="fullGroupName"><a href={ document.location.origin + "/profile/mariachatel" }>Username</a></li>
-                            <li className="username"><a href={ document.location.origin + "/profile/mariachatel" }>@username</a></li>
-                            <li className="item-date">13 sept.</li>
+                            <li className="fullGroupName"><a href={ document.location.origin + "/profile/" + this.state.datas.user_name }>{ this.state.datas.name }</a></li>
+                            <li className="username"><a href={ document.location.origin + "/profile/" + this.state.datas.user_name }>{ "@" + this.state.datas.user_name }</a></li>
+                            <li className="item-date">{ item.created_at }</li>
                         </ul>
                     </div>
                     {
-                        data.content !== undefined &&
+                        item.content &&
                         <div className="item-text-content">
-                            { data.content }
+                            { item.content }
                         </div>
                     }
                     {
-                        data.media !== undefined &&
+                        item.content &&
                         <div className="item-media-content">
-                            <img id="media-image" onClick={ this.zoomMedia } className="medium-zoom-image" src={ data.media } alt="" />
+                            <img id="media-image" onClick={ this.zoomMedia } className="medium-zoom-image" src={ item.media } alt="" />
                         </div>
                     }
                     <div className="item-footer">

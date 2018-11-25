@@ -21,7 +21,7 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="tab0">
                         <div id="timeline">
-                            <div id="timelinefeed"></div>
+                            <div id="timelinefeed" data-user_id="{{ $userAllData->id }}"></div>
                         </div>
                     </div>
                     <div class="tab-pane fade show" id="tab1">Likes...</div>

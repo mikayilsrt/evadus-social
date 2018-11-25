@@ -37662,7 +37662,8 @@ var TimelineFeed = function (_Component) {
         var _this = _possibleConstructorReturn(this, (TimelineFeed.__proto__ || Object.getPrototypeOf(TimelineFeed)).call(this, props));
 
         _this.state = {
-            datas: [],
+            datas: {},
+            post: [],
             activeVote: false
         };
         _this.toggleVote = _this.toggleVote.bind(_this);
@@ -37675,12 +37676,18 @@ var TimelineFeed = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            __WEBPACK_IMPORTED_MODULE_3_axios___default.a.get("/api/profile/1").then(function (response) {
+            var component = document.getElementById("timelinefeed");
+            __WEBPACK_IMPORTED_MODULE_3_axios___default.a.get("/api/profile/" + component.dataset.user_id).then(function (response) {
                 if (response.status === 200 && response.request.readyState === 4) {
                     _this2.setState({
-                        datas: response.data
+                        datas: response.data.user,
+                        post: response.data.user.post
                     });
+                    console.log(response.data.user);
+                    console.log(response.data.user.post);
                 }
+            }).catch(function (error) {
+                console.log(error);
             });
         }
     }, {
@@ -37706,20 +37713,20 @@ var TimelineFeed = function (_Component) {
         value: function getAllPost() {
             var _this3 = this;
 
-            return this.state.datas.map(function (data) {
+            return this.state.post.map(function (item) {
                 return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: 'content-timeline', key: data.id },
+                    { className: 'content-timeline', key: item.id },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'item-header' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'a',
-                            { href: document.location.origin + "/profile/mariachatel" },
+                            { href: document.location.origin + "/profile/" + _this3.state.datas.user_name },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
                                 { className: 'user-profile-img' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/img/default-profile-img.png', alt: '' })
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: "/assets/img/" + _this3.state.datas.profile_image, alt: '' })
                             )
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -37730,8 +37737,8 @@ var TimelineFeed = function (_Component) {
                                 { className: 'fullGroupName' },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'a',
-                                    { href: document.location.origin + "/profile/mariachatel" },
-                                    'Username'
+                                    { href: document.location.origin + "/profile/" + _this3.state.datas.user_name },
+                                    _this3.state.datas.name
                                 )
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -37739,26 +37746,26 @@ var TimelineFeed = function (_Component) {
                                 { className: 'username' },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'a',
-                                    { href: document.location.origin + "/profile/mariachatel" },
-                                    '@username'
+                                    { href: document.location.origin + "/profile/" + _this3.state.datas.user_name },
+                                    "@" + _this3.state.datas.user_name
                                 )
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'li',
                                 { className: 'item-date' },
-                                '13 sept.'
+                                item.created_at
                             )
                         )
                     ),
-                    data.content !== undefined && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    item.content && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'item-text-content' },
-                        data.content
+                        item.content
                     ),
-                    data.media !== undefined && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    item.content && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'item-media-content' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'media-image', onClick: _this3.zoomMedia, className: 'medium-zoom-image', src: data.media, alt: '' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'media-image', onClick: _this3.zoomMedia, className: 'medium-zoom-image', src: item.media, alt: '' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',

@@ -17,7 +17,7 @@ class PostController extends Controller
     public function index($id)
     {
         $user = User::findOrFail($id);
-        return json_encode($user->post);
+        return compact("user", $user->post);
     }
 
     /**
