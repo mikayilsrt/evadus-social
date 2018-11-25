@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import * as Icons from "react-feather";
+import axios from "axios";
 
 import mediumZoom from "medium-zoom";
 
@@ -9,10 +10,21 @@ export default class TimelineFeed extends Component {
     constructor (props) {
         super(props);
         this.state = {
+            data: [],
             activeVote: false,
         };
         this.toggleVote = this.toggleVote.bind(this);
         this.zoomMedia = this.zoomMedia.bind(this);
+    }
+
+    componentDidMount () {
+        axios.get("/api/profile/1").then((response) => {
+            if (response.status === 200 && response.request.readyState === 4) {
+                this.setState({
+                    data: response.data
+                });
+            }
+        });
     }
 
     toggleVote (e) {
