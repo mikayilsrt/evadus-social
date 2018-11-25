@@ -37662,7 +37662,7 @@ var TimelineFeed = function (_Component) {
         var _this = _possibleConstructorReturn(this, (TimelineFeed.__proto__ || Object.getPrototypeOf(TimelineFeed)).call(this, props));
 
         _this.state = {
-            data: [],
+            datas: [],
             activeVote: false
         };
         _this.toggleVote = _this.toggleVote.bind(_this);
@@ -37678,7 +37678,7 @@ var TimelineFeed = function (_Component) {
             __WEBPACK_IMPORTED_MODULE_3_axios___default.a.get("/api/profile/1").then(function (response) {
                 if (response.status === 200 && response.request.readyState === 4) {
                     _this2.setState({
-                        data: response.data
+                        datas: response.data
                     });
                 }
             });
@@ -37702,103 +37702,116 @@ var TimelineFeed = function (_Component) {
             });
         }
     }, {
+        key: 'getAllPost',
+        value: function getAllPost() {
+            var _this3 = this;
+
+            return this.state.datas.map(function (data) {
+                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'content-timeline', key: data.id },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'item-header' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'a',
+                            { href: document.location.origin + "/profile/mariachatel" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'user-profile-img' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/img/default-profile-img.png', alt: '' })
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'ul',
+                            { className: '' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'li',
+                                { className: 'fullGroupName' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: document.location.origin + "/profile/mariachatel" },
+                                    'Username'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'li',
+                                { className: 'username' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: document.location.origin + "/profile/mariachatel" },
+                                    '@username'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'li',
+                                { className: 'item-date' },
+                                '13 sept.'
+                            )
+                        )
+                    ),
+                    data.content !== undefined && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'item-text-content' },
+                        data.content
+                    ),
+                    data.media !== undefined && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'item-media-content' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'media-image', onClick: _this3.zoomMedia, className: 'medium-zoom-image', src: data.media, alt: '' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'item-footer' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'item-action' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'ul',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'li',
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'button',
+                                        { className: _this3.state.activeVote ? "toggle-active" : "", onClick: _this3.toggleVote },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["Heart"], { className: 'icon' }),
+                                        ' Likes'
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'li',
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'button',
+                                        null,
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["Link"], { className: 'icon' }),
+                                        ' Share'
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'li',
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'button',
+                                        null,
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["ChevronRight"], { className: 'icon' }),
+                                        ' Status'
+                                    )
+                                )
+                            )
+                        )
+                    )
+                );
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'content-timeline' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'item-header' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        { href: document.location.origin + "/profile/mariachatel" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'user-profile-img' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/img/default-profile-img.png', alt: '' })
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'ul',
-                        { className: '' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'li',
-                            { className: 'fullGroupName' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'a',
-                                { href: document.location.origin + "/profile/mariachatel" },
-                                'Username'
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'li',
-                            { className: 'username' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'a',
-                                { href: document.location.origin + "/profile/mariachatel" },
-                                '@username'
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'li',
-                            { className: 'item-date' },
-                            '13 sept.'
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'item-text-content' },
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan justo sem, vitae sollicitudin ex pulvinar vel. Praesent eget lacinia purus, id condimentum orci. In vulputate nibh quis sapien ultrices vestibulum. Mauris ut velit at leo posuere.'
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'item-media-content' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'media-image', onClick: this.zoomMedia, className: 'medium-zoom-image', src: 'https://images.unsplash.com/photo-1540281481658-a6ebea61c280?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a46acf5c0244921f4eba50da0dfbf401&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb', alt: '' })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'item-footer' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'item-action' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'ul',
-                            null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'li',
-                                null,
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'button',
-                                    { className: this.state.activeVote ? "toggle-active" : "", onClick: this.toggleVote },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["Heart"], { className: 'icon' }),
-                                    ' Likes'
-                                )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'li',
-                                null,
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'button',
-                                    null,
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["Link"], { className: 'icon' }),
-                                    ' Share'
-                                )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'li',
-                                null,
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'button',
-                                    null,
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["ChevronRight"], { className: 'icon' }),
-                                    ' Status'
-                                )
-                            )
-                        )
-                    )
-                )
+                null,
+                this.getAllPost()
             );
         }
     }]);

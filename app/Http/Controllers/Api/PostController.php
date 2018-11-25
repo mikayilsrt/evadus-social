@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class PostController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * return the list of publications.
      *
      * @param $id
      * @return mixed
@@ -17,7 +17,7 @@ class PostController extends Controller
     public function index($id)
     {
         $user = User::findOrFail($id);
-        return $user->post;
+        return json_encode($user->post);
     }
 
     /**
