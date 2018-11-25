@@ -75626,6 +75626,7 @@ var HeaderProfileContent = function (_Component) {
         var _this = _possibleConstructorReturn(this, (HeaderProfileContent.__proto__ || Object.getPrototypeOf(HeaderProfileContent)).call(this, props));
 
         _this.state = {
+            user: {},
             followActive: false
         };
         _this.handleClick = _this.handleClick.bind(_this);
@@ -75633,6 +75634,15 @@ var HeaderProfileContent = function (_Component) {
     }
 
     _createClass(HeaderProfileContent, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var component = document.getElementById("HeaderProfileContent");
+            // insert user state data required by data-user in html.
+            this.setState({
+                user: JSON.parse(component.dataset.user)
+            });
+        }
+    }, {
         key: 'handleClick',
         value: function handleClick(e) {
             e.preventDefault();
@@ -75652,7 +75662,7 @@ var HeaderProfileContent = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'profile-image' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/img/default-profile-img.png' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: "/assets/img/" + this.state.user.profile_image })
                     )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -75661,7 +75671,7 @@ var HeaderProfileContent = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'h3',
                         null,
-                        'Maria Ch\xE2tel-Innocenti'
+                        this.state.user.name
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'button',
@@ -75671,7 +75681,7 @@ var HeaderProfileContent = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'p',
                         null,
-                        'Le Lorem Ipsum est simplement du faux texte employ\xE9 dans la composition et la mise en page avant impression.'
+                        this.state.user.description
                     )
                 )
             );

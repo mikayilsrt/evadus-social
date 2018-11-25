@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use http\Env\Response;
 
 class UserController extends Controller
 {
@@ -14,7 +15,18 @@ class UserController extends Controller
      */
     public function index($user_name)
     {
-        $userData = User::where("user_name", $user_name)->firstOrFail();
-        return view("profile.index")->with("userData", $userData);
+        $userAllData = User::where("user_name", $user_name)->firstOrFail();
+
+        // tab for react component.
+        $userData = [
+            "id"            =>  $userAllData->id,
+            "name"          =>  $userAllData->name,
+            "profile_image" =>  $userAllData->profile_image,
+            "description"   =>  $userAllData->description,
+        ];
+
+        return view("profile.index")
+            ->with("userAllData", $userAllData)
+            ->with("userData", json_encode($userData));
     }
 }

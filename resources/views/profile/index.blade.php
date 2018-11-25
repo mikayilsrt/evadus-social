@@ -1,12 +1,12 @@
 @extends("layouts.master")
 
-@section("pageTitle", "Name (username) | ")
+@section("pageTitle", $userAllData->name . " (" . $userAllData->user_name . ") | ")
 
 @section("content")
     <div class="container" id="page-container">
         <div class="row">
             <div class="col-12 col-md-7" id="profileContent">
-                <div id="HeaderProfileContent"></div>
+                <div id="HeaderProfileContent" data-user="{{ $userData }}"></div>
                 <ul class="nav nav-tabs flat-tab-content" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a href="#tab0" role="tab" data-toggle="tab" aria-expanded="true">Posts</a>

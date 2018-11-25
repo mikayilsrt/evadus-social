@@ -6,9 +6,18 @@ export default class HeaderProfileContent extends Component {
     constructor (props) {
         super(props);
         this.state = {
+            user: {},
             followActive: false,
         };
         this.handleClick = this.handleClick.bind(this);
+    }
+
+    componentDidMount () {
+        const component = document.getElementById("HeaderProfileContent");
+        // insert user state data required by data-user in html.
+        this.setState({
+            user: JSON.parse(component.dataset.user)
+        });
     }
 
     handleClick (e) {
@@ -23,16 +32,15 @@ export default class HeaderProfileContent extends Component {
             <div className="header-profile-content">
                 <div className="left-content">
                     <div className="profile-image">
-                        <img src="/assets/img/default-profile-img.png"/>
+                        <img src={ "/assets/img/" + this.state.user.profile_image } />
                     </div>
                 </div>
                 <div className="right-content">
-                    <h3>Maria Châtel-Innocenti</h3>
+                    <h3>{ this.state.user.name }</h3>
                     <button className={ this.state.followActive ? "follow-btn active-follow" : "follow-btn" } onClick={ this.handleClick }>
                         { this.state.followActive ? "Subscriber" : "Follow" }
                     </button>
-                    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant
-                        impression.</p>
+                    <p>{ this.state.user.description }</p>
                 </div>
             </div>
         )
