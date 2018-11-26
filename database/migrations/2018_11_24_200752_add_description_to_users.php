@@ -14,7 +14,7 @@ class AddDescriptionToUsers extends Migration
     public function up()
     {
         Schema::table("users", function ($table) {
-            $table->text("description");
+            $table->text("description")->nullable();
         });
     }
 

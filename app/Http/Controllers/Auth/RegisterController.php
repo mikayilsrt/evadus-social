@@ -65,7 +65,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'name'      =>  $data['user_name'],
-            'user_name' =>  strtolower($data['user_name']),
+            'user_name' =>  strtolower(str_replace(" ", "", $data['user_name'])),
             'email'     =>  $data['email'],
             'password'  =>  Hash::make($data['password']),
             'ip'        =>  $_SERVER['REMOTE_ADDR'],
