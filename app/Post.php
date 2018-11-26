@@ -24,6 +24,11 @@ class Post extends Model
         return $this->belongsTo(Post::class);
     }
 
+    /**
+     * Get the likes that owns the post.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function like ()
     {
         return $this->hasMany(Like::class);
