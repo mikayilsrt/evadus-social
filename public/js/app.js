@@ -37702,7 +37702,7 @@ var TimelineFeed = function (_Component) {
         key: 'zoomMedia',
         value: function zoomMedia(e) {
             e.preventDefault();
-            var zoomMediaImage = Object(__WEBPACK_IMPORTED_MODULE_4_medium_zoom__["a" /* default */])("#media-image");
+            var zoomMediaImage = Object(__WEBPACK_IMPORTED_MODULE_4_medium_zoom__["a" /* default */])(document.getElementById(e.target.id));
             zoomMediaImage.open();
             zoomMediaImage.on('closed', function () {
                 return zoomMediaImage.detach();
@@ -37765,7 +37765,7 @@ var TimelineFeed = function (_Component) {
                     item.content && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'item-media-content' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'media-image', onClick: _this3.zoomMedia, className: 'medium-zoom-image', src: item.media, alt: '' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: "media-image-" + item.id, onClick: _this3.zoomMedia, className: 'medium-zoom-image', src: item.media, alt: '' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',

@@ -43,7 +43,7 @@ export default class TimelineFeed extends Component {
 
     zoomMedia (e) {
         e.preventDefault();
-        const zoomMediaImage = mediumZoom("#media-image");
+        const zoomMediaImage = mediumZoom(document.getElementById(e.target.id));
         zoomMediaImage.open();
         zoomMediaImage.on('closed', () => zoomMediaImage.detach())
     }
@@ -73,7 +73,7 @@ export default class TimelineFeed extends Component {
                     {
                         item.content &&
                         <div className="item-media-content">
-                            <img id="media-image" onClick={ this.zoomMedia } className="medium-zoom-image" src={ item.media } alt="" />
+                            <img id={ "media-image-" + item.id } onClick={ this.zoomMedia } className="medium-zoom-image" src={ item.media } alt="" />
                         </div>
                     }
                     <div className="item-footer">
