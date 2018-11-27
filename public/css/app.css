@@ -11385,6 +11385,7 @@ body {
 }
 
 #page-container .row #profileContent .header-profile-content .right-content {
+  width: 100%;
   padding-top: 10px;
 }
 
