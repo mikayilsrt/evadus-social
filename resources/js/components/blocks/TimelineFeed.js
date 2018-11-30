@@ -26,8 +26,6 @@ export default class TimelineFeed extends Component {
                     datas: response.data.user,
                     post: response.data.user.post
                 });
-                console.log(response.data.user);
-                console.log(response.data.user.post);
             }
         }).catch((error) => {
             console.log(error);

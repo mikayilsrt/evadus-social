@@ -37683,8 +37683,6 @@ var TimelineFeed = function (_Component) {
                         datas: response.data.user,
                         post: response.data.user.post
                     });
-                    console.log(response.data.user);
-                    console.log(response.data.user.post);
                 }
             }).catch(function (error) {
                 console.log(error);
