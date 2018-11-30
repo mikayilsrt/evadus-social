@@ -97,6 +97,6 @@ export default class TimelineFeed extends Component {
     }
 }
 
-if (document.getElementById('timelinefeed')) {
-    ReactDOM.render(<TimelineFeed />, document.getElementById('timelinefeed'));
+if (document.getElementById('timelinefeed2')) {
+    ReactDOM.render(<TimelineFeed />, document.getElementById('timelinefeed2'));
 }

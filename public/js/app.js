@@ -37827,8 +37827,8 @@ var TimelineFeed = function (_Component) {
 /* harmony default export */ __webpack_exports__["default"] = (TimelineFeed);
 
 
-if (document.getElementById('timelinefeed')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TimelineFeed, null), document.getElementById('timelinefeed'));
+if (document.getElementById('timelinefeed2')) {
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TimelineFeed, null), document.getElementById('timelinefeed2'));
 }
 
 /***/ }),
