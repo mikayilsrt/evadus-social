@@ -16,8 +16,9 @@ class PostController extends Controller
      */
     public function index($id)
     {
-        $user = User::findOrFail($id);
-        return compact("user", $user->post);
+        // $user = User::findOrFail($id);
+        // return compact("user", $user->post);
+        return User::with('post.like')->findOrFail($id);
     }
 
     /**

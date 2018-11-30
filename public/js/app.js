@@ -19323,6 +19323,7 @@ __webpack_require__(21);
 
 // require('./components/Example');
 __webpack_require__(43);
+__webpack_require__(327);
 __webpack_require__(318);
 __webpack_require__(319);
 __webpack_require__(320);
@@ -75949,6 +75950,87 @@ if (document.getElementById('modalNewPost')) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_medium_zoom__ = __webpack_require__(317);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+var MediaFeedBlocks = function (_Component) {
+    _inherits(MediaFeedBlocks, _Component);
+
+    function MediaFeedBlocks(props) {
+        _classCallCheck(this, MediaFeedBlocks);
+
+        var _this = _possibleConstructorReturn(this, (MediaFeedBlocks.__proto__ || Object.getPrototypeOf(MediaFeedBlocks)).call(this, props));
+
+        _this.state = {
+            id: "",
+            image: ""
+        };
+        _this.zoomMedia = _this.zoomMedia.bind(_this);
+        return _this;
+    }
+
+    _createClass(MediaFeedBlocks, [{
+        key: "componentDidMount",
+        value: function componentDidMount() {
+            var element = document.getElementById("media-image");
+            var elementID = element.dataset.id;
+            var elementImage = element.dataset.img;
+            this.setState({
+                id: elementID,
+                image: elementImage
+            });
+        }
+    }, {
+        key: "zoomMedia",
+        value: function zoomMedia(e) {
+            e.preventDefault();
+            var zoomMediaImage = Object(__WEBPACK_IMPORTED_MODULE_2_medium_zoom__["a" /* default */])(document.getElementById(e.target.id));
+            zoomMediaImage.open();
+            zoomMediaImage.on('closed', function () {
+                return zoomMediaImage.detach();
+            });
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { id: "media-image-" + this.state.id, onClick: this.zoomMedia, className: "medium-zoom-image", src: this.state.image, alt: "" });
+        }
+    }]);
+
+    return MediaFeedBlocks;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (MediaFeedBlocks);
+
+
+if (document.getElementById("media-image")) {
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(MediaFeedBlocks, null), document.getElementById("media-image"));
+}
 
 /***/ })
 /******/ ]);
