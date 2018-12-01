@@ -63,18 +63,14 @@
                                                 </div>
                                             @endif
                                             @if ($post->media)
-                                                <div class="item-media-content" id="media-image" data-img="{{ $post->media }}" data-id="{{ $post->id }}">
-                                                    <!-- <img id="media-image-1" class="medium-zoom-image" src="{{ $post->media }}" alt="" />-->
+                                                <div class="item-media-content" data-img="{{ $post->media }}" data-id="{{ $post->id }}">
+                                                    <img id="media-image-1" class="medium-zoom-image" src="{{ $post->media }}" alt="" />
                                                 </div>
                                             @endif
                                             <div class="item-footer">
                                                 <div class="item-action">
                                                     <ul>
-                                                        <li>
-                                                            <button class="">
-                                                                <i data-feather="heart" class="icon"></i> Likes
-                                                            </button>
-                                                        </li>
+                                                        <li class="react-like"></li>
                                                         <li>
                                                             <button>
                                                                 <i data-feather="link" class="icon"></i> Share
