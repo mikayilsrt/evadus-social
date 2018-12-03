@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import * as Icons from "react-feather";
+import axios from "axios";
 
 export default class PostLikeButtonBlocks extends Component {
 
@@ -15,16 +16,35 @@ export default class PostLikeButtonBlocks extends Component {
     componentDidMount () {
     }
 
-    handleClick () {
+    handleChange () {
         this.setState({
             isLiked: !this.state.isLiked,
-            likes: this.state.likes + (this.state.isLiked ? -1 : 1)
+            likes: this.state.likes + (this.state.isLiked ? -1 : 1) // true => -1 or +1
+        });
+    }
+
+    handleClick (e) {
+        e.preventDefault();
+        this.handleChange(); // Method to change the state values.
+        let isLiked = !this.state.isLiked; // Reserve the like boolean in true or false.
+
+        // Http request post with axios.
+        axios.post("/like", {
+            like: isLiked, // true => +1 false -1
+            user_id: 1, // id of user
+            post_id: 3 // id of post
+        }).then((response) => {
+            if (response.request.readyState === 4 && response.request.status === 200) {
+                console.log(response);
+            }
+        }).catch((error) => {
+            console.log(error);
         });
     }
 
     render () {
         return (
-            <button className={ this.state.isLiked ? "toggle-active" : "" } onClick={ () => this.handleClick() }>
+            <button className={ this.state.isLiked ? "toggle-active" : "" } onClick={ (e) => this.handleClick(e) }>
                 <Icons.Heart className="icon" /> Likes
             </button>
         );
