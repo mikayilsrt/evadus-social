@@ -70,7 +70,11 @@
                                             <div class="item-footer">
                                                 <div class="item-action">
                                                     <ul>
-                                                        <li class="react-like"></li>
+                                                        @foreach($post->like as $like)
+                                                            @if ($like->user_id == Auth::id())
+                                                                <li class="react-like" data-id="{{ $post->id }}" data-liked="1"></li>
+                                                            @endif
+                                                        @endforeach
                                                         <li>
                                                             <button>
                                                                 <i data-feather="link" class="icon"></i> Share

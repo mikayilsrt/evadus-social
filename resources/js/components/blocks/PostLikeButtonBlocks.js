@@ -9,6 +9,7 @@ export default class PostLikeButtonBlocks extends Component {
         super(props);
         this.state = {
             likes: props.likes || 0,
+            post_id: props.post_id || null,
             isLiked: props.isLiked || false
         };
     }
@@ -30,9 +31,9 @@ export default class PostLikeButtonBlocks extends Component {
 
         // Http request post with axios.
         axios.post("/like", {
+            _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
             like: isLiked, // true => +1 false -1
-            user_id: 1, // id of user
-            post_id: 3 // id of post
+            post_id: this.state.post_id // id of post
         }).then((response) => {
             if (response.request.readyState === 4 && response.request.status === 200) {
                 console.log(response);
@@ -53,5 +54,5 @@ export default class PostLikeButtonBlocks extends Component {
 }
 
 document.querySelectorAll("li.react-like").forEach(function (li) {
-    ReactDOM.render(React.createElement(PostLikeButtonBlocks), li);
+    ReactDOM.render(React.createElement(PostLikeButtonBlocks, {post_id: li.dataset.id, isLiked: li.dataset.liked}), li);
 });
