@@ -75482,8 +75482,10 @@ var PostLikeButtonBlocks = function (_Component) {
         var _this = _possibleConstructorReturn(this, (PostLikeButtonBlocks.__proto__ || Object.getPrototypeOf(PostLikeButtonBlocks)).call(this, props));
 
         _this.state = {
+            likeData: props.likeData || [], // contient tous les likes d'un post.
             likes: props.likes || 0,
             post_id: props.post_id || null,
+            user_id: props.user_id || null, // Auth id.
             isLiked: props.isLiked || false
         };
         return _this;
@@ -75491,7 +75493,17 @@ var PostLikeButtonBlocks = function (_Component) {
 
     _createClass(PostLikeButtonBlocks, [{
         key: 'componentDidMount',
-        value: function componentDidMount() {}
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            this.state.likeData.map(function (like) {
+                if (like.user_id == _this2.state.user_id) {
+                    _this2.setState({
+                        isLiked: true
+                    });
+                }
+            });
+        }
     }, {
         key: 'handleChange',
         value: function handleChange() {
@@ -75514,7 +75526,7 @@ var PostLikeButtonBlocks = function (_Component) {
                 post_id: this.state.post_id // id of post
             }).then(function (response) {
                 if (response.request.readyState === 4 && response.request.status === 200) {
-                    console.log(response);
+                    // ............... //
                 }
             }).catch(function (error) {
                 console.log(error);
@@ -75523,12 +75535,12 @@ var PostLikeButtonBlocks = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _this2 = this;
+            var _this3 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'button',
                 { className: this.state.isLiked ? "toggle-active" : "", onClick: function onClick(e) {
-                        return _this2.handleClick(e);
+                        return _this3.handleClick(e);
                     } },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["Heart"], { className: 'icon' }),
                 ' Likes'
@@ -75543,7 +75555,11 @@ var PostLikeButtonBlocks = function (_Component) {
 
 
 document.querySelectorAll("li.react-like").forEach(function (li) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(PostLikeButtonBlocks, { post_id: li.dataset.id, isLiked: li.dataset.liked }), li);
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(PostLikeButtonBlocks, {
+        user_id: li.dataset.authid,
+        post_id: li.dataset.id,
+        likeData: JSON.parse(li.dataset.postlikes)
+    }), li);
 });
 
 /***/ }),

@@ -8,13 +8,22 @@ export default class PostLikeButtonBlocks extends Component {
     constructor (props) {
         super(props);
         this.state = {
+            likeData: props.likeData || [], // contient tous les likes d'un post.
             likes: props.likes || 0,
             post_id: props.post_id || null,
+            user_id: props.user_id || null, // Auth id.
             isLiked: props.isLiked || false
         };
     }
 
     componentDidMount () {
+        this.state.likeData.map((like) => {
+            if (like.user_id == this.state.user_id) {
+                this.setState({
+                    isLiked: true
+                });
+            }
+        });
     }
 
     handleChange () {
@@ -36,7 +45,7 @@ export default class PostLikeButtonBlocks extends Component {
             post_id: this.state.post_id // id of post
         }).then((response) => {
             if (response.request.readyState === 4 && response.request.status === 200) {
-                console.log(response);
+                // ............... //
             }
         }).catch((error) => {
             console.log(error);
@@ -54,5 +63,14 @@ export default class PostLikeButtonBlocks extends Component {
 }
 
 document.querySelectorAll("li.react-like").forEach(function (li) {
-    ReactDOM.render(React.createElement(PostLikeButtonBlocks, {post_id: li.dataset.id, isLiked: li.dataset.liked}), li);
+    ReactDOM.render(
+        React.createElement(
+            PostLikeButtonBlocks,
+            {
+                user_id: li.dataset.authid,
+                post_id: li.dataset.id,
+                likeData: JSON.parse(li.dataset.postlikes)
+            }
+        ),
+    li);
 });
