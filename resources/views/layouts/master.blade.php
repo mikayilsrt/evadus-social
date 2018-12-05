@@ -28,8 +28,10 @@
 
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
         <script>
-            feather.replace()
+            feather.replace();
+            mediumZoom(document.querySelectorAll('.medium-zoom-image'));
         </script>
     </body>
 </html>

@@ -19323,6 +19323,7 @@ __webpack_require__(21);
 
 // require('./components/Example');
 __webpack_require__(43);
+__webpack_require__(318);
 __webpack_require__(319);
 __webpack_require__(320);
 __webpack_require__(321);
@@ -37827,8 +37828,8 @@ var TimelineFeed = function (_Component) {
 /* harmony default export */ __webpack_exports__["default"] = (TimelineFeed);
 
 
-if (document.getElementById('timelinefeed')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TimelineFeed, null), document.getElementById('timelinefeed'));
+if (document.getElementById('timelinefeed2')) {
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TimelineFeed, null), document.getElementById('timelinefeed2'));
 }
 
 /***/ }),
@@ -75446,7 +75447,122 @@ exports.default = ZoomOut;
 
 
 /***/ }),
-/* 318 */,
+/* 318 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_feather__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_feather___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_feather__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_axios__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var PostLikeButtonBlocks = function (_Component) {
+    _inherits(PostLikeButtonBlocks, _Component);
+
+    function PostLikeButtonBlocks(props) {
+        _classCallCheck(this, PostLikeButtonBlocks);
+
+        var _this = _possibleConstructorReturn(this, (PostLikeButtonBlocks.__proto__ || Object.getPrototypeOf(PostLikeButtonBlocks)).call(this, props));
+
+        _this.state = {
+            likeData: props.likeData || [], // contient tous les likes d'un post.
+            likes: props.likes || 0,
+            post_id: props.post_id || null,
+            user_id: props.user_id || null, // Auth id.
+            isLiked: props.isLiked || false
+        };
+        return _this;
+    }
+
+    _createClass(PostLikeButtonBlocks, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            this.state.likeData.map(function (like) {
+                if (like.user_id == _this2.state.user_id) {
+                    _this2.setState({
+                        isLiked: true
+                    });
+                }
+            });
+        }
+    }, {
+        key: 'handleChange',
+        value: function handleChange() {
+            this.setState({
+                isLiked: !this.state.isLiked,
+                likes: this.state.likes + (this.state.isLiked ? -1 : 1) // true => -1 or +1
+            });
+        }
+    }, {
+        key: 'handleClick',
+        value: function handleClick(e) {
+            e.preventDefault();
+            this.handleChange(); // Method to change the state values.
+            var isLiked = !this.state.isLiked; // Reserve the like boolean in true or false.
+
+            // Http request post with axios.
+            __WEBPACK_IMPORTED_MODULE_3_axios___default.a.post("/like", {
+                _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                like: isLiked, // true => +1 false -1
+                post_id: this.state.post_id // id of post
+            }).then(function (response) {
+                if (response.request.readyState === 4 && response.request.status === 200) {
+                    // ............... //
+                }
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'button',
+                { className: this.state.isLiked ? "toggle-active" : "", onClick: function onClick(e) {
+                        return _this3.handleClick(e);
+                    } },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_feather__["Heart"], { className: 'icon' }),
+                ' Likes'
+            );
+        }
+    }]);
+
+    return PostLikeButtonBlocks;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (PostLikeButtonBlocks);
+
+
+document.querySelectorAll("li.react-like").forEach(function (li) {
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(PostLikeButtonBlocks, {
+        user_id: li.dataset.authid,
+        post_id: li.dataset.id,
+        likeData: JSON.parse(li.dataset.postlikes)
+    }), li);
+});
+
+/***/ }),
 /* 319 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

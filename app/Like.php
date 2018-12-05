@@ -12,7 +12,7 @@ class Like extends Model
      * @var array
      */
     protected $fillable = [
-        "like"
+        "like", "user_id", "post_id"
     ];
 
     /**

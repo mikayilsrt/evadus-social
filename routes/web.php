@@ -20,6 +20,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/search/{tag}', function ($tag) {
         return view('search.index')->with("tag", $tag);
     });
+
+    Route::post("/like", "LikeController@like");
 });
 
 Route::get('/profile/{name}', "UserController@index");
