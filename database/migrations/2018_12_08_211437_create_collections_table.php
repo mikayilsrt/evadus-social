@@ -15,9 +15,9 @@ class CreateCollectionsTable extends Migration
     {
         Schema::create('collections', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('wording', 100);
+            $table->string('wording', 100)->nullable(false)->unique();
             $table->text('description');
-            $table->string('blanket', 100);
+            $table->string('blanket', 100)->default("default-blanket-img.png");
             $table->timestamps();
         });
     }
