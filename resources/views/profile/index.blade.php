@@ -15,9 +15,12 @@
                     </div>
                     <div class="right-content">
                         <h3>{{ $allProfileData->name }}</h3>
+                        <span class="follow-block" data-user_id="{{ $allProfileData->id }}"></span>
+                        <!--
                         <button class="follow-btn active-follow">
                             Follow
                         </button>
+                        -->
                         <p>{{ $allProfileData->description }}</p>
                     </div>
                 </div>
