@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFollowTable extends Migration
+class CreateFollowersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateFollowTable extends Migration
      */
     public function up()
     {
-        Schema::create('follow', function (Blueprint $table) {
+        Schema::create('followers', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger("follower_id");
+            $table->unsignedInteger("user_id");
             $table->unsignedInteger("following_id");
-            $table->foreign("follower_id")->references("id")->on("users");
+            $table->foreign("user_id")->references("id")->on("users");
             $table->foreign("following_id")->references("id")->on("users");
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ class CreateFollowTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('follow');
+        Schema::dropIfExists('followers');
     }
 }

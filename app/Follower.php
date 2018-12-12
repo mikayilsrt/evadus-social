@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Follow extends Model
+class Follower extends Model
 {
     /**
      * The attributes that are mass assignable
@@ -12,7 +12,7 @@ class Follow extends Model
      * @var array
      */
     protected $fillable = [
-        "follower_id", "following_id"
+        "user_id", "following_id"
     ];
 
     /**
