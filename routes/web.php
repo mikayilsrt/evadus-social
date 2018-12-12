@@ -22,6 +22,8 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::post("/like", "LikeController@like");
+
+    Route::post("/follow", "FollowController@follow")->name("follow");
 });
 
 Route::get('/profile/{name}', "UserController@index");
