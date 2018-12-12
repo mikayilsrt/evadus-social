@@ -37,4 +37,13 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
+    /**
+     * Get the follow that owns User.
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function follow ()
+    {
+        return $this->hasMany(Follow::class);
+    }
 }
