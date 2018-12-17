@@ -75603,17 +75603,23 @@ var FollowButtonBlocks = function (_Component) {
     }
 
     _createClass(FollowButtonBlocks, [{
-        key: 'handleClick',
-        value: function handleClick(e) {
-            e.preventDefault();
+        key: 'handleChange',
+        value: function handleChange() {
             this.setState({
                 isFollowed: !this.state.isFollowed
             });
+        }
+    }, {
+        key: 'handleClick',
+        value: function handleClick(e) {
+            e.preventDefault();
+            this.handleChange();
+            var isFollowed = !this.state.isFollowed;
 
             __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post("/follow", {
                 _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
                 user_id: this.state.user_id,
-                isFollowed: this.state.isFollowed
+                isFollowed: isFollowed
             }).then(function (response) {
                 console.log(response);
             }).catch(function (error) {

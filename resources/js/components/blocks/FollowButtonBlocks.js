@@ -12,16 +12,21 @@ export default class FollowButtonBlocks extends Component {
         };
     }
 
-    handleClick (e) {
-        e.preventDefault();
+    handleChange () {
         this.setState({
             isFollowed: !this.state.isFollowed
         });
+    }
+
+    handleClick (e) {
+        e.preventDefault();
+        this.handleChange();
+        let isFollowed = !this.state.isFollowed;
 
         axios.post("/follow", {
             _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
             user_id: this.state.user_id,
-            isFollowed: this.state.isFollowed
+            isFollowed: isFollowed
         }).then((response) => {
             console.log(response);
         }).catch((error) => {
