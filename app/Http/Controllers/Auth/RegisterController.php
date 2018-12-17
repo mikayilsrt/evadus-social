@@ -68,7 +68,6 @@ class RegisterController extends Controller
             'user_name' =>  strtolower(str_replace(" ", "", $data['user_name'])),
             'email'     =>  $data['email'],
             'password'  =>  Hash::make($data['password']),
-            'ip'        =>  $_SERVER['REMOTE_ADDR'],
         ]);
     }
 }
