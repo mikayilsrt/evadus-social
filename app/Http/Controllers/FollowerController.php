@@ -10,17 +10,14 @@ class FollowerController extends Controller
 {
 
     public function follow (Request $request) {
-        $user = User::findOrFail($request->user_id);
+        $user = User::findOrFail(Auth::id());
 
-        if ($request->user_id != Auth::id()) {
+        if ($request->profile_id != Auth::id()) {
             if ($request->isFollowed == 1) {
-                $user->follow()->create([
-                    "user_id"       =>  Auth::id(), // follower_id
-                    "following_id"  =>  $request->user_id
-                ]);
+                $user->followers()->attach($request->profile_id);
             } else {
                 if ($request->isFollowed == 0) {
-                    $user->follow()->delete();
+                    $user->followers()->detach($request->profile_id);
                 }
             }
         }

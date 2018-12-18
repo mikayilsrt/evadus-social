@@ -75596,13 +75596,28 @@ var FollowButtonBlocks = function (_Component) {
         var _this = _possibleConstructorReturn(this, (FollowButtonBlocks.__proto__ || Object.getPrototypeOf(FollowButtonBlocks)).call(this, props));
 
         _this.state = {
+            user_id: props.user_id || [],
+            followers: props.followers || [],
             isFollowed: props.follow || false,
-            user_id: props.user_id || 0
+            profile_id: props.profile_id || 0
         };
         return _this;
     }
 
     _createClass(FollowButtonBlocks, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            this.state.followers.map(function (follower) {
+                if (follower.pivot.following_id == _this2.state.user_id) {
+                    _this2.setState({
+                        isFollowed: true
+                    });
+                }
+            });
+        }
+    }, {
         key: 'handleChange',
         value: function handleChange() {
             this.setState({
@@ -75618,7 +75633,7 @@ var FollowButtonBlocks = function (_Component) {
 
             __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post("/follow", {
                 _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                user_id: this.state.user_id,
+                profile_id: this.state.profile_id,
                 isFollowed: isFollowed
             }).then(function (response) {
                 console.log(response);
@@ -75629,12 +75644,12 @@ var FollowButtonBlocks = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _this2 = this;
+            var _this3 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'button',
                 { className: this.state.isFollowed ? "follow-btn active-follow" : "follow-btn", onClick: function onClick(e) {
-                        return _this2.handleClick(e);
+                        return _this3.handleClick(e);
                     } },
                 this.state.isFollowed ? "Subscriber" : "Follow"
             );
@@ -75649,7 +75664,9 @@ var FollowButtonBlocks = function (_Component) {
 
 document.querySelectorAll("span.follow-block").forEach(function (span) {
     __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FollowButtonBlocks, {
-        user_id: span.dataset.user_id
+        user_id: span.dataset.authid,
+        profile_id: span.dataset.user_id,
+        followers: JSON.parse(span.dataset.followers)
     }), span);
 });
 

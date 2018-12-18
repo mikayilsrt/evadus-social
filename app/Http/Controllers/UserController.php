@@ -16,6 +16,12 @@ class UserController extends Controller
     {
         $allProfileData = User::with("post.like")->where("user_name", $user_name)->first();
 
+        // $allProfileData->followings => user qui follow
+        // $allProfileData->followers => les user qui suis le user
+        // return $allProfileData->followings;
+
+        // return $allProfileData->followers;
+
         return view("profile.index")
             ->with("allProfileData", $allProfileData);
     }

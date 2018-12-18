@@ -7,9 +7,21 @@ export default class FollowButtonBlocks extends Component {
     constructor (props) {
         super(props);
         this.state = {
+            user_id: props.user_id || [],
+            followers: props.followers || [],
             isFollowed: props.follow || false,
-            user_id: props.user_id || 0
+            profile_id: props.profile_id || 0
         };
+    }
+
+    componentDidMount () {
+        this.state.followers.map((follower) => {
+            if (follower.pivot.following_id == this.state.user_id) {
+                this.setState({
+                    isFollowed: true
+                });
+            }
+        })
     }
 
     handleChange () {
@@ -25,7 +37,7 @@ export default class FollowButtonBlocks extends Component {
 
         axios.post("/follow", {
             _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-            user_id: this.state.user_id,
+            profile_id: this.state.profile_id,
             isFollowed: isFollowed
         }).then((response) => {
             console.log(response);
@@ -49,7 +61,9 @@ document.querySelectorAll("span.follow-block").forEach((span) => {
         React.createElement(
             FollowButtonBlocks,
             {
-                user_id: span.dataset.user_id
+                user_id: span.dataset.authid,
+                profile_id: span.dataset.user_id,
+                followers: JSON.parse(span.dataset.followers)
             }
         ),
     span);
