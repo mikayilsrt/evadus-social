@@ -99,7 +99,7 @@
                                 <div class="user-profile-img">
                                     <img src="/assets/img/{{ Auth::user()->profile_image }}" alt="">
                                 </div>
-                                <span>username</span>
+                                <span>{{ Auth::user()->user_name }}</span>
                                 <i data-feather="chevron-down" class="icon"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
