@@ -16,7 +16,7 @@ export default class FollowButtonBlocks extends Component {
 
     componentDidMount () {
         this.state.followers.map((follower) => {
-            if (follower.pivot.following_id == this.state.user_id) {
+            if (follower.pivot.user_id == this.state.user_id) {
                 this.setState({
                     isFollowed: true
                 });

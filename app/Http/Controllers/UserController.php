@@ -19,9 +19,7 @@ class UserController extends Controller
         // $allProfileData->followings => user qui follow
         // $allProfileData->followers => les user qui suis le user
         // return $allProfileData->followings;
-
-        // return $allProfileData->followers;
-
+        
         return view("profile.index")
             ->with("allProfileData", $allProfileData);
     }
