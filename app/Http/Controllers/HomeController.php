@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -13,6 +15,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.index');
+        $posts = DB::table("posts")
+            ->join("users", "posts.user_id", "=", "users.id")
+            ->join("followers", "users.id", "=", "followers.following_id")
+            ->where("followers.user_id", "=", Auth::id())
+            ->select("posts.*", "users.*")
+            ->distinct()
+            ->get();
+        // return $posts;
+        return view('home.index')->with("posts", $posts);
     }
 }

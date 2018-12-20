@@ -6,6 +6,54 @@
         <div class="row">
             <div class="col-12 col-md-7" id="timeline">
                 <!-- <div id="timelinefeed"></div> -->
+                @foreach($posts as $post)
+                    <div class="content-timeline">
+                        <div class="item-header">
+                            <a href="/profile/{{ $post->user_name }}">
+                                <div class="user-profile-img">
+                                    <img src="/assets/img/{{ $post->profile_image }}" alt="">
+                                </div>
+                            </a>
+                            <ul class="">
+                                <li class="fullGroupName">
+                                    <a href="/profile/{{ $post->user_name }}">{{ $post->name }}</a>
+                                </li>
+                                <li class="username">
+                                    <a href="/profile/{{ $post->user_name }}">{{ "@" . $post->user_name }}</a>
+                                </li>
+                                <li class="item-date">{{ $post->created_at }}</li>
+                            </ul>
+                        </div>
+                        @if ($post->content)
+                            <div class="item-text-content">
+                                {{ $post->content }}
+                            </div>
+                        @endif
+                        @if ($post->media)
+                            <div class="item-media-content" data-img="{{ $post->media }}" data-id="{{ $post->id }}">
+                                <img id="media-image-1" class="medium-zoom-image" src="{{ $post->media }}" alt="" />
+                            </div>
+                        @endif
+                        <div class="item-footer">
+                            <div class="item-action">
+                                <ul>
+                                    <li class="react-like" data-id="{{ $post->id }}" data-authId="{{ Auth::id() }}" data-postLikes="{{ "" }}"></li>
+                                    <li>
+                                        <button>
+                                            <i data-feather="link" class="icon"></i> Share
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button>
+                                            <i data-feather="chevron-right" class="icon"></i> Status
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                <!--
                 <div class="content-timeline">
                     <div class="item-header">
                         <a href="">
@@ -122,6 +170,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
             @include("layouts._partials._block-section")
         </div>
