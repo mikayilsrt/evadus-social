@@ -23,4 +23,10 @@ class UserController extends Controller
         return view("profile.index")
             ->with("allProfileData", $allProfileData);
     }
+
+    public function randomUser()
+    {
+        return User::all()
+            ->random(3);
+    }
 }
