@@ -11569,6 +11569,47 @@ body {
   color: #b71540;
 }
 
+#page-container .row #profileContent .profile-card-item {
+  padding: 10px 20px;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+#page-container .row #profileContent .profile-card-item .profile-image {
+  float: left;
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+#page-container .row #profileContent .profile-card-item .profile-image a img {
+  width: 100%;
+}
+
+#page-container .row #profileContent .profile-card-item .card-item-info {
+  display: inline-block;
+  margin-left: 7px;
+  float: left;
+}
+
+#page-container .row #profileContent .profile-card-item .card-item-info h3 a {
+  color: #303030;
+  font-size: 16px;
+}
+
+#page-container .row #profileContent .profile-card-item .card-item-info h3 a span {
+  color: #888888;
+}
+
+#page-container .row #profileContent .profile-card-item .card-item-info p {
+  margin-top: 7px;
+  font-size: 14px;
+  color: #888888;
+}
+
 #content-auth {
   left: 0;
   right: 0;

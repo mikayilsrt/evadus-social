@@ -15,7 +15,7 @@
                     </div>
                     <div class="right-content">
                         <h3>{{ $allProfileData->name }}</h3>
-                        <span class="follow-block" data-user_id="{{ $allProfileData->id }}" data-authid="{{ Auth::id() }}" data-followers="{{ $allProfileData->followings }}"></span>
+                        <span class="follow-block" data-user_id="{{ $allProfileData->id }}" data-authid="{{ Auth::id() }}" data-followers="{{ $allProfileData->followers }}"></span>
                         <!--
                         <button class="follow-btn active-follow">
                             Follow
@@ -29,10 +29,10 @@
                         <a href="#tab0" role="tab" data-toggle="tab" aria-expanded="true">Posts</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#tab1" role="tab" data-toggle="tab" aria-expanded="true">Likes</a>
+                        <a href="#tab1" role="tab" data-toggle="tab" aria-expanded="true">Abonnés</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#tab2" role="tab" data-toggle="tab" aria-expanded="true">Collections</a>
+                        <a href="#tab2" role="tab" data-toggle="tab" aria-expanded="true">Abonnements</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -93,8 +93,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade show" id="tab1">Likes...</div>
-                    <div class="tab-pane fade show" id="tab2">Collections...</div>
+                    <div class="tab-pane fade show" id="tab1">
+                        @foreach($allProfileData->followers as $follower)
+                            <div class="profile-card-item">
+                                <div class="profile-image">
+                                    <a href="{{ "/profile/" . $follower->user_name }}">
+                                        <img src="{{ "/assets/img/" . $follower->profile_image }}">
+                                    </a>
+                                </div>
+                                <div class="card-item-info">
+                                    <h3><a href="{{ "/profile/" . $follower->user_name }}">{{ $follower->name }} <span>{{ "@" . $follower->user_name }}</span></a></h3>
+                                    <p>{{ $follower->description }}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                    <div class="tab-pane fade show" id="tab2">
+                        @foreach($allProfileData->followings as $following)
+                            <div class="profile-card-item">
+                                <div class="profile-image">
+                                    <a href="{{ "/profile/" . $following->user_name }}">
+                                        <img src="{{ "/assets/img/" . $following->profile_image }}">
+                                    </a>
+                                </div>
+                                <div class="card-item-info">
+                                    <h3><a href="{{ "/profile/" . $following->user_name }}">{{ $following->name }} <span>{{ "@" . $following->user_name }}</span></a></h3>
+                                    <p>{{ $following->description }}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
                 <!--
                 <div class="header-profile-content">
