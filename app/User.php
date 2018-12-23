@@ -39,17 +39,22 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the follow that owns User.
+     * Get the followings that owns User. (Abonnements)
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function followers ()
+    public function followings ()
     {
         return $this->belongsToMany(User::class, "followers", "user_id", "following_id")
             ->withTimestamps();
     }
 
-    public function followings () {
+    /**
+     * Get the followers that owns User. (Abonnés)
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function followers () {
         return $this->belongsToMany(User::class, "followers", "following_id", "user_id")
             ->withTimestamps();
     }
