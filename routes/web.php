@@ -16,6 +16,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/discover', function () {
         return view('discover.index');
     });
+
+    Route::get("/profile/settings", function () {
+        return view('profile.settings');
+    })->name('profile.settings');
     
     Route::get('/search/{tag}', function ($tag) {
         return view('search.index')->with("tag", $tag);
