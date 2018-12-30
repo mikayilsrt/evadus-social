@@ -37,7 +37,7 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li href="#"><a href="{{ url("profile", Auth::user()->user_name) }}" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
-                        <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
+                        <li href="#"><a href="{{ route("profile.settings") }}" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
                         <div class="dropdown-divider"></div>
                         <li href="#">
                             <form method="POST" action="{{ url("logout") }}">
@@ -104,7 +104,7 @@
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li href="#"><a href="{{ url("profile", Auth::user()->user_name) }}" class="dropdown-item"><i class="icon" data-feather="user"></i>Profile</a></li>
-                                <li href="#"><a href="#" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
+                                <li href="#"><a href="{{ route("profile.settings") }}" class="dropdown-item"><i class="icon" data-feather="settings"></i>Settings</a></li>
                                 <div class="dropdown-divider"></div>
                                 <li href="#">
                                     <form method="POST" action="{{ url("logout") }}">
