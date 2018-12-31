@@ -17,9 +17,9 @@ Route::group(['middleware' => ['auth']], function () {
         return view('discover.index');
     });
 
-    Route::get("/profile/settings", function () {
-        return view('profile.settings');
-    })->name('profile.settings');
+    Route::get("/profile/settings", "SettingsController@index")->name('profile.settings');
+
+    Route::post("/profile/settings", "SettingsController@update")->name('profile.update');
     
     Route::get('/search/{tag}', function ($tag) {
         return view('search.index')->with("tag", $tag);
