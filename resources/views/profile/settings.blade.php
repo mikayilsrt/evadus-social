@@ -7,7 +7,7 @@
         <h1>Settings</h1>
         <div class="row">
             <div class="col-12 col-md-6">
-                <form method="post" action="{{ route('profile.update') }}">
+                <form method="post" action="{{ route('profile.update') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="name">Nom du profile</label>

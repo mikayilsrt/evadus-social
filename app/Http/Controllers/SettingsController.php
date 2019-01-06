@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Faker\Provider\Image;
+use Image;
 
 class SettingsController extends Controller
 {
@@ -32,9 +32,9 @@ class SettingsController extends Controller
         }*/
 
         $user = User::findOrFail(Auth::id());
-        $user->name     =  $request->input('name');
-        $user->user_name     =  $request->input('username');
-        $user->email         =  $request->input('email');
+        $user->name         =   $request->input('name');
+        $user->user_name    =   $request->input('username');
+        $user->email        =   $request->input('email');
 
         if ($request->hasFile('profile_image')) {
             $profile_image = $request->file('profile_image');
