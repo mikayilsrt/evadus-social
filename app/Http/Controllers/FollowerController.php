@@ -14,10 +14,10 @@ class FollowerController extends Controller
 
         if ($request->profile_id != Auth::id()) {
             if ($request->isFollowed == 1) {
-                $user->followers()->attach($request->profile_id);
+                $user->followings()->attach($request->profile_id);
             } else {
                 if ($request->isFollowed == 0) {
-                    $user->followers()->detach($request->profile_id);
+                    $user->followings()->detach($request->profile_id);
                 }
             }
         }
