@@ -75839,7 +75839,7 @@ var UsersSuggested = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'a',
                             { href: document.location.origin + "/profile/" + item.user_name },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/img/default-profile-img.png', alt: '' })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: "/uploads/profileimages/" + item.profile_image, alt: '' })
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

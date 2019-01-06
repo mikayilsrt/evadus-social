@@ -39,7 +39,7 @@ export default class UsersSuggested extends Component {
                 <div className="user-item" key={ item.id }>
                     <div className="user-profile">
                         <a href={ document.location.origin + "/profile/" + item.user_name }>
-                            <img src="/assets/img/default-profile-img.png" alt=""/>
+                            <img src={ "/uploads/profileimages/" + item.profile_image } alt=""/>
                         </a>
                     </div>
                     <div className="user-info">

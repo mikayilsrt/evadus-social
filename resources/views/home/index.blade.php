@@ -11,7 +11,7 @@
                         <div class="item-header">
                             <a href="/profile/{{ $post->user_name }}">
                                 <div class="user-profile-img">
-                                    <img src="/assets/img/{{ $post->profile_image }}" alt="">
+                                    <img src="/uploads/profileimages/{{ $post->profile_image }}" alt="">
                                 </div>
                             </a>
                             <ul class="">

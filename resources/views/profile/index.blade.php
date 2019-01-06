@@ -10,7 +10,7 @@
                 <div class="header-profile-content">
                     <div class="left-content">
                         <div class="profile-image">
-                            <img src="/assets/img/{{ $allProfileData->profile_image }}" />
+                            <img src="/uploads/profileimages/{{ $allProfileData->profile_image }}" />
                         </div>
                     </div>
                     <div class="right-content">
@@ -47,7 +47,7 @@
                                             <div class="item-header">
                                                 <a href="/profile/{{ $allProfileData->user_name }}">
                                                     <div class="user-profile-img">
-                                                        <img src="/assets/img/{{ $allProfileData->profile_image }}" alt="">
+                                                        <img src="/uploads/profileimages/{{ $allProfileData->profile_image }}" alt="">
                                                     </div>
                                                 </a>
                                                 <ul class="">
@@ -98,7 +98,7 @@
                             <div class="profile-card-item">
                                 <div class="profile-image">
                                     <a href="{{ "/profile/" . $follower->user_name }}">
-                                        <img src="{{ "/assets/img/" . $follower->profile_image }}">
+                                        <img src="{{ "/uploads/profileimages/" . $follower->profile_image }}">
                                     </a>
                                 </div>
                                 <div class="card-item-info">
@@ -113,7 +113,7 @@
                             <div class="profile-card-item">
                                 <div class="profile-image">
                                     <a href="{{ "/profile/" . $following->user_name }}">
-                                        <img src="{{ "/assets/img/" . $following->profile_image }}">
+                                        <img src="{{ "/uploads/profileimages/" . $following->profile_image }}">
                                     </a>
                                 </div>
                                 <div class="card-item-info">
