@@ -26,13 +26,13 @@
                 </div>
                 <ul class="nav nav-tabs flat-tab-content" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a href="#tab0" role="tab" data-toggle="tab" aria-expanded="true">Posts</a>
+                        <a href="#tab0" role="tab" data-toggle="tab" aria-expanded="true">{{ count($allProfileData->post) }} Posts</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#tab1" role="tab" data-toggle="tab" aria-expanded="true">Abonnés</a>
+                        <a href="#tab1" role="tab" data-toggle="tab" aria-expanded="true">{{ count($allProfileData->followers) }} Abonnés</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#tab2" role="tab" data-toggle="tab" aria-expanded="true">Abonnements</a>
+                        <a href="#tab2" role="tab" data-toggle="tab" aria-expanded="true">{{ count($allProfileData->followings) }} Abonnements</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
